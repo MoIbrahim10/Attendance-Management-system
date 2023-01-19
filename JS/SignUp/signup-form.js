@@ -12,7 +12,7 @@ const submitButton = document.getElementById("submit-button");
 
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
-  await validateForm(form);
+  validateForm(form);
   submitButton.style.backgroundColor = "#2000A1";
 
   const emailInput = form.elements.email;

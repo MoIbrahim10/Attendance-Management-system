@@ -32,5 +32,11 @@
         </div>
       </div>
     </div>
+    <script>
+      let userMail = localStorage.getItem("email");
+      document.getElementById(
+        "userMail"
+      ).innerHTML = `<a href="mailto:${userMail}">${userMail}</a>`;
+    </script>
   </body>
 </html>

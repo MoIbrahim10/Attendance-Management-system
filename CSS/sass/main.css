@@ -699,6 +699,10 @@ table.dataTable thead > tr > th.sorting:last-child:after, table.dataTable thead 
   stroke: #CCCCD6;
 }
 
+.emp-navBar {
+  background-color: #ffffff;
+}
+
 td {
   vertical-align: middle;
 }/*# sourceMappingURL=main.css.map */
