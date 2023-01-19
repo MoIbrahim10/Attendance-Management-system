@@ -1,0 +1,34 @@
+body{
+  background-color: $background-color !important;
+}
+
+.image-container{
+  width: 80%;
+}
+.headerMsg{
+  margin-top: 10px;
+  font-size: $Xlarge-size;
+  font-weight: $font-weight-bold;
+}
+.paragraphtext{
+  font-size: $regular-size;
+  line-height: 24px;
+  font-weight: $font-weight-normal;
+  color: $text-color-light;
+  }
+
+
+.wrapper{
+  background-color: $background-color-light;
+  border-radius: $border-radius*2;
+  }
+  
+.btnsLink{
+  text-decoration: none;
+  color: inherit;
+  &:hover{
+    text-decoration: none;
+    color: inherit;
+  }
+}
+

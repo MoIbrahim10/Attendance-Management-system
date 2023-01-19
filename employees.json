@@ -1,0 +1,212 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "fname": "Sara",
+      "lname": "Ahmed",
+      "avatar": "images/Employeesimages/Lana Blanca Perkins.jpeg",
+      "email": "sara@gmail.com",
+      "age": "24",
+      "address": "Cairo",
+      "jobTittle": "Software Engineer",
+      "role": "admin",
+      "userName": "SaraAhmed10",
+      "password": "12345678",
+      "attendances": [
+        {
+          "date": "15/1/2023",
+          "arrivalTime": "09:00",
+          "departureTime": "17:00",
+          "status": "present"
+        },
+        {
+          "date": "16/1/2023",
+          "arrivalTime": "09:15",
+          "departureTime": "17:00",
+          "status": "late"
+        },
+        {
+          "date": "17/1/2023",
+          "arrivalTime": "",
+          "departureTime": "",
+          "status": "absent"
+        },{
+          "date": "18/1/2023",
+          "arrivalTime": "08:30",
+          "departureTime": "17:00",
+          "status": "present"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "fname": "Marsha ",
+      "lname": "Colon",
+      "avatar": "images/Employeesimages/Lana Blanca Perkins.jpeg",
+      "email": "marshaaidacolon@ebrius.net",
+      "age": "47",
+      "address": "Georgia",
+      "jobTittle": "Secretary",
+      "role": "employee",
+      "userName": "marshaaidacolon",
+      "password": "sr3j8ph10i",
+      "attendances": [
+        {
+          "date": "15/1/2023",
+          "arrivalTime": "09:00",
+          "departureTime": "17:00",
+          "status": "present"
+        },
+        {
+          "date": "16/1/2023",
+          "arrivalTime": "09:15",
+          "departureTime": "17:00",
+          "status": "late"
+        },
+        {
+          "date": "17/1/2023",
+          "arrivalTime": "",
+          "departureTime": "",
+          "status": "absent"
+        },{
+          "date": "18/1/2023",
+          "arrivalTime": "08:30",
+          "departureTime": "17:00",
+          "status": "present"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "fname": "Rolando",
+      "lname": "Graham",
+      "avatar": "images/Employeesimages/Lana Blanca Perkins.jpeg",
+      "email": "rolandograham@boahora.net",
+      "age": "48",
+      "address": "Utah",
+      "jobTittle": "Security",
+      "role": "security",
+      "userName": "Potatoad5246",
+      "password": "KWQJ1TefVt",
+      "attendances": [
+        {
+          "date": "15/1/2023",
+          "arrivalTime": "09:00",
+          "departureTime": "17:00",
+          "status": "present"
+        },
+        {
+          "date": "16/1/2023",
+          "arrivalTime": "09:15",
+          "departureTime": "17:00",
+          "status": "late"
+        },
+        {
+          "date": "17/1/2023",
+          "arrivalTime": "",
+          "departureTime": "",
+          "status": "absent"
+        },{
+          "date": "18/1/2023",
+          "arrivalTime": "08:30",
+          "departureTime": "17:00",
+          "status": "present"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "fname": "Michael",
+      "lname": "Dalton",
+      "avatar": "images/Employeesimages/Lana Blanca Perkins.jpeg",
+      "email": "cristian1995@hotmail.com",
+      "age": "26",
+      "address": "Iowa",
+      "jobTittle": "Software Engineer",
+      "role": "employee",
+      "userName": "cristian1995",
+      "password": "jooh7iTo",
+      "attendances": [
+        {
+          "date": "15/1/2023",
+          "arrivalTime": "09:00",
+          "departureTime": "17:00",
+          "status": "present"
+        },
+        {
+          "date": "16/1/2023",
+          "arrivalTime": "09:15",
+          "departureTime": "17:00",
+          "status": "late"
+        },
+        {
+          "date": "17/1/2023",
+          "arrivalTime": "",
+          "departureTime": "",
+          "status": "absent"
+        },{
+          "date": "18/1/2023",
+          "arrivalTime": "08:30",
+          "departureTime": "17:00",
+          "status": "present"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "fname": "Edith ",
+      "lname": "Martin",
+      "avatar": "images/Employeesimages/Lana Blanca Perkins.jpeg",
+      "email": "EdithJMartin@hotmail.com",
+      "age": "27",
+      "address": "Arizona",
+      "jobTittle": "Designer",
+      "role": "employee",
+      "userName": "Edith1Martin",
+      "password": "Ti4xeepa4oo",
+      "attendances": [
+        {
+          "date": "15/1/2023",
+          "arrivalTime": "09:00",
+          "departureTime": "17:00",
+          "status": "present"
+        },
+        {
+          "date": "16/1/2023",
+          "arrivalTime": "09:15",
+          "departureTime": "17:00",
+          "status": "late"
+        },
+        {
+          "date": "17/1/2023",
+          "arrivalTime": "",
+          "departureTime": "",
+          "status": "absent"
+        },{
+          "date": "1-18-2023",
+          "arrivalTime": "08:30",
+          "departureTime": "17:00",
+          "status": "present"
+        }
+      ]
+    }
+  ],
+  "pending": [
+    {
+      "id": 1,
+      "fname": "Ahmed",
+      "lname": "Gamal",
+      "email": "Agamal@gmail.com",
+      "address": "10 Sadat St, Nasr City, Cairo, Egypt",
+      "age": "23"
+    },
+    {
+      "fname": "John",
+      "lname": "Adams",
+      "email": "mielbedwihyfff@gmail.com",
+      "address": "10 xd css CS",
+      "age": "23",
+      "id": 2
+    }
+  ]
+}

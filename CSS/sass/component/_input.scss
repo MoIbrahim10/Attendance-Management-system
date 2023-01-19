@@ -1,0 +1,147 @@
+.inputField{
+  width: 100%;
+  border: $input-border;
+  border-radius: $input-border-radius;
+  box-shadow: none;
+  color: $text-color-dark;
+  padding: 14px 24px;
+  margin-top: 0.5em;
+  box-sizing: border-box;
+  @extend %labelInput;
+  transition: all 0.3s ease;
+  &:focus{
+      border: $input-border-focus;
+  }
+  @media screen and (min-width: $min-md-size) {
+    width: 480px;
+  }
+    
+  }
+  .inputFieldAdmin{
+    width: 96% !important;
+  }
+
+  ::placeholder { 
+    @extend %labelInput;
+    color: #CCCCD6;
+  }
+.labels{
+  color: $text-color-dark;
+  @extend %labelInput;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
+}
+
+
+.helperText{
+  @extend %labelInput;
+  color: $text-placeholder-color;
+  font-size: $small-size;
+  margin: 0.5em $small-size*2;
+}
+
+.rememberMe,.termsConditions{
+  @extend %labelInput;
+  font-weight: $font-weight-medium;
+  font-size: $medium-size;
+  position: absolute;
+  top: 0;
+  left: 30px;
+  width: 200px;
+}
+.termsConditions{
+  width: 580px;
+  @media screen and (max-width: $min-lg-size) {
+    top: -8px;
+    width: 450px;
+  } 
+  @media screen and (max-width: $min-md-size) {
+    top: -18px;
+    width: 250px;
+  } 
+  @media screen and (max-width: $min-sm-size) {
+    top: -18px;
+    width: 180px;
+  } 
+  }
+  .fWeight-semibold{
+    font-size: $medium-size;
+    font-weight: $font-weight-medium;
+  }
+
+
+.containerCheckBox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.containerCheckBox {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+}
+
+.checkmark {
+  display: inline-block;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 1.3em;
+  width: 1.3em;
+  background-color: inherit;
+  border: $input-border;
+  transition: all 0.3s;
+  border-radius: 5px;
+}
+
+.containerCheckBox input:checked ~ .checkmark {
+  background-color: $primary-color;
+  animation: pop 0.5s;
+  animation-direction: alternate;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+
+.containerCheckBox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.containerCheckBox .checkmark:after {
+  left: 0.45em;
+  top: 0.25em;
+  width: 25%;
+  height: 50%;
+  border: solid white;
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

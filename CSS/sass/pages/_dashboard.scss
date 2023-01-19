@@ -1,0 +1,264 @@
+.mainWrapper{
+background-color:$background-color;
+margin: 0 !important;
+padding: 0 !important;
+
+}
+.horizontalNav,.verticalNav, .verticalNav1,.horizontalNav1{
+background-color: $background-color-light;
+}
+.verticalNav{
+  height: 70vh;
+  width: 90px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.horizontalNav{
+  position: absolute;
+  height: 72px;
+  width: 93%;
+  top: 0;
+  left: 97px;
+}
+
+.navIcon:hover,.navIcon:focus{
+  &>*{
+    stroke: $primary-color;
+  }
+}
+.companyLogo{
+  background-color:$background-color;
+  border-radius: $border-radius;
+}
+.companyName{
+  @extend %labelInput;
+  color:$primary-color;
+}
+
+
+
+.adminAvatar{
+  height: 40px;
+  border-radius: 50%;
+}
+
+.adminName{
+  @extend %labelInput;
+  color:$text-color-dark2;
+}
+
+main{
+  // position: absolute;
+  // top: 122px;
+  // left: 155px;
+  // padding: 0;
+  background-color: $background-color;
+}
+
+.dashboardHeader{
+font-style: normal;
+font-weight: $font-weight-bold;
+font-size: 24px;
+line-height: 150%;
+}
+
+.noPending{
+width: 1150px;
+height: 108px;
+margin-bottom: 50px;
+background: rgba(32, 0, 161, 0.05);
+border-radius: 6px;
+
+/* Inner text style */
+color: $primary-color;
+font-family: 'Noto Sans', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: $large-size;
+line-height: 150%;
+text-transform: uppercase;
+
+}
+
+.tableContainer {
+  border: 1px solid #ccc;
+  padding: 20px 40px;
+  width: 1150px;
+  font-size: $medium-size;
+  background: $background-color-light;
+  border: 1px solid #f0f0f0;
+  border-radius: 6px;
+}
+#table_id tbody tr:hover {
+  background-color: rgba(32, 0, 161, 0.05);
+}
+table.dataTable thead > tr > th.sorting:before {
+  margin: 2px 0 !important;
+}
+
+table.dataTable thead > tr > th.sorting:last-child:after,table.dataTable thead > tr > th.sorting:last-child:before {
+  display: none !important;
+}
+table thead{
+  @extend %tableHeaders;
+}
+.jobID{
+font-weight: $font-weight-bold;
+color: #2000A1;
+}
+.actionBtn {
+  background-color: #2000a1;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  width: 32px;
+  height: 32px;
+}
+.deleteBtn {
+  background-color: $danger-color;
+}
+.actionBtn img {
+  padding: 0 0 5px 0;
+}
+.status {
+  width: 83px !important;
+  height: 22px !important;
+  border-radius: 11px !important;
+}
+.bg-danger,.declineBtn {
+  background-color: $danger-color !important;
+}
+.bg-success,.approveBtn {
+  background-color: $success-color !important;
+}
+.bg-warning {
+  background-color: $warning-color !important;
+}
+
+.approveBtn,.declineBtn {
+  width: 130px;
+  height: 40px;
+  border-radius: $border-radius;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**************************** delete employee popup ****************************/
+.blurbody{
+  filter : blur(5px);
+  pointer-events: none;
+  user-select: none;
+}
+.bluredBackground {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  
+}
+
+.alert_box {
+  padding: 36px 32px;
+  background-color: #fff;
+  // width: 459px;
+  // height: 303px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.04);
+  border-radius: 3px;
+  animation: animationDropCenter 1s;
+  @extend %popUp;
+  & span{
+    font-weight: 500;
+    font-size: 18px;
+    color: #000000;
+  }
+  & .subText{
+    font-weight: 400;
+    font-size: 14px;
+    color: #8d929d;
+  } 
+}
+
+
+.UpdateEmpPopUp {
+  padding: 36px 32px;
+  background-color: #fff;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.04);
+  border-radius: 3px;
+  animation: animationDropCenter 1s;
+  @media screen and (max-width: 776px) {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .inputGroup{margin: 0px auto;}
+  }  
+  @media screen and (max-width: 300px) {
+  transform: scale(0.8);
+  }  
+}
+
+
+
+
+.alertBoxBtn {
+  height: 48px;
+  width: 188px;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+}
+.cancelBtn,.confirmBtn, .cancelBtn2,.confirmBtn2{
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.16px;
+  color: black;
+}
+.confirmBtn{
+  background-color: #cc2929;
+  color: $text-color-white;
+}
+.cancelBtn2{
+  color: $primary-color;
+}
+.confirmBtn2{
+  background-color: $primary-color;
+  color: $text-color-white;
+}
+
+.editEmp .uploadImage{
+  width: 120px;
+  height: 200px;
+}
+
+.editEmp .inputField{
+  @media screen and (min-width: 768px)
+  {width: 430px;}
+}
+
+.centerItems{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

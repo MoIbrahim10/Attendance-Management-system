@@ -1,0 +1,36 @@
+
+.uploadImage{
+  border: 2px dashed $primary-color;
+  background: $background-color;
+  padding: 46px 86px;
+}
+.uploadLabel{
+  @extend %labelInput;
+  font-size: $large-size;
+  color: $text-color-dark;
+  font-weight: $font-weight-medium;
+}
+
+.UploadDescription{
+  font-size: $small-size;
+  color: $text-placeholder-color;;
+}
+
+.agaInput{
+  @media screen and (min-width: $min-lg-size) {
+  width: 215px;
+  }
+}
+.emailInput{
+  width: 100%;
+@media screen and (max-width: $min-md-size) {
+  margin-bottom: 10px;
+} 
+}
+
+#userMail>a{
+  color: $primary-color;
+  font-weight: $font-weight-medium;
+  text-decoration: none;
+}
+

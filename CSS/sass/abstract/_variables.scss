@@ -1,0 +1,65 @@
+
+/*------------------Screen Sizes ------------------*/
+$min-xs-size: 0;
+$min-sm-size: 576px;
+$min-md-size: 768px;
+$min-lg-size: 1200px;
+$min-xl-size: 1400px;
+
+/*------------------font family------------------*/
+$font-family: 'Poppins','Open Sans',sans-serif;
+
+/*------------------color system ------------------*/
+$background-color:#F8F7FA;
+$background-color-light:#ffffff;
+
+$primary-color: #2000A1; 
+$primary-colorlight: #5e7dac;
+$secondary-color:#CCCCD6;
+$error-color:#BD0000;
+
+$danger-color:#cc2929;
+$warning-color:#eeb931;
+$success-color:#51c16a;
+
+$input-border: 1px solid #CCCCD6;
+$input-border-focus: 1px solid #8D929D;
+
+
+$text-color-dark: #2E2E2E;
+$text-color-light: #6B6D76;
+$text-placeholder-color:#CCCCD6;
+$text-color-white: #FFFFFF;
+$text-color-dark2:#8D929D;
+
+
+
+/*------------------font size ------------------*/
+
+$font-size: 16px;
+$small-size: 12px;
+$medium-size: 14px;
+$regular-size: 16px;
+$large-size: 18px;
+$Xlarge-size: 32px;
+
+
+$font-size-xxs: 0.75em;  
+$font-size-xs: 0.875em;
+$font-size-sm: 1em;
+$font-size-md: 1.125em;
+$font-size-lg: 1.25em;
+$font-size-xl: 1.5em;
+$font-size-xxl: 2em;
+
+/*------------------font weight ------------------*/
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 600;
+
+/*------------------border radius ------------------*/
+$border-radius: 6px;
+$input-border-radius: 8px;
+
+

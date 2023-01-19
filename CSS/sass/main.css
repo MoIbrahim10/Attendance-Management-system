@@ -1,0 +1,704 @@
+/*------------------Screen Sizes ------------------*/
+/*------------------font family------------------*/
+/*------------------color system ------------------*/
+/*------------------font size ------------------*/
+/*------------------font weight ------------------*/
+/*------------------border radius ------------------*/
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap");
+::-moz-placeholder {
+  font-style: normal;
+  line-height: 150%;
+  letter-spacing: 0.16px;
+}
+:-ms-input-placeholder {
+  font-style: normal;
+  line-height: 150%;
+  letter-spacing: 0.16px;
+}
+.InviteEmployee h1, .alert_box, table thead, .adminName, .companyName, .uploadLabel, .hrefLink, .goToSignUp, .goToSignIn, .rememberMeSec, .termsConditionsSec, .rememberMe, .termsConditions, .helperText, .labels, ::placeholder, .inputField {
+  font-style: normal;
+  line-height: 150%;
+  letter-spacing: 0.16px;
+}
+
+::-moz-placeholder {
+  font-weight: 400;
+  font-size: 1em;
+}
+
+:-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 1em;
+}
+
+.adminName, .companyName, .uploadLabel, .hrefLink, .goToSignUp, .goToSignIn, .rememberMeSec, .termsConditionsSec, .rememberMe, .termsConditions, .helperText, .labels, ::placeholder, .inputField {
+  font-weight: 400;
+  font-size: 1em;
+}
+
+table thead {
+  font-weight: 400;
+  font-size: 14px;
+  color: #6D6D6D;
+}
+
+.alert_box {
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+.btn, .secondaryBtn, .primaryBtnDisabled, .primaryBtn {
+  padding: 12px 0px;
+  width: 100%;
+  height: 48px;
+  border-radius: 6px;
+  letter-spacing: 0.16px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primaryBtn {
+  background-color: #2000A1;
+  color: #FFFFFF;
+  border: none;
+  outline: none;
+}
+.primaryBtn:hover {
+  lighting-color: black;
+}
+
+.primaryBtnDisabled {
+  background-color: #CCCCD6;
+  color: #FFFFFF;
+  border: none;
+  outline: none;
+}
+.primaryBtnDisabled:hover {
+  lighting-color: black;
+}
+
+.secondaryBtn {
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  color: #2000A1;
+  border: none;
+  outline: none;
+}
+.secondaryBtn:hover {
+  border: 1px solid #2000A1;
+}
+
+.inputField {
+  width: 100%;
+  border: 1px solid #CCCCD6;
+  border-radius: 8px;
+  box-shadow: none;
+  color: #2E2E2E;
+  padding: 14px 24px;
+  margin-top: 0.5em;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+.inputField:focus {
+  border: 1px solid #8D929D;
+}
+@media screen and (min-width: 768px) {
+  .inputField {
+    width: 480px;
+  }
+}
+
+.inputFieldAdmin {
+  width: 96% !important;
+}
+
+::-moz-placeholder {
+  color: #CCCCD6;
+}
+
+:-ms-input-placeholder {
+  color: #CCCCD6;
+}
+
+::placeholder {
+  color: #CCCCD6;
+}
+
+.labels {
+  color: #2E2E2E;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.helperText {
+  color: #CCCCD6;
+  font-size: 12px;
+  margin: 0.5em 24px;
+}
+
+.rememberMe, .termsConditions {
+  font-weight: 500;
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  left: 30px;
+  width: 200px;
+}
+
+.termsConditions {
+  width: 580px;
+}
+@media screen and (max-width: 1200px) {
+  .termsConditions {
+    top: -8px;
+    width: 450px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .termsConditions {
+    top: -18px;
+    width: 250px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .termsConditions {
+    top: -18px;
+    width: 180px;
+  }
+}
+
+.fWeight-semibold {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.containerCheckBox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.containerCheckBox {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.checkmark {
+  display: inline-block;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 1.3em;
+  width: 1.3em;
+  background-color: inherit;
+  border: 1px solid #CCCCD6;
+  transition: all 0.3s;
+  border-radius: 5px;
+}
+
+.containerCheckBox input:checked ~ .checkmark {
+  background-color: #2000A1;
+  -webkit-animation: pop 0.5s;
+          animation: pop 0.5s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.containerCheckBox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.containerCheckBox .checkmark:after {
+  left: 0.45em;
+  top: 0.25em;
+  width: 25%;
+  height: 50%;
+  border: solid white;
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+}
+
+@-webkit-keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+body {
+  background-color: #F8F7FA !important;
+}
+
+.image-container {
+  width: 80%;
+}
+
+.headerMsg {
+  margin-top: 10px;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.paragraphtext {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #6B6D76;
+}
+
+.wrapper {
+  background-color: #ffffff;
+  border-radius: 12px;
+}
+
+.btnsLink {
+  text-decoration: none;
+  color: inherit;
+}
+.btnsLink:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.rememberMeSec, .termsConditionsSec {
+  font-size: 14px;
+}
+@media screen and (max-width: 576px) {
+  .rememberMeSec, .termsConditionsSec {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
+.goToSignUp, .goToSignIn {
+  font-size: 14px;
+  color: #8D929D;
+}
+
+.hrefLink {
+  font-weight: 500;
+  font-size: 14px;
+  color: #2000A1;
+  text-decoration: none;
+}
+.hrefLink:hover {
+  color: #2000A1;
+  text-decoration: underline;
+}
+
+.passwordContainer {
+  position: relative;
+}
+
+#togglePassword {
+  position: absolute;
+  top: 45%;
+  right: 20px;
+  color: #CCCCD6;
+  cursor: pointer;
+}
+
+#password {
+  padding-right: 28.8px;
+}
+
+.passwordContainer {
+  width: 100%;
+}
+
+.uploadImage {
+  border: 2px dashed #2000A1;
+  background: #F8F7FA;
+  padding: 46px 86px;
+}
+
+.uploadLabel {
+  font-size: 18px;
+  color: #2E2E2E;
+  font-weight: 500;
+}
+
+.UploadDescription {
+  font-size: 12px;
+  color: #CCCCD6;
+}
+
+@media screen and (min-width: 1200px) {
+  .agaInput {
+    width: 215px;
+  }
+}
+
+.emailInput {
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .emailInput {
+    margin-bottom: 10px;
+  }
+}
+
+#userMail > a {
+  color: #2000A1;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.mainWrapper {
+  background-color: #F8F7FA;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.horizontalNav, .verticalNav, .verticalNav1, .horizontalNav1 {
+  background-color: #ffffff;
+}
+
+.verticalNav {
+  height: 70vh;
+  width: 90px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.horizontalNav {
+  position: absolute;
+  height: 72px;
+  width: 93%;
+  top: 0;
+  left: 97px;
+}
+
+.navIcon:hover > *, .navIcon:focus > * {
+  stroke: #2000A1;
+}
+
+.companyLogo {
+  background-color: #F8F7FA;
+  border-radius: 6px;
+}
+
+.companyName {
+  color: #2000A1;
+}
+
+.adminAvatar {
+  height: 40px;
+  border-radius: 50%;
+}
+
+.adminName {
+  color: #8D929D;
+}
+
+main {
+  background-color: #F8F7FA;
+}
+
+.dashboardHeader {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 150%;
+}
+
+.noPending {
+  width: 1150px;
+  height: 108px;
+  margin-bottom: 50px;
+  background: rgba(32, 0, 161, 0.05);
+  border-radius: 6px;
+  /* Inner text style */
+  color: #2000A1;
+  font-family: "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+.tableContainer {
+  border: 1px solid #ccc;
+  padding: 20px 40px;
+  width: 1150px;
+  font-size: 14px;
+  background: #ffffff;
+  border: 1px solid #f0f0f0;
+  border-radius: 6px;
+}
+
+#table_id tbody tr:hover {
+  background-color: rgba(32, 0, 161, 0.05);
+}
+
+table.dataTable thead > tr > th.sorting:before {
+  margin: 2px 0 !important;
+}
+
+table.dataTable thead > tr > th.sorting:last-child:after, table.dataTable thead > tr > th.sorting:last-child:before {
+  display: none !important;
+}
+
+.jobID {
+  font-weight: 600;
+  color: #2000A1;
+}
+
+.actionBtn {
+  background-color: #2000a1;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  width: 32px;
+  height: 32px;
+}
+
+.deleteBtn {
+  background-color: #cc2929;
+}
+
+.actionBtn img {
+  padding: 0 0 5px 0;
+}
+
+.status {
+  width: 83px !important;
+  height: 22px !important;
+  border-radius: 11px !important;
+}
+
+.bg-danger, .declineBtn {
+  background-color: #cc2929 !important;
+}
+
+.bg-success, .approveBtn {
+  background-color: #51c16a !important;
+}
+
+.bg-warning {
+  background-color: #eeb931 !important;
+}
+
+.approveBtn, .declineBtn {
+  width: 130px;
+  height: 40px;
+  border-radius: 6px;
+}
+
+/**************************** delete employee popup ****************************/
+.blurbody {
+  filter: blur(5px);
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.bluredBackground {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.alert_box {
+  padding: 36px 32px;
+  background-color: #fff;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.04);
+  border-radius: 3px;
+  -webkit-animation: animationDropCenter 1s;
+          animation: animationDropCenter 1s;
+}
+.alert_box span {
+  font-weight: 500;
+  font-size: 18px;
+  color: #000000;
+}
+.alert_box .subText {
+  font-weight: 400;
+  font-size: 14px;
+  color: #8d929d;
+}
+
+.UpdateEmpPopUp {
+  padding: 36px 32px;
+  background-color: #fff;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.04);
+  border-radius: 3px;
+  -webkit-animation: animationDropCenter 1s;
+          animation: animationDropCenter 1s;
+}
+@media screen and (max-width: 776px) {
+  .UpdateEmpPopUp {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .UpdateEmpPopUp .inputGroup {
+    margin: 0px auto;
+  }
+}
+@media screen and (max-width: 300px) {
+  .UpdateEmpPopUp {
+    transform: scale(0.8);
+  }
+}
+
+.alertBoxBtn {
+  height: 48px;
+  width: 188px;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+}
+
+.cancelBtn, .confirmBtn, .cancelBtn2, .confirmBtn2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.16px;
+  color: black;
+}
+
+.confirmBtn {
+  background-color: #cc2929;
+  color: #FFFFFF;
+}
+
+.cancelBtn2 {
+  color: #2000A1;
+}
+
+.confirmBtn2 {
+  background-color: #2000A1;
+  color: #FFFFFF;
+}
+
+.editEmp .uploadImage {
+  width: 120px;
+  height: 200px;
+}
+
+@media screen and (min-width: 768px) {
+  .editEmp .inputField {
+    width: 430px;
+  }
+}
+
+.centerItems {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.editAdminContainer {
+  background-color: #ffffff;
+  border: 1px solid #F0F0F0;
+  border-radius: 4px;
+}
+
+.uploadImageAdmin {
+  border: 2px dashed #2000A1;
+  background: #F8F7FA;
+  padding: 46px 60px;
+}
+@media screen and (max-width: 1200px) {
+  .uploadImageAdmin {
+    padding: 46px 30px;
+  }
+}
+
+#eyeIcon {
+  position: absolute;
+  top: 45%;
+  right: 30px;
+  color: #CCCCD6;
+  cursor: pointer;
+}
+
+.InviteEmployee {
+  text-align: start;
+}
+.InviteEmployee h1 {
+  font-size: 24px !important;
+  font-weight: 600 !important;
+}
+
+.invitationMail {
+  text-align: start;
+}
+
+.activeNav > * {
+  stroke: #2000A1;
+}
+
+.inactiveNav > * {
+  stroke: #CCCCD6;
+}
+
+td {
+  vertical-align: middle;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,42 @@
+.btn{
+    padding: 12px 0px;
+    width: 100%;
+    height: 48px;
+    border-radius: $border-radius;
+    letter-spacing: 0.16px;
+    font-size: 1rem;
+    font-weight: $font-weight-medium;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.primaryBtn{
+    @extend .btn;
+    background-color: $primary-color;
+    color: $text-color-white;
+    border: none;
+    outline: none;
+    &:hover{
+        lighting-color: black
+    }
+}
+.primaryBtnDisabled{
+    @extend .btn;
+    background-color: $secondary-color;
+    color: $text-color-white;
+    border: none;
+    outline: none;
+    &:hover{
+        lighting-color: black
+    }
+}
+.secondaryBtn{
+    @extend .btn;
+    box-sizing: border-box;
+    background-color: $text-color-white;
+    color:  $primary-color;
+    border: none;
+    outline: none;
+    &:hover{
+        border: 1px solid $primary-color;
+    }
+}

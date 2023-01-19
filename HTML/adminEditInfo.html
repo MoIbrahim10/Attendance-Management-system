@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/sass/main.css" />
+    <!-- Font Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <!-- Bootstrap CSS-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Edit personal information</title>
+  </head>
+  <body>
+    <div class="container-fluid mainWrapper position-relative">
+      <div class="row gx-0">
+        <!-- Vertical Nav -->
+        <nav
+          class="col-12 col-md-1 verticalNav1 d-flex justify-content-around flex-md-column justify-content-md-start align-items-center gap-4 px-md-4 py-md-5 p-2"
+        >
+          <!-- Home Icon -->
+          <div class="mt-md-5">
+            <a href="adminDashboard copy.html"
+              ><svg
+                width="31"
+                height="31"
+                viewBox="0 0 31 31"
+                fill="none"
+                class="navIcon home"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18.4165 25.2067V19.5867C18.4165 19.3383 18.3178 19.1 18.1422 18.9244C17.9665 18.7487 17.7283 18.6501 17.4798 18.6501H13.7333C13.4849 18.6501 13.2466 18.7487 13.071 18.9244C12.8953 19.1 12.7966 19.3383 12.7966 19.5867V25.2067C12.7966 25.4551 12.698 25.6933 12.5223 25.8689C12.3467 26.0446 12.1085 26.1433 11.8601 26.1433L6.24096 26.144C6.11795 26.1441 5.99614 26.1198 5.88248 26.0728C5.76883 26.0257 5.66556 25.9567 5.57858 25.8698C5.49159 25.7828 5.42259 25.6795 5.37551 25.5659C5.32843 25.4522 5.3042 25.3304 5.3042 25.2074V14.3821C5.3042 14.2516 5.33147 14.1226 5.38425 14.0032C5.43704 13.8839 5.51418 13.7769 5.61073 13.6891L14.9765 5.17332C15.1489 5.01656 15.3736 4.9297 15.6066 4.92969C15.8396 4.92968 16.0643 5.01653 16.2367 5.17328L25.6037 13.6891C25.7003 13.7769 25.7774 13.8839 25.8302 14.0033C25.883 14.1226 25.9103 14.2517 25.9103 14.3822V25.2074C25.9103 25.3304 25.8861 25.4522 25.839 25.5659C25.7919 25.6795 25.7229 25.7828 25.6359 25.8698C25.5489 25.9567 25.4457 26.0257 25.332 26.0728C25.2184 26.1199 25.0966 26.1441 24.9735 26.1441L19.353 26.1433C19.1046 26.1433 18.8664 26.0446 18.6908 25.8689C18.5152 25.6933 18.4165 25.4551 18.4165 25.2067V25.2067Z"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+          <!-- Reports Icon -->
+          <div>
+            <a
+              ><svg
+                width="31"
+                height="31"
+                viewBox="0 0 31 31"
+                fill="none"
+                class="navIcon reports"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5.30444 15.8125H25.9105"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M5.30444 8.31885H25.9105"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M5.30444 23.3047H25.9105"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+          <!-- Edit Info Icon -->
+          <div>
+            <a
+              ><svg
+                width="31"
+                height="31"
+                viewBox="0 0 31 31"
+                fill="none"
+                class="navIcon editAdminInfo"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15.6073 22.3415C19.2283 22.3415 22.1638 19.4061 22.1638 15.785C22.1638 12.164 19.2283 9.22852 15.6073 9.22852C11.9862 9.22852 9.05078 12.164 9.05078 15.785C9.05078 19.4061 11.9862 22.3415 15.6073 22.3415Z"
+                  stroke="#2000A1"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M25.9102 14.8492L27.117 13.0391C27.1956 12.9225 27.2476 12.79 27.2693 12.651C27.291 12.5121 27.2818 12.37 27.2424 12.235C27.0147 11.4854 26.7147 10.7596 26.3465 10.0681C26.279 9.94496 26.1852 9.83826 26.0718 9.75559C25.9583 9.67291 25.828 9.61631 25.6902 9.58981L23.5549 9.16271L22.2303 7.83813L21.8032 5.70275C21.7767 5.56489 21.7201 5.43458 21.6374 5.32113C21.5547 5.20768 21.448 5.11388 21.3249 5.04644C20.6333 4.67831 19.9076 4.37831 19.1579 4.15068C19.0229 4.11127 18.8808 4.10207 18.7419 4.12374C18.6029 4.14541 18.4704 4.1974 18.3538 4.27603L16.5438 5.48269H14.6705L12.8605 4.27603C12.7439 4.1974 12.6114 4.14541 12.4725 4.12374C12.3335 4.10208 12.1914 4.11127 12.0564 4.15068C11.3068 4.37831 10.581 4.6783 9.88942 5.04643C9.7663 5.11388 9.65959 5.20768 9.57691 5.32113C9.49423 5.43459 9.43762 5.56491 9.41112 5.70277L8.98413 7.83801L7.65943 9.16271L5.52417 9.5897C5.38631 9.6162 5.256 9.6728 5.14255 9.75547C5.0291 9.83815 4.9353 9.94485 4.86785 10.068C4.49966 10.7596 4.19962 11.4853 3.97196 12.235C3.93256 12.37 3.92336 12.5121 3.94503 12.651C3.9667 12.79 4.0187 12.9225 4.09734 13.0391L5.30399 14.8491V16.7224L4.09733 18.5324C4.0187 18.649 3.96671 18.7815 3.94504 18.9205C3.92338 19.0594 3.93257 19.2015 3.97197 19.3365C4.19957 20.0862 4.49957 20.8119 4.86772 21.5035C4.93517 21.6266 5.02897 21.7333 5.14242 21.816C5.25587 21.8987 5.38617 21.9553 5.52403 21.9818L7.65943 22.4089L8.98402 23.7335L9.41102 25.8689C9.43751 26.0067 9.49411 26.137 9.57678 26.2505C9.65945 26.3639 9.76615 26.4577 9.88926 26.5252C10.5808 26.8934 11.3066 27.1934 12.0562 27.421C12.1912 27.4604 12.3333 27.4696 12.4722 27.4479C12.6112 27.4262 12.7437 27.3742 12.8603 27.2956L14.6704 26.0889H16.5437L18.3538 27.2957C18.4704 27.3743 18.6029 27.4263 18.7419 27.448C18.8808 27.4696 19.0229 27.4604 19.1579 27.421C19.9075 27.1934 20.6333 26.8934 21.3248 26.5253C21.4479 26.4579 21.5546 26.3641 21.6373 26.2506C21.72 26.1372 21.7766 26.0068 21.8031 25.869L22.2302 23.7336L23.5548 22.4089L25.6902 21.9819C25.828 21.9554 25.9583 21.8988 26.0718 21.8161C26.1852 21.7335 26.279 21.6267 26.3465 21.5036C26.7147 20.8121 27.0147 20.0864 27.2424 19.3367C27.2818 19.2017 27.291 19.0597 27.2693 18.9207C27.2476 18.7817 27.1956 18.6492 27.117 18.5326L25.9102 16.7225V14.8492Z"
+                  stroke="#2000A1"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+          <!--Add Employee -->
+          <div>
+            <a id="addEmployee"
+              ><svg
+                width="31"
+                height="31"
+                viewBox="0 0 31 31"
+                fill="none"
+                class="navIcon"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.2271 7.32666H26.8469"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M24.0374 4.5166V10.1364"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M4.25 26.0588C5.40155 24.0656 7.05736 22.4105 9.05109 21.2598C11.0448 20.1091 13.3062 19.5034 15.6082 19.5034C17.9101 19.5034 20.1716 20.1092 22.1653 21.26C24.159 22.4107 25.8147 24.0658 26.9663 26.059"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M22.6382 14.6069C22.1373 15.9593 21.2566 17.1383 20.1019 18.0022C18.9473 18.8662 17.5677 19.3784 16.1289 19.4774C14.6902 19.5763 13.2535 19.2577 11.9914 18.5599C10.7293 17.8621 9.69557 16.8148 9.01431 15.5437C8.33305 14.2726 8.03326 12.8319 8.15097 11.3945C8.26867 9.95722 8.79887 8.58444 9.67785 7.44113C10.5568 6.29783 11.7472 5.43262 13.106 4.94945C14.4648 4.46627 15.9342 4.38569 17.3377 4.71738"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+          <!--Log out -->
+          <div>
+            <a id="logOut"
+              ><svg
+                width="31"
+                height="31"
+                viewBox="0 0 31 31"
+                fill="none"
+                class="navIcon"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20.9966 10.812L25.9139 15.7294L20.9966 20.6467"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12.7979 15.73H25.9108"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M14.6709 26.0324H6.24108C5.99267 26.0324 5.75443 25.9337 5.57878 25.758C5.40313 25.5824 5.30444 25.3441 5.30444 25.0957V6.36291C5.30444 6.1145 5.40313 5.87626 5.57878 5.70061C5.75443 5.52495 5.99267 5.42627 6.24108 5.42627H14.6709"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </nav>
+        <div class="col-11 d-flex flex-column">
+          <nav
+            class="d-none d-md-flex horizontalNav1 px-4 py-2 d-flex justify-content-between align-items-center"
+          >
+            <div class="companyLogo py-2 px-4">
+              <img src="../Images/HeaderIcon.svg" />
+              <span class="companyName">TechWave Solutions</span>
+            </div>
+            <div class="adminInfo d-flex align-items-center gap-2">
+              <img
+                class="adminAvatar"
+                src="../Images/Employees/EdithMartin.jpeg"
+                alt=""
+              />
+              <span class="adminName">Edith Martin</span>
+            </div>
+          </nav>
+
+          <main class="ps-5 pt-5">
+            <h1 class="dashboardHeader">Employee List</h1>
+            <div class="editAdminContainer p-5 me-0 me-md-5">
+              <div class="row">
+                <div
+                  class="col-12 order-last order-lg-first col-lg-2 d-flex flex-row justify-content-center align-items-center gap-4 mt-5 mt-lg-0 mb-4 flex-lg-column align-items-lg-start gap-lg-2 mb-lg-0 gx-0"
+                >
+                  <div
+                    class="uploadImageAdmin d-flex align-items-center justify-content-center"
+                  >
+                    <img src="../Images/uploadImageIcon.png" />
+                  </div>
+                  <div>
+                    <span class="uploadLabel"> Upload Image </span>
+                    <p class="UploadDescription">
+                      This image should be not larger than 500x500 pixels and
+                      1Mb
+                    </p>
+                  </div>
+                </div>
+                <div class="container col-10">
+                  <div class="row">
+                    <div
+                      class="col-12 d-flex flex-column justify-content-center flex-lg-row justify-content-lg-start gap-3"
+                    >
+                      <div
+                        class="col-12 col-lg-6 d-flex flex-column align-items-start"
+                      >
+                        <label for="fName" class="labels"> First Name </label>
+                        <input
+                          type="text"
+                          name="fName"
+                          id="fName"
+                          class="inputField inputFieldAdmin"
+                          placeholder="Mohamed"
+                        />
+                      </div>
+                      <div
+                        class="col-12 col-lg-6 d-flex flex-column align-items-start"
+                      >
+                        <label for="lName" class="labels"> Last Name </label>
+                        <input
+                          type="text"
+                          name="lName"
+                          id="lName"
+                          class="inputField inputFieldAdmin"
+                          placeholder="Ibrahim"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col-12 d-flex flex-column flex-lg-row gap-3">
+                      <div
+                        class="col-12 col-lg-6 d-flex flex-column align-items-start"
+                      >
+                        <label for="email" class="labels">
+                          Email Address
+                        </label>
+                        <input
+                          type="email"
+                          name="email"
+                          id="email"
+                          class="inputField emailInput inputFieldAdmin"
+                          placeholder="example@youremail.com"
+                        />
+                      </div>
+                      <div
+                        class="col-12 col-lg-6 password-sec d-flex flex-column align-items-start"
+                      >
+                        <label for="password" class="labels"> Password </label>
+                        <div class="passwordContainer">
+                          <input
+                            type="password"
+                            name="password"
+                            id="password"
+                            class="inputField inputFieldAdmin"
+                            placeholder="Your password"
+                          />
+                          <i class="far fa-eye" id="eyeIcon"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <div class="row m-3">
+                    <div class="col-12 d-flex flex-row gap-5">
+                      <div class="col-6 d-flex flex-column align-items-start">
+                        <label for="role" class="labels"> Role </label>
+                        <input
+                          type="text"
+                          name="role"
+                          id="role"
+                          class="inputField"
+                          placeholder="Employee"
+                        />
+                      </div>
+                      <div class="col-6 d-flex flex-column align-items-start">
+                        <label for="jobTitle" class="labels"> Job title </label>
+                        <input
+                          type="text"
+                          name="jobTitle"
+                          id="jobTitle"
+                          class="inputField"
+                          placeholder="Accountant"
+                        />
+                      </div>
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div
+                  class="col-12 d-flex flex-row justify-content-center justify-content-lg-end gap-3"
+                >
+                  <!-- <button class="alertBoxBtn cancelBtn2">Cancel</button> -->
+                  <button class="alertBoxBtn confirmBtn2">Save Changes</button>
+                </div>
+              </div>
+            </div>
+            <!-- password icon toggle script -->
+            <script>
+              const togglePassword = document.querySelector("#eyeIcon");
+              const password = document.querySelector("#password");
+
+              togglePassword.addEventListener("click", function (e) {
+                this.classList.toggle("fa-eye-slash");
+                const type =
+                  password.getAttribute("type") === "password"
+                    ? "text"
+                    : "password";
+                password.setAttribute("type", type);
+              });
+            </script>
+          </main>
+        </div>
+      </div>
+    </div>
+    <!--Add Employee-->
+    <div class="bluredBackground" id="AddEmp">
+      <div class="alert_box d-flex flex-column justify-content-center gap-3">
+        <div class="InviteEmployee">
+          <h1>Add a new employee</h1>
+          <p class="subText">
+            Add a new employee by sending them an invitation link through their
+            email to join the platform.
+          </p>
+        </div>
+        <div>
+          <div class="d-flex flex-column gap-3">
+            <div class="d-flex flex-column gap-2 invitationMail">
+              <label for="empEmail">Invitation Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email2"
+                class="inputField emailInput"
+                placeholder="example@youremail.com"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="btns d-flex justify-content-end gap-3">
+          <button
+            id="btnClose2"
+            class="alertBoxBtn cancelBtn2"
+            onclick="closePopUp()"
+          >
+            Cancel
+          </button>
+          <button id="btnDelete" class="alertBoxBtn confirmBtn2">
+            Send Invite
+          </button>
+        </div>
+      </div>
+    </div>
+    <!--Add Employee pop up-->
+    <script>
+      let AddEmpBg = document.getElementById("AddEmp");
+      let EditInfoIcon = document.getElementsByClassName("editAdminInfo")[0];
+      let body = document.getElementsByClassName("mainWrapper")[0];
+
+      addEmployee.onclick = function () {
+        body.classList.add("blurbody");
+        EditInfoIcon.classList.add("inactiveNav");
+        addEmployee.children[0].classList.add("activeNav");
+        AddEmpBg.classList.add("centerItems");
+      };
+      function closePopUp() {
+        body.classList.remove("blurbody");
+        EditInfoIcon.classList.remove("inactiveNav");
+        addEmployee.children[0].classList.remove("activeNav");
+        AddEmpBg.classList.remove("centerItems");
+      }
+      logOut.onclick = function () {
+        window.location.replace("../index.html");
+      };
+    </script>
+  </body>
+</html>

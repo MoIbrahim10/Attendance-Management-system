@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/sass/main.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script src="../JS/SignUp/signup-form.js" type="module"></script>
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <div
+      class="min-vh-100 container d-flex flex-column align-items-center justify-content-center main-container py-5"
+    >
+      <form id="signup-form" class="wrapper d-flex flex-column gap-4 px-4 py-5">
+        <div class="px-5">
+          <h1 class="headerMsg">Welcome</h1>
+          <p class="paragraphtext">Enter your credentials to register.</p>
+        </div>
+        <div
+          class="Name d-flex flex-column flex-xl-row fl align-items-start px-5 gap-2 gap-xl-5"
+        >
+          <div class="d-flex flex-column align-items-start">
+            <label for="fname" class="labels"> First Name </label>
+            <input
+              type="text"
+              name="fname"
+              id="fname"
+              class="inputField"
+              placeholder="Mohamed"
+            />
+            <span id="fname-error" style="color: #bd0000"></span>
+          </div>
+          <div class="d-flex flex-column align-items-start">
+            <label for="lname" class="labels"> Last Name </label>
+            <input
+              type="text"
+              name="lname"
+              id="lname"
+              class="inputField"
+              placeholder="Ibrahim"
+            />
+            <span id="lname-error" style="color: #bd0000"></span>
+          </div>
+        </div>
+        <div class="d-flex flex-column flex-xl-row px-5 gap-2 gap-xl-5">
+          <div class="imageInputContainer">
+            <div
+              class="uploadImageSec d-flex flex-column align-items-center align-items-xl-start gap-2"
+            >
+              <div class="uploadImage">
+                <img src="../Images/uploadImageIcon.png" />
+              </div>
+              <span class="uploadLabel"> Upload Image </span>
+              <p class="UploadDescription">
+                This image should be not larger<br />
+                than 500x500 pixels and 1Mb
+              </p>
+            </div>
+          </div>
+          <div class="inputsSec">
+            <div
+              class="addressAge d-flex flex-column flex-xl-row align-items-start gap-2"
+            >
+              <div
+                class="addressSec d-flex flex-column align-items-start me-lg-5"
+              >
+                <label for="address" class="labels"> Address </label>
+                <input
+                  type="text"
+                  name="address"
+                  id="address"
+                  class="inputField"
+                  placeholder="Main Street, Your County, and Anytown"
+                />
+                <span id="address-error" style="color: #bd0000"></span>
+              </div>
+              <div class="ageSec d-flex flex-column">
+                <label for="age" class="labels ageLabel"> Age </label>
+                <input
+                  type="number"
+                  name="age"
+                  id="age"
+                  class="inputField agaInput"
+                  placeholder="23"
+                  inputmode="numeric"
+                />
+                <span id="age-error" style="color: #bd0000"></span>
+              </div>
+            </div>
+            <div class="emailSec d-flex flex-column align-items-start mt-3">
+              <label for="email" class="labels"> Email Address </label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="inputField emailInput"
+                placeholder="example@youremail.com"
+              />
+              <span id="email-error" style="color: #bd0000"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="termsConditionsSec px-5">
+          <label class="containerCheckBox pb-5 pb-lg-0">
+            <input type="checkbox" id="termsAndConditions" />
+            <div class="checkmark"></div>
+            <span class="termsConditions"
+              >By creating an account, you agree to the
+              <span class="fWeight-semibold">Terms of Service</span> and
+              <span class="fWeight-semibold">Privacy Policy</span> .
+            </span>
+          </label>
+          <span id="termsConditions-error" style="color: #bd0000"></span>
+        </div>
+        <div class="px-5 w-100">
+          <button class="primaryBtnDisabled" type="submit" id="submit-button">
+            Sign Up
+          </button>
+        </div>
+      </form>
+
+      <div class="goToSignIn m-2">
+        Already have an account?
+        <a href="SignIn.html" class="hrefLink">Click here to sign in</a>
+      </div>
+    </div>
+  </body>
+</html>

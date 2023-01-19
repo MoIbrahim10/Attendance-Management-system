@@ -1,0 +1,27 @@
+%fontBasics{
+  //font-family: 'Poppins';
+  font-style: normal;
+  line-height: 150%;
+  letter-spacing: 0.16px;
+}
+
+%labelInput{
+  @extend %fontBasics;
+  font-weight: $font-weight-normal;
+  font-size: $font-size-sm;
+}
+
+%tableHeaders{
+@extend %fontBasics;
+font-weight: 400;
+font-size: 14px;
+color: #6D6D6D;
+}
+
+%popUp{
+ @extend %fontBasics;
+ text-align: center;
+}
+
+
+

@@ -1,0 +1,22 @@
+.editAdminContainer{
+  background-color: $background-color-light;
+  border: 1px solid #F0F0F0;
+border-radius: 4px;
+}
+
+.uploadImageAdmin{
+  border: 2px dashed $primary-color;
+  background: $background-color;
+  padding: 46px 60px;
+  @media screen and (max-width: $min-lg-size) {
+    padding: 46px 30px;
+  }
+  }
+
+#eyeIcon{
+  position: absolute;
+  top: 45%;
+  right: 30px;
+  color: #CCCCD6;
+  cursor: pointer;
+}

@@ -1,0 +1,256 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/sass/main.css" />
+    <!-- Font Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <!-- Bootstrap CSS-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Edit personal information</title>
+  </head>
+  <body>
+    <div class="container-fluid mainWrapper position-relative">
+      <div class="row gx-0">
+        <nav
+          class="col-12 col-md-1 verticalNav1 d-flex justify-content-around flex-md-column justify-content-md-start align-items-center gap-4 px-md-4 py-md-5 p-2"
+        >
+          <div class="mt-md-5">
+            <a href="adminDashboard copy.html"
+              ><svg
+                width="31"
+                height="31"
+                viewBox="0 0 31 31"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18.4165 25.2067V19.5867C18.4165 19.3383 18.3178 19.1 18.1422 18.9244C17.9665 18.7487 17.7283 18.6501 17.4798 18.6501H13.7333C13.4849 18.6501 13.2466 18.7487 13.071 18.9244C12.8953 19.1 12.7966 19.3383 12.7966 19.5867V25.2067C12.7966 25.4551 12.698 25.6933 12.5223 25.8689C12.3467 26.0446 12.1085 26.1433 11.8601 26.1433L6.24096 26.144C6.11795 26.1441 5.99614 26.1198 5.88248 26.0728C5.76883 26.0257 5.66556 25.9567 5.57858 25.8698C5.49159 25.7828 5.42259 25.6795 5.37551 25.5659C5.32843 25.4522 5.3042 25.3304 5.3042 25.2074V14.3821C5.3042 14.2516 5.33147 14.1226 5.38425 14.0032C5.43704 13.8839 5.51418 13.7769 5.61073 13.6891L14.9765 5.17332C15.1489 5.01656 15.3736 4.9297 15.6066 4.92969C15.8396 4.92968 16.0643 5.01653 16.2367 5.17328L25.6037 13.6891C25.7003 13.7769 25.7774 13.8839 25.8302 14.0033C25.883 14.1226 25.9103 14.2517 25.9103 14.3822V25.2074C25.9103 25.3304 25.8861 25.4522 25.839 25.5659C25.7919 25.6795 25.7229 25.7828 25.6359 25.8698C25.5489 25.9567 25.4457 26.0257 25.332 26.0728C25.2184 26.1199 25.0966 26.1441 24.9735 26.1441L19.353 26.1433C19.1046 26.1433 18.8664 26.0446 18.6908 25.8689C18.5152 25.6933 18.4165 25.4551 18.4165 25.2067V25.2067Z"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+          <div>
+            <a
+              ><svg
+                width="31"
+                height="31"
+                viewBox="0 0 31 31"
+                fill="none"
+                class="navIcon"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5.30444 15.8125H25.9105"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M5.30444 8.31885H25.9105"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M5.30444 23.3047H25.9105"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+          <div>
+            <a
+              ><svg
+                width="31"
+                height="31"
+                viewBox="0 0 31 31"
+                fill="none"
+                class="navIcon"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15.6075 22.34C19.2286 22.34 22.164 19.4046 22.164 15.7835C22.164 12.1625 19.2286 9.22705 15.6075 9.22705C11.9865 9.22705 9.05103 12.1625 9.05103 15.7835C9.05103 19.4046 11.9865 22.34 15.6075 22.34Z"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M25.911 14.8473L27.1177 13.0372C27.1964 12.9206 27.2483 12.7881 27.27 12.6491C27.2917 12.5101 27.2825 12.3681 27.2431 12.2331C27.0154 11.4834 26.7154 10.7577 26.3472 10.0661C26.2798 9.943 26.186 9.8363 26.0725 9.75363C25.9591 9.67096 25.8288 9.61436 25.6909 9.58786L23.5556 9.16076L22.231 7.83617L21.8039 5.70079C21.7774 5.56294 21.7208 5.43263 21.6382 5.31918C21.5555 5.20573 21.4488 5.11193 21.3257 5.04448C20.6341 4.67635 19.9083 4.37636 19.1586 4.14872C19.0236 4.10932 18.8816 4.10012 18.7426 4.12179C18.6036 4.14345 18.4711 4.19545 18.3545 4.27408L16.5445 5.48074H14.6713L12.8613 4.27408C12.7447 4.19545 12.6122 4.14345 12.4732 4.12179C12.3342 4.10012 12.1922 4.10932 12.0572 4.14872C11.3075 4.37635 10.5817 4.67635 9.89015 5.04448C9.76703 5.11192 9.66032 5.20572 9.57764 5.31918C9.49496 5.43264 9.43835 5.56295 9.41186 5.70082L8.98486 7.83606L7.66016 9.16076L5.5249 9.58775C5.38704 9.61424 5.25674 9.67085 5.14328 9.75352C5.02983 9.83619 4.93603 9.9429 4.86859 10.066C4.5004 10.7576 4.20035 11.4834 3.97269 12.2331C3.93329 12.3681 3.9241 12.5101 3.94577 12.6491C3.96744 12.7881 4.01943 12.9205 4.09807 13.0372L5.30473 14.8472V16.7204L4.09806 18.5304C4.01943 18.647 3.96744 18.7795 3.94577 18.9185C3.92411 19.0575 3.9333 19.1995 3.9727 19.3345C4.2003 20.0842 4.5003 20.81 4.86845 21.5016C4.9359 21.6247 5.0297 21.7314 5.14315 21.8141C5.2566 21.8967 5.38691 21.9533 5.52476 21.9798L7.66016 22.4069L8.98475 23.7315L9.41175 25.8669C9.43824 26.0048 9.49484 26.1351 9.57751 26.2485C9.66019 26.362 9.76689 26.4558 9.89 26.5232C10.5816 26.8914 11.3073 27.1914 12.057 27.419C12.192 27.4584 12.334 27.4676 12.473 27.4459C12.6119 27.4243 12.7444 27.3723 12.861 27.2936L14.6711 26.087H16.5444L18.3545 27.2937C18.4711 27.3724 18.6036 27.4244 18.7426 27.446C18.8816 27.4677 19.0236 27.4585 19.1586 27.4191C19.9083 27.1915 20.634 26.8915 21.3256 26.5233C21.4487 26.4559 21.5554 26.3621 21.638 26.2487C21.7207 26.1352 21.7773 26.0049 21.8038 25.867L22.2309 23.7316L23.5555 22.4069L25.6909 21.9799C25.8287 21.9534 25.959 21.8968 26.0725 21.8142C26.186 21.7315 26.2798 21.6248 26.3472 21.5017C26.7154 20.8101 27.0154 20.0844 27.2431 19.3348C27.2825 19.1997 27.2917 19.0577 27.27 18.9187C27.2483 18.7798 27.1963 18.6473 27.1177 18.5306L25.911 16.7206V14.8473Z"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+          <div>
+            <a
+              ><svg
+                width="31"
+                height="31"
+                viewBox="0 0 31 31"
+                fill="none"
+                class="navIcon"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.2271 7.32666H26.8469"
+                  stroke="#2000A1"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M24.0374 4.5166V10.1364"
+                  stroke="#2000A1"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M4.25 26.0588C5.40155 24.0656 7.05736 22.4105 9.05109 21.2598C11.0448 20.1091 13.3062 19.5034 15.6082 19.5034C17.9101 19.5034 20.1716 20.1092 22.1653 21.26C24.159 22.4107 25.8147 24.0658 26.9663 26.059"
+                  stroke="#2000A1"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M22.6382 14.6069C22.1373 15.9593 21.2566 17.1383 20.1019 18.0022C18.9473 18.8662 17.5677 19.3784 16.1289 19.4774C14.6902 19.5763 13.2535 19.2577 11.9914 18.5599C10.7293 17.8621 9.69557 16.8148 9.01431 15.5437C8.33305 14.2726 8.03326 12.8319 8.15097 11.3945C8.26867 9.95722 8.79887 8.58444 9.67785 7.44113C10.5568 6.29783 11.7472 5.43262 13.106 4.94945C14.4648 4.46627 15.9342 4.38569 17.3377 4.71738"
+                  stroke="#2000A1"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+          <div>
+            <a
+              ><svg
+                width="31"
+                height="31"
+                viewBox="0 0 31 31"
+                fill="none"
+                class="navIcon"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20.9966 10.812L25.9139 15.7294L20.9966 20.6467"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12.7979 15.73H25.9108"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M14.6709 26.0324H6.24108C5.99267 26.0324 5.75443 25.9337 5.57878 25.758C5.40313 25.5824 5.30444 25.3441 5.30444 25.0957V6.36291C5.30444 6.1145 5.40313 5.87626 5.57878 5.70061C5.75443 5.52495 5.99267 5.42627 6.24108 5.42627H14.6709"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </nav>
+        <div class="col-11 d-flex flex-column">
+          <nav
+            class="d-none d-md-flex horizontalNav1 px-4 py-2 d-flex justify-content-between align-items-center"
+          >
+            <div class="companyLogo py-2 px-4">
+              <img src="../Images/HeaderIcon.svg" />
+              <span class="companyName">TechWave Solutions</span>
+            </div>
+            <div class="adminInfo d-flex align-items-center gap-2">
+              <img
+                class="adminAvatar"
+                src="../Images/Employees/EdithMartin.jpeg"
+                alt=""
+              />
+              <span class="adminName">Edith Martin</span>
+            </div>
+          </nav>
+
+          <main class="ps-5 pt-5">
+            <h1 class="dashboardHeader">Employee List</h1>
+            <div class="editAdminContainer p-5 me-0 me-md-5">
+              <div>
+                <span>Add a new employee</span>
+                <p class="subText">
+                  Add a new employee by sending them an invitation link through
+                  their email to join the platform.
+                </p>
+              </div>
+              <div class="row">
+                <div class="col-12 d-flex flex-column flex-lg-row gap-3">
+                  <div
+                    class="col-12 col-lg-6 d-flex flex-column align-items-start"
+                  >
+                    <label for="email" class="labels"> Email Address </label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      class="inputField emailInput inputFieldAdmin"
+                      placeholder="example@youremail.com"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div
+                  class="col-12 d-flex flex-row justify-content-center justify-content-lg-end gap-3"
+                >
+                  <!-- <button class="alertBoxBtn cancelBtn2">Cancel</button> -->
+                  <button class="alertBoxBtn confirmBtn2">Save Changes</button>
+                </div>
+              </div>
+            </div>
+            <!-- password icon toggle script -->
+            <script>
+              const togglePassword = document.querySelector("#eyeIcon");
+              const password = document.querySelector("#password");
+
+              togglePassword.addEventListener("click", function (e) {
+                this.classList.toggle("fa-eye-slash");
+                const type =
+                  password.getAttribute("type") === "password"
+                    ? "text"
+                    : "password";
+                password.setAttribute("type", type);
+              });
+            </script>
+          </main>
+        </div>
+      </div>
+    </div>
+  </body>
+</html> -->

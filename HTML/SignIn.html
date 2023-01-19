@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/sass/main.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <title>Sign In</title>
+  </head>
+  <body>
+    <div
+      class="min-vh-100 container d-flex flex-column align-items-center justify-content-center main-container"
+    >
+      <div class="wrapper d-flex flex-column gap-4 px-4 py-5">
+        <div class="px-5">
+          <h1 class="headerMsg">Welcome Back</h1>
+          <p class="paragraphtext">
+            Enter your credentials to access your account.
+          </p>
+        </div>
+
+        <div class="email-sec d-flex flex-column align-items-start px-5">
+          <label for="email" class="labels"> Email Address </label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="inputField"
+            placeholder="example@youremail.com"
+          />
+        </div>
+
+        <div class="password-sec d-flex flex-column align-items-start px-5">
+          <label for="password" class="labels"> Password </label>
+          <div class="passwordContainer">
+            <input
+              type="password"
+              name="password"
+              id="password"
+              class="inputField"
+              placeholder="Your password"
+            />
+            <i class="far fa-eye" id="togglePassword"></i>
+          </div>
+          <div class="helperText">Minimum 6 characters</div>
+        </div>
+        <script>
+          const togglePassword = document.querySelector("#togglePassword");
+          const password = document.querySelector("#password");
+
+          togglePassword.addEventListener("click", function (e) {
+            const type =
+              password.getAttribute("type") === "password"
+                ? "text"
+                : "password";
+            password.setAttribute("type", type);
+            this.classList.toggle("fa-eye-slash");
+          });
+        </script>
+
+        <div class="rememberMeSec d-flex justify-content-between px-5">
+          <label class="containerCheckBox">
+            <input type="checkbox" checked="checked" />
+            <div class="checkmark"></div>
+            <span class="rememberMe">Remember Me</span>
+          </label>
+          <a href="forgotPass.html" class="hrefLink">Forgot your password?</a>
+        </div>
+        <div class="px-5 w-100">
+          <button class="primaryBtnDisabled">Sign in</button>
+        </div>
+      </div>
+      <div class="goToSignUp mt-2">
+        Don't have an account?
+        <a href="signUp.html" class="hrefLink">Sign up now!</a>
+      </div>
+    </div>
+  </body>
+</html>

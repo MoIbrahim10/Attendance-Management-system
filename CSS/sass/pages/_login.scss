@@ -1,0 +1,46 @@
+.rememberMeSec,.termsConditionsSec{
+  @extend %labelInput;
+  font-size: $medium-size;
+  @media screen and (max-width: $min-sm-size) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
+.goToSignUp,.goToSignIn{
+  @extend %labelInput;
+  font-size: $medium-size;
+  color: $text-color-dark2;
+}
+
+.hrefLink{
+  @extend %labelInput;
+  font-weight: $font-weight-medium;
+  font-size: $medium-size;
+  color: $primary-color;
+  text-decoration: none;
+  &:hover{
+    color: $primary-color;
+    text-decoration: underline;
+  }
+  }
+
+.passwordContainer{
+  position: relative;
+}
+#togglePassword{
+  position: absolute;
+  top: 45%;
+  right:20px;
+  color: $secondary-color;
+  cursor: pointer;
+}
+#password{
+  padding-right: $large-size*1.6;
+  
+}
+.passwordContainer{
+  width: 100%;
+}
