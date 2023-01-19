@@ -6,33 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-
-    <link
-      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
       integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
-      integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.css"
-    />
-    <script
-      type="text/javascript"
-      src="https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.js"
-    ></script>
-    <script src="../JS/Employee/employee.js" type="module"></script>
+
+    <script src="../JS/Employee/empmain.js" type="module"></script>
     <link rel="stylesheet" href="../CSS/sass/main.css" />
 
     <title>Employee</title>
@@ -54,18 +34,50 @@
             src="../Images/avatar.svg"
             alt="user-avatar"
           />
-          <span class="adminName">Edith Martin</span>
+          <span class="adminName"><span id="employee-name"></span></span>
+          <a id="logOut"
+            ><svg
+              width="31"
+              height="31"
+              viewBox="0 0 31 31"
+              fill="none"
+              class="navIcon"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20.9966 10.812L25.9139 15.7294L20.9966 20.6467"
+                stroke="#CCCCD6"
+                stroke-width="1.87328"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M12.7979 15.73H25.9108"
+                stroke="#CCCCD6"
+                stroke-width="1.87328"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M14.6709 26.0324H6.24108C5.99267 26.0324 5.75443 25.9337 5.57878 25.758C5.40313 25.5824 5.30444 25.3441 5.30444 25.0957V6.36291C5.30444 6.1145 5.40313 5.87626 5.57878 5.70061C5.75443 5.52495 5.99267 5.42627 6.24108 5.42627H14.6709"
+                stroke="#CCCCD6"
+                stroke-width="1.87328"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
         </div>
       </nav>
       <div class="empContent m-auto p-5">
         <div>
           <div class="col-12" id="emp-info-sec">
             <h2 class="mb-3">Employee Information</h2>
-            <p>Name: Employee Name</p>
-            <p>Email: employee@gmail.com</p>
-            <p>Age: 24</p>
-            <p>Address: Cairo</p>
-            <p>Job Tittle: Software Engineer</p>
+            <p>Name: <span id="name"></span></p>
+            <p>Email: <span id="email"></span></p>
+            <p>Age: <span id="age"></span></p>
+            <p>Address: <span id="address"></span></p>
+            <p>Job Tittle: <span id="jobTittle"></span></p>
           </div>
         </div>
 
@@ -75,8 +87,8 @@
             <h3>Daily Report</h3>
           </div>
           <div class="card-body">
-            <div class="form-group">
-              <label for="daily-report-date">Select Date:</label>
+            <div class="form-group mb-5">
+              <label for="daily-report-date" class="mb-2">Select Date:</label>
               <input
                 type="date"
                 class="form-control"
@@ -84,11 +96,8 @@
                 placeholder="Select date"
               />
             </div>
-            <table
-              class="table table-striped table-bordered col-12"
-              id="emp-daily-report-table"
-            >
-              <thead>
+            <table class="table col-12" id="emp-daily-report-table">
+              <thead class="border-bottom border-dark">
                 <tr>
                   <th>Date</th>
                   <th>Arrival Time</th>
@@ -96,7 +105,14 @@
                   <th>Status</th>
                 </tr>
               </thead>
-              <tbody></tbody>
+              <tbody>
+                <tr>
+                  <td id="date"></td>
+                  <td id="arrival-time"></td>
+                  <td id="departure-time"></td>
+                  <td id="status"></td>
+                </tr>
+              </tbody>
             </table>
           </div>
         </div>
@@ -107,29 +123,32 @@
             <h3>Monthly Report</h3>
           </div>
           <div class="card-body">
-            <div class="form-group">
-              <label for="monthly-report-start-date">Select Start Date:</label>
-              <input
-                type="date"
-                class="form-control"
-                id="monthly-report-start-date"
-                placeholder="Select start date"
-              />
+            <div class="mb-5">
+              <div class="form-group mb-3">
+                <label for="monthly-report-start-date" class="mb-2"
+                  >Select Start Date:</label
+                >
+                <input
+                  type="date"
+                  class="form-control"
+                  id="monthly-report-start-date"
+                  placeholder="Select start date"
+                />
+              </div>
+              <div class="form-group">
+                <label for="monthly-report-end-date" class="mb-2"
+                  >Select End Date:</label
+                >
+                <input
+                  type="date"
+                  class="form-control"
+                  id="monthly-report-end-date"
+                  placeholder="Select end date"
+                />
+              </div>
             </div>
-            <div class="form-group">
-              <label for="monthly-report-end-date">Select End Date:</label>
-              <input
-                type="date"
-                class="form-control"
-                id="monthly-report-end-date"
-                placeholder="Select end date"
-              />
-            </div>
-            <table
-              class="table table-striped table-bordered col-12"
-              id="emp-monthly-report-table"
-            >
-              <thead>
+            <table class="table col-12" id="emp-monthly-report-table">
+              <thead class="border-bottom border-dark">
                 <tr>
                   <th>Date</th>
                   <th>Arrival Time</th>
@@ -137,7 +156,7 @@
                   <th>Status</th>
                 </tr>
               </thead>
-              <tbody></tbody>
+              <tbody id="monthlyReportTB"></tbody>
             </table>
           </div>
         </div>

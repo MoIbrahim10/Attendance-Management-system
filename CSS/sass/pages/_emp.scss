@@ -1,3 +1,51 @@
 .emp-navBar{
   background-color: $background-color-light;
 }
+
+.late{
+  background-color: $warning-color !important;
+}
+.absent{
+  background-color: $danger-color !important;
+}
+.present{
+  background-color: $success-color !important;
+}
+
+
+
+.emp-daily-report-table, .emp-monthly-report-table {
+  font-size: $large-size;
+  & thead {
+    background-color: $background-color-light !important;
+    th {
+      color: $text-color-dark !important;
+      font-weight: $font-weight-bold !important;
+    }
+  }
+  & tbody {
+    tr {
+      td {
+        color: $text-color-dark !important;
+        font-weight: $font-weight-normal !important;
+      }
+    }
+  }
+}
+
+.emp-daily-report-table tbody tr td,.emp-monthly-report-table tbody tr td {
+  & #status{
+    font-size: 30px !important;
+  }
+}
+
+#signOut:hover{
+  & > *{
+    fill: $danger-color !important;
+  }
+}
+
+.navIcon:hover,.navIcon:focus{
+  &>*{
+    stroke: $danger-color !important;  }
+}

@@ -14,25 +14,25 @@
       "password": "12345678",
       "attendances": [
         {
-          "date": "15/1/2023",
-          "arrivalTime": "09:00",
+          "date": "1/15/2023",
+          "arrivalTime": "08:30",
           "departureTime": "17:00",
           "status": "present"
         },
         {
-          "date": "16/1/2023",
+          "date": "1/16/2023",
           "arrivalTime": "09:15",
           "departureTime": "17:00",
           "status": "late"
         },
         {
-          "date": "17/1/2023",
+          "date": "1/17/2023",
           "arrivalTime": "",
           "departureTime": "",
           "status": "absent"
         },
         {
-          "date": "18/1/2023",
+          "date": "1/18/2023",
           "arrivalTime": "08:30",
           "departureTime": "17:00",
           "status": "present"
@@ -53,25 +53,25 @@
       "password": "sr3j8ph10i",
       "attendances": [
         {
-          "date": "15/1/2023",
+          "date": "1/15/2023",
           "arrivalTime": "09:00",
           "departureTime": "17:00",
           "status": "present"
         },
         {
-          "date": "16/1/2023",
+          "date": "1/16/2023",
           "arrivalTime": "09:15",
           "departureTime": "17:00",
           "status": "late"
         },
         {
-          "date": "17/1/2023",
+          "date": "1/17/2023",
           "arrivalTime": "",
           "departureTime": "",
           "status": "absent"
         },
         {
-          "date": "18/1/2023",
+          "date": "1/18/2023",
           "arrivalTime": "08:30",
           "departureTime": "17:00",
           "status": "present"
@@ -92,25 +92,25 @@
       "password": "KWQJ1TefVt",
       "attendances": [
         {
-          "date": "15/1/2023",
+          "date": "1/15/2023",
           "arrivalTime": "09:00",
           "departureTime": "17:00",
           "status": "present"
         },
         {
-          "date": "16/1/2023",
+          "date": "1/16/2023",
           "arrivalTime": "09:15",
           "departureTime": "17:00",
           "status": "late"
         },
         {
-          "date": "17/1/2023",
+          "date": "1/17/2023",
           "arrivalTime": "",
           "departureTime": "",
           "status": "absent"
         },
         {
-          "date": "18/1/2023",
+          "date": "1/18/2023",
           "arrivalTime": "08:30",
           "departureTime": "17:00",
           "status": "present"
@@ -131,25 +131,25 @@
       "password": "jooh7iTo",
       "attendances": [
         {
-          "date": "15/1/2023",
-          "arrivalTime": "09:00",
+          "date": "1/15/2023",
+          "arrivalTime": "08:40",
           "departureTime": "17:00",
           "status": "present"
         },
         {
-          "date": "16/1/2023",
+          "date": "1/16/2023",
           "arrivalTime": "09:15",
           "departureTime": "17:00",
           "status": "late"
         },
         {
-          "date": "17/1/2023",
+          "date": "1/17/2023",
           "arrivalTime": "",
           "departureTime": "",
           "status": "absent"
         },
         {
-          "date": "18/1/2023",
+          "date": "1/18/2023",
           "arrivalTime": "08:30",
           "departureTime": "17:00",
           "status": "present"
@@ -170,25 +170,25 @@
       "password": "Ti4xeepa4oo",
       "attendances": [
         {
-          "date": "15/1/2023",
+          "date": "1/15/2023",
           "arrivalTime": "09:00",
           "departureTime": "17:00",
           "status": "present"
         },
         {
-          "date": "16/1/2023",
+          "date": "1/16/2023",
           "arrivalTime": "09:15",
           "departureTime": "17:00",
           "status": "late"
         },
         {
-          "date": "17/1/2023",
+          "date": "1/17/2023",
           "arrivalTime": "",
           "departureTime": "",
           "status": "absent"
         },
         {
-          "date": "1-18-2023",
+          "date": "1/18/2023",
           "arrivalTime": "08:30",
           "departureTime": "17:00",
           "status": "present"
