@@ -112,7 +112,6 @@ startDateInput.addEventListener('change', async (e) => {
       arrivalTimeCell.textContent = attendance.arrivalTime;
       departureTimeCell.textContent = attendance.departureTime;
       statusCell.innerHTML = `<span class="badge bg-success status ${attendance.status}">${attendance.status}</span>`;
-
       row.appendChild(dateCell);
       row.appendChild(arrivalTimeCell);
       row.appendChild(departureTimeCell);

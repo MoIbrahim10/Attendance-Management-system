@@ -4,7 +4,220 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+      integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- bootstrap5 dataTables css cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css"
+    />
+    <script src="../JS/Security/securitymain.js" type="module"></script>
+    <link rel="stylesheet" href="../CSS/sass/main.css" />
     <title>Security</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container p-4">
+      <form class="row g-3">
+        <div class="col-auto">
+          <label for="username" class="visually-hidden">username</label>
+          <input
+            type="text"
+            class="form-control"
+            id="username"
+            placeholder="username"
+          />
+          <span id="wrongUsername"></span>
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="confirmBtn">Confirm Attendance</button>
+        </div>
+      </form>
+      <table class="table mt-5 col-10" id="attendance-table">
+        <thead>
+          <tr>
+            <th scope="col" id="num">#</th>
+            <th scope="col" id="name">Name</th>
+            <th scope="col" id="arrvTime">Arrival time</th>
+            <th scope="col" id="deptTime">Departure time</th>
+            <th scope="col" id="status">Status</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider" id="attendance-table-body"></tbody>
+      </table>
+      <h6 id="error-message"></h6>
+    </div>
+    <!-- <table class="table align-middle mb-0 bg-white">
+      <thead class="bg-light">
+        <tr>
+          <th>Name</th>
+          <th>Title</th>
+          <th>Status</th>
+          <th>Position</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="d-flex align-items-center">
+              <img
+                src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+                alt=""
+                style="width: 45px; height: 45px"
+                class="rounded-circle"
+              />
+              <div class="ms-3">
+                <p class="fw-bold mb-1">John Doe</p>
+                <p class="text-muted mb-0">john.doe@gmail.com</p>
+              </div>
+            </div>
+          </td>
+          <td>
+            <p class="fw-normal mb-1">Software engineer</p>
+            <p class="text-muted mb-0">IT department</p>
+          </td>
+          <td>
+            <span class="badge badge-success rounded-pill d-inline"
+              >Active</span
+            >
+          </td>
+          <td>Senior</td>
+          <td>
+            <button type="button" class="btn btn-link btn-sm btn-rounded">
+              Edit
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="d-flex align-items-center">
+              <img
+                src="https://mdbootstrap.com/img/new/avatars/6.jpg"
+                class="rounded-circle"
+                alt=""
+                style="width: 45px; height: 45px"
+              />
+              <div class="ms-3">
+                <p class="fw-bold mb-1">Alex Ray</p>
+                <p class="text-muted mb-0">alex.ray@gmail.com</p>
+              </div>
+            </div>
+          </td>
+          <td>
+            <p class="fw-normal mb-1">Consultant</p>
+            <p class="text-muted mb-0">Finance</p>
+          </td>
+          <td>
+            <span class="badge badge-primary rounded-pill d-inline"
+              >Onboarding</span
+            >
+          </td>
+          <td>Junior</td>
+          <td>
+            <button
+              type="button"
+              class="btn btn-link btn-rounded btn-sm fw-bold"
+              data-mdb-ripple-color="dark"
+            >
+              Edit
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="d-flex align-items-center">
+              <img
+                src="https://mdbootstrap.com/img/new/avatars/7.jpg"
+                class="rounded-circle"
+                alt=""
+                style="width: 45px; height: 45px"
+              />
+              <div class="ms-3">
+                <p class="fw-bold mb-1">Kate Hunington</p>
+                <p class="text-muted mb-0">kate.hunington@gmail.com</p>
+              </div>
+            </div>
+          </td>
+          <td>
+            <p class="fw-normal mb-1">Designer</p>
+            <p class="text-muted mb-0">UI/UX</p>
+          </td>
+          <td>
+            <span class="badge badge-warning rounded-pill d-inline"
+              >Awaiting</span
+            >
+          </td>
+          <td>Senior</td>
+          <td>
+            <button
+              type="button"
+              class="btn btn-link btn-rounded btn-sm fw-bold"
+              data-mdb-ripple-color="dark"
+            >
+              Edit
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="container mt-4">
+      <table id="datatable" class="table table-dark table-hover table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>createdAt</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Jhon doe</td>
+            <td>Jhondoe@gmail.com</td>
+            <td>10/10/22</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>smae</td>
+            <td>smae@gmail.com</td>
+            <td>10/11/22</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Jhon doe3</td>
+            <td>Jhondoe3@gmail.com</td>
+            <td>10/10/22</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Jhon doe4</td>
+            <td>Jhondoe4@gmail.com</td>
+            <td>10/10/24</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Jhon doe5</td>
+            <td>Jhondoe5@gmail.com</td>
+            <td>10/10/21</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- bootstrap5 dataTables js cdn -->
+    <!-- <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#datatable").DataTable();
+      });
+    </script>
+    -->
+  </body>
 </html>

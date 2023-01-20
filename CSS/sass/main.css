@@ -742,6 +742,40 @@ table.dataTable thead > tr > th.sorting:last-child:after, table.dataTable thead 
   stroke: #cc2929 !important;
 }
 
+#wrongUsername {
+  color: red;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.confirmBtn {
+  background-color: #1c1c1c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 9px 15px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.late-status {
+  background-color: #eeb931 !important;
+  color: white !important;
+}
+
+.present-status {
+  background-color: #51c16a !important;
+  color: white !important;
+}
+
+.absent-status {
+  background-color: #cc2929 !important;
+  color: white !important;
+}
+
 td {
   vertical-align: middle;
 }/*# sourceMappingURL=main.css.map */

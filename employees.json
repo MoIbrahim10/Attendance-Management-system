@@ -36,25 +36,31 @@
           "arrivalTime": "08:30",
           "departureTime": "17:00",
           "status": "present"
+        },
+        {
+          "date": "1/20/2023",
+          "arrivalTime": "07:27",
+          "departureTime": "11:13",
+          "status": "late"
         }
       ]
     },
     {
       "id": 2,
-      "fname": "Marsha ",
-      "lname": "Colon",
+      "fname": "Ali",
+      "lname": "Ahmed",
       "avatar": "images/Employeesimages/Lana Blanca Perkins.jpeg",
-      "email": "marshaaidacolon@ebrius.net",
-      "age": "47",
-      "address": "Georgia",
-      "jobTittle": "Secretary",
-      "role": "employee",
-      "userName": "marshaaidacolon",
-      "password": "sr3j8ph10i",
+      "email": "AliAhmed@gmail.com",
+      "age": "36",
+      "address": "Cairo",
+      "jobTittle": "Software Engineer",
+      "role": "security",
+      "userName": "AliAhmed92",
+      "password": "ali@123_=5",
       "attendances": [
         {
           "date": "1/15/2023",
-          "arrivalTime": "09:00",
+          "arrivalTime": "08:30",
           "departureTime": "17:00",
           "status": "present"
         },
@@ -75,25 +81,31 @@
           "arrivalTime": "08:30",
           "departureTime": "17:00",
           "status": "present"
+        },
+        {
+          "date": "1/20/2023",
+          "arrivalTime": "12:15",
+          "departureTime": "11:13",
+          "status": "late"
         }
       ]
     },
     {
       "id": 3,
-      "fname": "Rolando",
-      "lname": "Graham",
+      "fname": "Fayrouz",
+      "lname": "Ahmed",
       "avatar": "images/Employeesimages/Lana Blanca Perkins.jpeg",
-      "email": "rolandograham@boahora.net",
-      "age": "48",
-      "address": "Utah",
-      "jobTittle": "Security",
-      "role": "security",
-      "userName": "Potatoad5246",
-      "password": "KWQJ1TefVt",
+      "email": "Fayrouz@gmail.com",
+      "age": "24",
+      "address": "Cairo",
+      "jobTittle": "Designer",
+      "role": "employee",
+      "userName": "Fayrouz_1",
+      "password": "Fayrouz@123",
       "attendances": [
         {
           "date": "1/15/2023",
-          "arrivalTime": "09:00",
+          "arrivalTime": "08:30",
           "departureTime": "17:00",
           "status": "present"
         },
@@ -113,6 +125,12 @@
           "date": "1/18/2023",
           "arrivalTime": "08:30",
           "departureTime": "17:00",
+          "status": "present"
+        },
+        {
+          "date": "1/20/2023",
+          "arrivalTime": "10:56",
+          "departureTime": "11:13",
           "status": "present"
         }
       ]
@@ -127,7 +145,7 @@
       "address": "Iowa",
       "jobTittle": "Software Engineer",
       "role": "employee",
-      "userName": "cristian1995",
+      "userName": "MichaelDal1",
       "password": "jooh7iTo",
       "attendances": [
         {
@@ -153,6 +171,12 @@
           "arrivalTime": "08:30",
           "departureTime": "17:00",
           "status": "present"
+        },
+        {
+          "date": "1/20/2023",
+          "arrivalTime": "12:16",
+          "departureTime": "11:00",
+          "status": "late"
         }
       ]
     },
@@ -191,6 +215,12 @@
           "date": "1/18/2023",
           "arrivalTime": "08:30",
           "departureTime": "17:00",
+          "status": "present"
+        },
+        {
+          "date": "1/20/2023",
+          "arrivalTime": "11:44",
+          "departureTime": "10:46",
           "status": "present"
         }
       ]
