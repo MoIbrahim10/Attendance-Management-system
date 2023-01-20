@@ -175,7 +175,7 @@
         {
           "date": "1/20/2023",
           "arrivalTime": "12:16",
-          "departureTime": "11:00",
+          "departureTime": "11:31",
           "status": "late"
         }
       ]
@@ -220,7 +220,7 @@
         {
           "date": "1/20/2023",
           "arrivalTime": "11:44",
-          "departureTime": "10:46",
+          "departureTime": "11:31",
           "status": "present"
         }
       ]

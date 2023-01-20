@@ -9,7 +9,7 @@ export async function checkAttendance(username) {
   let currentMinute = currentTime.getMinutes();
   let errorMessage = document.getElementById("wrongUsername");
   let userNameInput = document.getElementById("username");
-  if(currentHour >= 8 && currentHour < 24) {
+  if(currentHour >= 8 && currentHour < 17) {
     let employee = await getEmployeeByUsername(username)
       if(employee) {
         userNameInput.style.border = "1px solid #51C16A";
@@ -44,8 +44,11 @@ export async function checkAttendance(username) {
         else {todayAttendance = JSON.parse(todayAttendance);}
 
         // Check if employee has already attended today
-        let existingAttendance = todayAttendance.find(att => att.username === employee.userName);
-        if (!existingAttendance) {
+        let existingAttendanceIndex = todayAttendance.findIndex(att => att.username === employee.userName);
+        if (existingAttendanceIndex !== -1) {
+          todayAttendance[existingAttendanceIndex].departureTime = employee.attendances[employee.attendances.length - 1].departureTime;
+          localStorage.setItem(todayDate, JSON.stringify(todayAttendance));
+        }else{
           todayAttendance.push({          
             name: employee.fname + " " + employee.lname,
             username: employee.userName,
@@ -53,8 +56,9 @@ export async function checkAttendance(username) {
             departureTime: employee.attendances[employee.attendances.length - 1].departureTime,
             status: employee.attendances[employee.attendances.length - 1].status
           });
+          localStorage.setItem(todayDate, JSON.stringify(todayAttendance));
         }
-        localStorage.setItem(todayDate, JSON.stringify(todayAttendance));
+        
       }else {
         userNameInput.style.border = "1px solid #CC2929";
         errorMessage.innerHTML = "Sorry, username is incorrect";
@@ -105,31 +109,6 @@ export function updateTable() {
     tableBody.appendChild(newRow);
   });
 }
-
-
-
- // const tableBody = document.getElementById("attendance-table-body");
-  // const newRow = document.createElement('tr');
-  // const numCol = document.createElement('th');
-
-  // numCol.scope = 'row';
-  // numCol.innerText = tableBody.children.length + 1;
-  // newRow.appendChild(numCol);
-  // const nameCol = document.createElement('td');
-  // nameCol.innerText = `${employee.fname} ${employee.lname}`;
-  // newRow.appendChild(nameCol);
-  // const arrvTimeCol = document.createElement('td');
-  // arrvTimeCol.innerText = employee.attendances[employee.attendances.length - 1].arrivalTime;
-  // newRow.appendChild(arrvTimeCol);
-  // const deptTimeCol = document.createElement('td');
-  // deptTimeCol.innerText = employee.attendances[employee.attendances.length - 1].departureTime || '-';
-  // newRow.appendChild(deptTimeCol);
-  // const statusCol = document.createElement('td');
-  // statusCol.innerText = employee.attendances[employee.attendances.length - 1].status;
-  // newRow.appendChild(statusCol);
-  // tableBody.appendChild(newRow);
-
-  // localStorage.setItem("username", JSON.stringify(newRow));
 
 
 
