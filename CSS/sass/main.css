@@ -468,6 +468,10 @@ main {
   text-transform: uppercase;
 }
 
+#pendingTableDiv {
+  display: none;
+}
+
 .tableContainer {
   border: 1px solid #ccc;
   padding: 20px 40px;
@@ -504,7 +508,7 @@ table.dataTable thead > tr > th.sorting:last-child:after, table.dataTable thead 
   height: 32px;
 }
 
-.deleteBtn {
+.deleteEmpBtn {
   background-color: #cc2929;
 }
 
@@ -518,15 +522,15 @@ table.dataTable thead > tr > th.sorting:last-child:after, table.dataTable thead 
   border-radius: 11px !important;
 }
 
-.bg-danger, .declineBtn {
+.bg-absent, .declineBtn {
   background-color: #cc2929 !important;
 }
 
-.bg-success, .approveBtn {
+.bg-present, .approveBtn {
   background-color: #51c16a !important;
 }
 
-.bg-warning {
+.bg-late {
   background-color: #eeb931 !important;
 }
 
@@ -750,7 +754,7 @@ table.dataTable thead > tr > th.sorting:last-child:after, table.dataTable thead 
   margin-bottom: 5px;
 }
 
-.confirmBtn {
+.confirmAttndBtn {
   background-color: #1c1c1c;
   color: white;
   border: none;

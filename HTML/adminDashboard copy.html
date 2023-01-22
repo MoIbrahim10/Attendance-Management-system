@@ -39,7 +39,8 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-
+    <!-- main JS-->
+    <!-- <script src="../JS/admin/adminMain.js" type="module"></script> -->
     <title>Admin Dashboard</title>
   </head>
   <body>
@@ -234,7 +235,7 @@
             <h1 class="dashboardHeader">Employee List</h1>
             <div class="table-responsive tableContainer">
               <table
-                id="table_id"
+                id="empdataTable"
                 class="table table-borderless table-responsive p-4"
               >
                 <thead>
@@ -247,7 +248,7 @@
                     <th>Actions</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody id="empDataBody">
                   <tr>
                     <td>
                       <div class="d-flex flex-row align-items-center gap-3">
@@ -382,19 +383,23 @@
                       </div>
                     </td>
                   </tr>
+                  -->
                 </tbody>
               </table>
             </div>
 
             <script>
-              $("#table_id").DataTable({ responsive: true });
+              $("#empdataTable").DataTable({ responsive: true });
             </script>
 
             <h1 class="dashboardHeader mt-4">Pending Access Requests</h1>
-            <!-- <div class="d-flex justify-content-center align-items-center noPending">
-          No Pending Access Requests Yet
-        </div> -->
-            <div class="table-responsive tableContainer">
+            <div
+              class="d-flex justify-content-center align-items-center noPending"
+              id="noPendingDiv"
+            >
+              No Pending Access Requests Yet
+            </div>
+            <div class="table-responsive tableContainer" id="pendingTableDiv">
               <table
                 id="table_id2"
                 class="table table-borderless table-responsive p-4"

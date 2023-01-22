@@ -42,6 +42,12 @@
           "arrivalTime": "07:27",
           "departureTime": "11:13",
           "status": "late"
+        },
+        {
+          "date": "1/21/2023",
+          "arrivalTime": "",
+          "departureTime": "",
+          "status": "absent"
         }
       ]
     },
@@ -87,6 +93,12 @@
           "arrivalTime": "12:15",
           "departureTime": "11:13",
           "status": "late"
+        },
+        {
+          "date": "1/21/2023",
+          "arrivalTime": "",
+          "departureTime": "",
+          "status": "absent"
         }
       ]
     },
@@ -132,6 +144,12 @@
           "arrivalTime": "10:56",
           "departureTime": "11:13",
           "status": "present"
+        },
+        {
+          "date": "1/21/2023",
+          "arrivalTime": "09:24",
+          "departureTime": "",
+          "status": "late"
         }
       ]
     },
@@ -176,6 +194,12 @@
           "date": "1/20/2023",
           "arrivalTime": "12:16",
           "departureTime": "11:31",
+          "status": "late"
+        },
+        {
+          "date": "1/21/2023",
+          "arrivalTime": "09:26",
+          "departureTime": "",
           "status": "late"
         }
       ]
@@ -222,26 +246,36 @@
           "arrivalTime": "11:44",
           "departureTime": "11:31",
           "status": "present"
+        },
+        {
+          "date": "1/21/2023",
+          "arrivalTime": "",
+          "departureTime": "",
+          "status": "absent"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "fname": "John",
+      "lname": "Adams",
+      "email": "mielbedwihy@gmail.com",
+      "address": "10 xd css CS",
+      "age": "23",
+      "avatar": "images/Employeesimages/Lana Blanca Perkins.jpeg",
+      "username": "J_Adams6186",
+      "password": "93phs4qwwg",
+      "jobTittle": "Engineer",
+      "role": "employee",
+      "attendances": [
+        {
+          "date": "1/22/2023",
+          "arrivalTime": "",
+          "departureTime": "",
+          "status": "present"
         }
       ]
     }
   ],
-  "pending": [
-    {
-      "id": 1,
-      "fname": "Ahmed",
-      "lname": "Gamal",
-      "email": "Agamal@gmail.com",
-      "address": "10 Sadat St, Nasr City, Cairo, Egypt",
-      "age": "23"
-    },
-    {
-      "fname": "John",
-      "lname": "Adams",
-      "email": "mielbedwihyfff@gmail.com",
-      "address": "10 xd css CS",
-      "age": "23",
-      "id": 2
-    }
-  ]
+  "pending": []
 }

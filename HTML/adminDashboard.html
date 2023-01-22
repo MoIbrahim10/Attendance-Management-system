@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../CSS/sass/main.css" />
 
+    <!-- Font Awesome-->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -13,12 +14,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
+    <!-- Jquery-->
     <script
       src="https://code.jquery.com/jquery-3.6.3.min.js"
       integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
       crossorigin="anonymous"
     ></script>
+    <!-- Jquery DataTable-->
     <link
       rel="stylesheet"
       type="text/css"
@@ -30,6 +32,7 @@
       charset="utf8"
       src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"
     ></script>
+    <!-- Bootstrap-->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -37,408 +40,288 @@
       crossorigin="anonymous"
     />
 
+    <!--SMTP sendMail-->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <!-- main JS-->
+    <script src="../JS/admin/adminMain.js" type="module"></script>
     <title>Admin Dashboard</title>
   </head>
   <body>
     <div class="container-fluid mainWrapper position-relative">
-      <nav
-        class="verticalNav d-flex flex-column align-items-center gap-4 px-4 py-5"
-      >
-        <div class="mt-5">
-          <a href=""
-            ><svg
-              width="23"
-              height="25"
-              viewBox="0 0 23 25"
-              fill="none"
-              class="navIcon"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M14.4165 22.2047V16.5847C14.4165 16.3363 14.3178 16.0981 14.1422 15.9224C13.9665 15.7468 13.7283 15.6481 13.4798 15.6481H9.73328C9.48487 15.6481 9.24663 15.7468 9.07098 15.9224C8.89532 16.0981 8.79664 16.3363 8.79664 16.5847V22.2047C8.79664 22.4531 8.69798 22.6913 8.52235 22.867C8.34672 23.0426 8.10851 23.1413 7.86012 23.1414L2.24096 23.1421C2.11795 23.1421 1.99614 23.1179 1.88248 23.0708C1.76883 23.0238 1.66556 22.9548 1.57858 22.8678C1.49159 22.7808 1.42259 22.6776 1.37551 22.5639C1.32843 22.4503 1.3042 22.3285 1.3042 22.2055V11.3802C1.3042 11.2497 1.33147 11.1206 1.38425 11.0013C1.43704 10.8819 1.51418 10.775 1.61073 10.6872L10.9765 2.17137C11.1489 2.01461 11.3736 1.92774 11.6066 1.92773C11.8396 1.92773 12.0643 2.01458 12.2367 2.17133L21.6037 10.6872C21.7003 10.775 21.7774 10.882 21.8302 11.0013C21.883 11.1206 21.9103 11.2497 21.9103 11.3802V22.2055C21.9103 22.3285 21.8861 22.4503 21.839 22.5639C21.7919 22.6776 21.7229 22.7808 21.6359 22.8678C21.5489 22.9548 21.4457 23.0238 21.332 23.0708C21.2184 23.1179 21.0966 23.1421 20.9735 23.1421L15.353 23.1414C15.1046 23.1413 14.8664 23.0426 14.6908 22.867C14.5152 22.6913 14.4165 22.4531 14.4165 22.2047V22.2047Z"
-                stroke="#2000A1"
-                stroke-width="1.87328"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </a>
-        </div>
-        <div>
-          <a href=""
-            ><svg
-              width="31"
-              height="31"
-              viewBox="0 0 31 31"
-              fill="none"
-              class="navIcon"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M5.30444 15.8125H25.9105"
-                stroke="#CCCCD6"
-                stroke-width="1.87328"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M5.30444 8.31885H25.9105"
-                stroke="#CCCCD6"
-                stroke-width="1.87328"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M5.30444 23.3047H25.9105"
-                stroke="#CCCCD6"
-                stroke-width="1.87328"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </a>
-        </div>
-        <div>
-          <a href=""
-            ><svg
-              width="31"
-              height="31"
-              viewBox="0 0 31 31"
-              fill="none"
-              class="navIcon"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M15.6075 22.34C19.2286 22.34 22.164 19.4046 22.164 15.7835C22.164 12.1625 19.2286 9.22705 15.6075 9.22705C11.9865 9.22705 9.05103 12.1625 9.05103 15.7835C9.05103 19.4046 11.9865 22.34 15.6075 22.34Z"
-                stroke="#CCCCD6"
-                stroke-width="1.87328"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M25.911 14.8473L27.1177 13.0372C27.1964 12.9206 27.2483 12.7881 27.27 12.6491C27.2917 12.5101 27.2825 12.3681 27.2431 12.2331C27.0154 11.4834 26.7154 10.7577 26.3472 10.0661C26.2798 9.943 26.186 9.8363 26.0725 9.75363C25.9591 9.67096 25.8288 9.61436 25.6909 9.58786L23.5556 9.16076L22.231 7.83617L21.8039 5.70079C21.7774 5.56294 21.7208 5.43263 21.6382 5.31918C21.5555 5.20573 21.4488 5.11193 21.3257 5.04448C20.6341 4.67635 19.9083 4.37636 19.1586 4.14872C19.0236 4.10932 18.8816 4.10012 18.7426 4.12179C18.6036 4.14345 18.4711 4.19545 18.3545 4.27408L16.5445 5.48074H14.6713L12.8613 4.27408C12.7447 4.19545 12.6122 4.14345 12.4732 4.12179C12.3342 4.10012 12.1922 4.10932 12.0572 4.14872C11.3075 4.37635 10.5817 4.67635 9.89015 5.04448C9.76703 5.11192 9.66032 5.20572 9.57764 5.31918C9.49496 5.43264 9.43835 5.56295 9.41186 5.70082L8.98486 7.83606L7.66016 9.16076L5.5249 9.58775C5.38704 9.61424 5.25674 9.67085 5.14328 9.75352C5.02983 9.83619 4.93603 9.9429 4.86859 10.066C4.5004 10.7576 4.20035 11.4834 3.97269 12.2331C3.93329 12.3681 3.9241 12.5101 3.94577 12.6491C3.96744 12.7881 4.01943 12.9205 4.09807 13.0372L5.30473 14.8472V16.7204L4.09806 18.5304C4.01943 18.647 3.96744 18.7795 3.94577 18.9185C3.92411 19.0575 3.9333 19.1995 3.9727 19.3345C4.2003 20.0842 4.5003 20.81 4.86845 21.5016C4.9359 21.6247 5.0297 21.7314 5.14315 21.8141C5.2566 21.8967 5.38691 21.9533 5.52476 21.9798L7.66016 22.4069L8.98475 23.7315L9.41175 25.8669C9.43824 26.0048 9.49484 26.1351 9.57751 26.2485C9.66019 26.362 9.76689 26.4558 9.89 26.5232C10.5816 26.8914 11.3073 27.1914 12.057 27.419C12.192 27.4584 12.334 27.4676 12.473 27.4459C12.6119 27.4243 12.7444 27.3723 12.861 27.2936L14.6711 26.087H16.5444L18.3545 27.2937C18.4711 27.3724 18.6036 27.4244 18.7426 27.446C18.8816 27.4677 19.0236 27.4585 19.1586 27.4191C19.9083 27.1915 20.634 26.8915 21.3256 26.5233C21.4487 26.4559 21.5554 26.3621 21.638 26.2487C21.7207 26.1352 21.7773 26.0049 21.8038 25.867L22.2309 23.7316L23.5555 22.4069L25.6909 21.9799C25.8287 21.9534 25.959 21.8968 26.0725 21.8142C26.186 21.7315 26.2798 21.6248 26.3472 21.5017C26.7154 20.8101 27.0154 20.0844 27.2431 19.3348C27.2825 19.1997 27.2917 19.0577 27.27 18.9187C27.2483 18.7798 27.1963 18.6473 27.1177 18.5306L25.911 16.7206V14.8473Z"
-                stroke="#CCCCD6"
-                stroke-width="1.87328"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </a>
-        </div>
-        <div>
-          <a href=""
-            ><svg
-              width="31"
-              height="31"
-              viewBox="0 0 31 31"
-              fill="none"
-              class="navIcon"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M21.2271 7.32666H26.8469"
-                stroke="#CCCCD6"
-                stroke-width="1.87328"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M24.0374 4.5166V10.1364"
-                stroke="#CCCCD6"
-                stroke-width="1.87328"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M4.25 26.0588C5.40155 24.0656 7.05736 22.4105 9.05109 21.2598C11.0448 20.1091 13.3062 19.5034 15.6082 19.5034C17.9101 19.5034 20.1716 20.1092 22.1653 21.26C24.159 22.4107 25.8147 24.0658 26.9663 26.059"
-                stroke="#CCCCD6"
-                stroke-width="1.87328"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M22.6382 14.6069C22.1373 15.9593 21.2566 17.1383 20.1019 18.0022C18.9473 18.8662 17.5677 19.3784 16.1289 19.4774C14.6902 19.5763 13.2535 19.2577 11.9914 18.5599C10.7293 17.8621 9.69557 16.8148 9.01431 15.5437C8.33305 14.2726 8.03326 12.8319 8.15097 11.3945C8.26867 9.95722 8.79887 8.58444 9.67785 7.44113C10.5568 6.29783 11.7472 5.43262 13.106 4.94945C14.4648 4.46627 15.9342 4.38569 17.3377 4.71738"
-                stroke="#CCCCD6"
-                stroke-width="1.87328"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </a>
-        </div>
-        <div>
-          <a href=""
-            ><svg
-              width="31"
-              height="31"
-              viewBox="0 0 31 31"
-              fill="none"
-              class="navIcon"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M20.9966 10.812L25.9139 15.7294L20.9966 20.6467"
-                stroke="#CCCCD6"
-                stroke-width="1.87328"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M12.7979 15.73H25.9108"
-                stroke="#CCCCD6"
-                stroke-width="1.87328"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M14.6709 26.0324H6.24108C5.99267 26.0324 5.75443 25.9337 5.57878 25.758C5.40313 25.5824 5.30444 25.3441 5.30444 25.0957V6.36291C5.30444 6.1145 5.40313 5.87626 5.57878 5.70061C5.75443 5.52495 5.99267 5.42627 6.24108 5.42627H14.6709"
-                stroke="#CCCCD6"
-                stroke-width="1.87328"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </a>
-        </div>
-      </nav>
-      <nav
-        class="horizontalNav px-4 py-2 d-flex justify-content-between align-items-center"
-      >
-        <div class="companyLogo py-2 px-4">
-          <img src="../Images/HeaderIcon.svg" />
-          <span class="companyName">TechWave Solutions</span>
-        </div>
-        <div class="adminInfo d-flex align-items-center gap-2">
-          <img
-            class="adminAvatar"
-            src="../Images/Employees/EdithMartin.jpeg"
-            alt=""
-          />
-          <span class="adminName">Edith Martin</span>
-        </div>
-      </nav>
-
-      <main>
-        <h1 class="dashboardHeader">Employee List</h1>
-        <div class="table-responsive tableContainer">
-          <table
-            id="table_id"
-            class="table table-borderless table-responsive p-4"
+      <div class="row gx-0">
+        <!-- Vertical Nav -->
+        <nav
+          class="col-12 col-md-1 verticalNav1 d-flex justify-content-around flex-md-column justify-content-md-start align-items-center gap-4 px-md-4 py-md-5 p-2"
+        >
+          <!-- Home Icon -->
+          <div class="mt-md-5">
+            <a
+              ><svg
+                width="23"
+                height="25"
+                viewBox="0 0 23 25"
+                fill="none"
+                class="navIcon home"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.4165 22.2047V16.5847C14.4165 16.3363 14.3178 16.0981 14.1422 15.9224C13.9665 15.7468 13.7283 15.6481 13.4798 15.6481H9.73328C9.48487 15.6481 9.24663 15.7468 9.07098 15.9224C8.89532 16.0981 8.79664 16.3363 8.79664 16.5847V22.2047C8.79664 22.4531 8.69798 22.6913 8.52235 22.867C8.34672 23.0426 8.10851 23.1413 7.86012 23.1414L2.24096 23.1421C2.11795 23.1421 1.99614 23.1179 1.88248 23.0708C1.76883 23.0238 1.66556 22.9548 1.57858 22.8678C1.49159 22.7808 1.42259 22.6776 1.37551 22.5639C1.32843 22.4503 1.3042 22.3285 1.3042 22.2055V11.3802C1.3042 11.2497 1.33147 11.1206 1.38425 11.0013C1.43704 10.8819 1.51418 10.775 1.61073 10.6872L10.9765 2.17137C11.1489 2.01461 11.3736 1.92774 11.6066 1.92773C11.8396 1.92773 12.0643 2.01458 12.2367 2.17133L21.6037 10.6872C21.7003 10.775 21.7774 10.882 21.8302 11.0013C21.883 11.1206 21.9103 11.2497 21.9103 11.3802V22.2055C21.9103 22.3285 21.8861 22.4503 21.839 22.5639C21.7919 22.6776 21.7229 22.7808 21.6359 22.8678C21.5489 22.9548 21.4457 23.0238 21.332 23.0708C21.2184 23.1179 21.0966 23.1421 20.9735 23.1421L15.353 23.1414C15.1046 23.1413 14.8664 23.0426 14.6908 22.867C14.5152 22.6913 14.4165 22.4531 14.4165 22.2047V22.2047Z"
+                  stroke="#2000A1"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+          <!-- Reports Icon -->
+          <div>
+            <a
+              ><svg
+                width="31"
+                height="31"
+                viewBox="0 0 31 31"
+                fill="none"
+                class="navIcon reports"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5.30444 15.8125H25.9105"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M5.30444 8.31885H25.9105"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M5.30444 23.3047H25.9105"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+          <!-- Edit Info Icon -->
+          <div>
+            <a href="adminEditInfo.html"
+              ><svg
+                width="31"
+                height="31"
+                viewBox="0 0 31 31"
+                fill="none"
+                class="navIcon editAdminInfo"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15.6075 22.34C19.2286 22.34 22.164 19.4046 22.164 15.7835C22.164 12.1625 19.2286 9.22705 15.6075 9.22705C11.9865 9.22705 9.05103 12.1625 9.05103 15.7835C9.05103 19.4046 11.9865 22.34 15.6075 22.34Z"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M25.911 14.8473L27.1177 13.0372C27.1964 12.9206 27.2483 12.7881 27.27 12.6491C27.2917 12.5101 27.2825 12.3681 27.2431 12.2331C27.0154 11.4834 26.7154 10.7577 26.3472 10.0661C26.2798 9.943 26.186 9.8363 26.0725 9.75363C25.9591 9.67096 25.8288 9.61436 25.6909 9.58786L23.5556 9.16076L22.231 7.83617L21.8039 5.70079C21.7774 5.56294 21.7208 5.43263 21.6382 5.31918C21.5555 5.20573 21.4488 5.11193 21.3257 5.04448C20.6341 4.67635 19.9083 4.37636 19.1586 4.14872C19.0236 4.10932 18.8816 4.10012 18.7426 4.12179C18.6036 4.14345 18.4711 4.19545 18.3545 4.27408L16.5445 5.48074H14.6713L12.8613 4.27408C12.7447 4.19545 12.6122 4.14345 12.4732 4.12179C12.3342 4.10012 12.1922 4.10932 12.0572 4.14872C11.3075 4.37635 10.5817 4.67635 9.89015 5.04448C9.76703 5.11192 9.66032 5.20572 9.57764 5.31918C9.49496 5.43264 9.43835 5.56295 9.41186 5.70082L8.98486 7.83606L7.66016 9.16076L5.5249 9.58775C5.38704 9.61424 5.25674 9.67085 5.14328 9.75352C5.02983 9.83619 4.93603 9.9429 4.86859 10.066C4.5004 10.7576 4.20035 11.4834 3.97269 12.2331C3.93329 12.3681 3.9241 12.5101 3.94577 12.6491C3.96744 12.7881 4.01943 12.9205 4.09807 13.0372L5.30473 14.8472V16.7204L4.09806 18.5304C4.01943 18.647 3.96744 18.7795 3.94577 18.9185C3.92411 19.0575 3.9333 19.1995 3.9727 19.3345C4.2003 20.0842 4.5003 20.81 4.86845 21.5016C4.9359 21.6247 5.0297 21.7314 5.14315 21.8141C5.2566 21.8967 5.38691 21.9533 5.52476 21.9798L7.66016 22.4069L8.98475 23.7315L9.41175 25.8669C9.43824 26.0048 9.49484 26.1351 9.57751 26.2485C9.66019 26.362 9.76689 26.4558 9.89 26.5232C10.5816 26.8914 11.3073 27.1914 12.057 27.419C12.192 27.4584 12.334 27.4676 12.473 27.4459C12.6119 27.4243 12.7444 27.3723 12.861 27.2936L14.6711 26.087H16.5444L18.3545 27.2937C18.4711 27.3724 18.6036 27.4244 18.7426 27.446C18.8816 27.4677 19.0236 27.4585 19.1586 27.4191C19.9083 27.1915 20.634 26.8915 21.3256 26.5233C21.4487 26.4559 21.5554 26.3621 21.638 26.2487C21.7207 26.1352 21.7773 26.0049 21.8038 25.867L22.2309 23.7316L23.5555 22.4069L25.6909 21.9799C25.8287 21.9534 25.959 21.8968 26.0725 21.8142C26.186 21.7315 26.2798 21.6248 26.3472 21.5017C26.7154 20.8101 27.0154 20.0844 27.2431 19.3348C27.2825 19.1997 27.2917 19.0577 27.27 18.9187C27.2483 18.7798 27.1963 18.6473 27.1177 18.5306L25.911 16.7206V14.8473Z"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+          <!--Add Employee -->
+          <div>
+            <a id="addEmployee"
+              ><svg
+                width="31"
+                height="31"
+                viewBox="0 0 31 31"
+                fill="none"
+                class="navIcon"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.2271 7.32666H26.8469"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M24.0374 4.5166V10.1364"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M4.25 26.0588C5.40155 24.0656 7.05736 22.4105 9.05109 21.2598C11.0448 20.1091 13.3062 19.5034 15.6082 19.5034C17.9101 19.5034 20.1716 20.1092 22.1653 21.26C24.159 22.4107 25.8147 24.0658 26.9663 26.059"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M22.6382 14.6069C22.1373 15.9593 21.2566 17.1383 20.1019 18.0022C18.9473 18.8662 17.5677 19.3784 16.1289 19.4774C14.6902 19.5763 13.2535 19.2577 11.9914 18.5599C10.7293 17.8621 9.69557 16.8148 9.01431 15.5437C8.33305 14.2726 8.03326 12.8319 8.15097 11.3945C8.26867 9.95722 8.79887 8.58444 9.67785 7.44113C10.5568 6.29783 11.7472 5.43262 13.106 4.94945C14.4648 4.46627 15.9342 4.38569 17.3377 4.71738"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+          <!--Log out -->
+          <div>
+            <a id="logOut"
+              ><svg
+                width="31"
+                height="31"
+                viewBox="0 0 31 31"
+                fill="none"
+                class="navIcon"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20.9966 10.812L25.9139 15.7294L20.9966 20.6467"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12.7979 15.73H25.9108"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M14.6709 26.0324H6.24108C5.99267 26.0324 5.75443 25.9337 5.57878 25.758C5.40313 25.5824 5.30444 25.3441 5.30444 25.0957V6.36291C5.30444 6.1145 5.40313 5.87626 5.57878 5.70061C5.75443 5.52495 5.99267 5.42627 6.24108 5.42627H14.6709"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </nav>
+        <div class="col-11 d-flex flex-column">
+          <!--Header -->
+          <nav
+            class="d-none d-md-flex horizontalNav1 px-4 py-2 d-flex justify-content-between align-items-center"
           >
-            <thead>
-              <tr>
-                <th>Employee</th>
-                <th>Job ID</th>
-                <th>Job title</th>
-                <th>Role</th>
-                <th>Status</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <div class="d-flex flex-row align-items-center gap-3">
-                    <img
-                      src="../Images/Employees/MichaelDalton.jpeg"
-                      width="40"
-                      class="rounded-circle"
-                    />
-                    <div class="d-flex flex-column ml-2">
-                      <span class="d-block font-weight-bold">Nour Sami</span>
-                      <small class="text-muted">example@youemail.com</small>
-                    </div>
-                  </div>
-                </td>
-                <td class="jobID">1312</td>
-                <td>designer</td>
-                <td>admin</td>
-                <td><span class="badge bg-success status">Present</span></td>
-                <td>
-                  <div class="d-flex gap-2">
-                    <button class="actionBtn" onclick="openResetPassPopUp()">
-                      <img src="../images/Key.svg" class="" />
-                    </button>
-                    <button class="actionBtn" onclick="openUpdateEmpPopUp()">
-                      <img src="../images/PencilSimple.svg" class="" />
-                    </button>
+            <div class="companyLogo py-2 px-4">
+              <img src="../Images/HeaderIcon.svg" />
+              <span class="companyName">TechWave Solutions</span>
+            </div>
+            <div class="adminInfo d-flex align-items-center gap-2">
+              <img
+                class="adminAvatar"
+                src="../Images/Employees/EdithMartin.jpeg"
+                alt=""
+              />
+              <span class="adminName">Edith Martin</span>
+            </div>
+          </nav>
 
-                    <button
-                      class="actionBtn deleteBtn"
-                      onclick="openDeleteEmpPopUp()"
-                    >
-                      <img src="../images/X.svg" class="" />
-                    </button>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="d-flex flex-row align-items-center gap-3">
-                    <img
-                      src="../Images/Employees/MichaelDalton.jpeg"
-                      width="40"
-                      class="rounded-circle"
-                    />
-                    <div class="d-flex flex-column ml-2">
-                      <span class="d-block font-weight-bold"
-                        >Jennifer john</span
-                      >
-                      <small class="text-muted">example@youemail.com</small>
-                    </div>
-                  </div>
-                </td>
-                <td class="jobID">2421</td>
-                <td>IT</td>
-                <td>Security</td>
-                <td><span class="badge bg-danger status">Absent</span></td>
-                <td>
-                  <div class="d-flex gap-2">
-                    <button class="actionBtn" onclick="openResetPassPopUp()">
-                      <img src="../images/Key.svg" class="" />
-                    </button>
-                    <button class="actionBtn" onclick="openUpdateEmpPopUp()">
-                      <img src="../images/PencilSimple.svg" class="" />
-                    </button>
+          <main class="p-5">
+            <h1 class="dashboardHeader">Employee List</h1>
 
-                    <button
-                      class="actionBtn deleteBtn"
-                      onclick="openDeleteEmpPopUp()"
-                    >
-                      <img src="../images/X.svg" class="" />
-                    </button>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="d-flex flex-row align-items-center gap-3">
-                    <img
-                      src="../Images/Employees/MichaelDalton.jpeg"
-                      width="40"
-                      class="rounded-circle"
-                    />
-                    <div class="d-flex flex-column ml-2">
-                      <span class="d-block font-weight-bold">Sarah Fahmi</span>
-                      <small class="text-muted">example@youemail.com</small>
-                    </div>
-                  </div>
-                </td>
-                <td class="jobID">4213</td>
-                <td>Developer</td>
-                <td>Employee</td>
-                <td><span class="badge bg-warning status">Late</span></td>
-                <td>
-                  <div class="d-flex gap-2">
-                    <button class="actionBtn" onclick="openResetPassPopUp()">
-                      <img src="../images/Key.svg" class="" />
-                    </button>
-                    <button class="actionBtn" onclick="openUpdateEmpPopUp()">
-                      <img src="../images/PencilSimple.svg" class="" />
-                    </button>
+            <div class="table-responsive tableContainer">
+              <table
+                id="empdataTable"
+                class="table table-borderless table-responsive p-4"
+              >
+                <thead>
+                  <tr>
+                    <th>Employee</th>
+                    <th>Job ID</th>
+                    <th>Job title</th>
+                    <th>Role</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="empDataBody"></tbody>
+              </table>
+            </div>
 
-                    <button
-                      class="actionBtn deleteBtn"
-                      onclick="openDeleteEmpPopUp()"
-                    >
-                      <img src="../images/X.svg" class="" />
-                    </button>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+            <h1 class="dashboardHeader mt-4">Pending Access Requests</h1>
+            <div id="noPendingDiv">
+              <div
+                class="d-flex justify-content-center align-items-center noPending"
+              >
+                No Pending Access Requests Yet
+              </div>
+            </div>
+            <div class="table-responsive tableContainer" id="pendingTableDiv">
+              <table
+                id="pendingTable"
+                class="table table-borderless table-responsive p-4"
+              >
+                <thead>
+                  <tr>
+                    <th>Pending user</th>
+                    <th>Age</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="pendingTableBody"></tbody>
+              </table>
+            </div>
+          </main>
         </div>
-
-        <script>
-          $("#table_id").DataTable();
-        </script>
-
-        <h1 class="dashboardHeader">Pending Access Requests</h1>
-        <!-- <div class="d-flex justify-content-center align-items-center noPending">
-          No Pending Access Requests Yet
-        </div> -->
-        <div class="table-responsive tableContainer">
-          <table
-            id="table_id2"
-            class="table table-borderless table-responsive p-4"
+      </div>
+    </div>
+    <!--Add Employee-->
+    <div class="bluredBackground" id="AddEmp">
+      <div class="alert_box d-flex flex-column justify-content-center gap-3">
+        <div class="InviteEmployee">
+          <h1>Add a new employee</h1>
+          <p class="subText">
+            Add a new employee by sending them an invitation link through their
+            email to join the platform.
+          </p>
+        </div>
+        <div>
+          <div class="d-flex flex-column gap-3">
+            <div class="d-flex flex-column gap-2 invitationMail">
+              <label for="empEmail">Invitation Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email2"
+                class="inputField emailInput"
+                placeholder="example@youremail.com"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="btns d-flex justify-content-end gap-3">
+          <button
+            id="btnClose2"
+            class="alertBoxBtn cancelBtn2"
+            onclick="closeAddEmpPopUp()"
           >
-            <thead>
-              <tr>
-                <th>Employee</th>
-                <th>Age</th>
-                <th>Email</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <div class="d-flex flex-row align-items-center gap-3">
-                    <img
-                      src="../Images/Employees/MichaelDalton.jpeg"
-                      width="40"
-                      class="rounded-circle"
-                    />
-                    <span class="d-block font-weight-bold">Nour Sami</span>
-                  </div>
-                </td>
-                <td>23</td>
-                <td>example@youremail.com</td>
-                <td>
-                  <div class="d-flex gap-2">
-                    <button class="btn btn-success approveBtn">Approve</button>
-                    <button class="btn btn-danger declineBtn">Decline</button>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="d-flex flex-row align-items-center gap-3">
-                    <img
-                      src="../Images/Employees/MichaelDalton.jpeg"
-                      width="40"
-                      class="rounded-circle"
-                    />
-                    <span class="d-block font-weight-bold">Nour Sami</span>
-                  </div>
-                </td>
-                <td>23</td>
-                <td>Ahmedmohamed_1999@youremail.com</td>
-                <td>
-                  <div class="d-flex gap-2">
-                    <button class="btn btn-success approveBtn">Approve</button>
-                    <button class="btn btn-danger declineBtn">Decline</button>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="d-flex flex-row align-items-center gap-3">
-                    <img
-                      src="../Images/Employees/MichaelDalton.jpeg"
-                      width="40"
-                      class="rounded-circle"
-                    />
-                    <span class="d-block font-weight-bold">Nour Sami</span>
-                  </div>
-                </td>
-                <td>23</td>
-                <td>example@youremail.com</td>
-                <td>
-                  <div class="d-flex gap-2">
-                    <button class="btn btn-success approveBtn">Approve</button>
-                    <button class="btn btn-danger declineBtn">Decline</button>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+            Cancel
+          </button>
+          <button id="btnDelete" class="alertBoxBtn confirmBtn2">
+            Send Invite
+          </button>
         </div>
-        <script>
-          $("#table_id2").DataTable();
-        </script>
-      </main>
+      </div>
     </div>
     <!--Delete employee pop up-->
     <div class="bluredBackground" id="deleteEmpBg">
@@ -484,7 +367,7 @@
           <button
             id="btnClose"
             class="alertBoxBtn cancelBtn"
-            onclick="closePopUp()"
+            onclick="closeDeleteEmpPopUp()"
           >
             Cancel
           </button>
@@ -537,7 +420,7 @@
           <button
             id="btnClose2"
             class="alertBoxBtn cancelBtn2"
-            onclick="closePopUp3()"
+            onclick="closeResetPassPopUp()"
           >
             Cancel
           </button>
@@ -657,7 +540,7 @@
             <button
               id="btnClose3"
               class="alertBoxBtn cancelBtn2"
-              onclick="closePopUp2()"
+              onclick="closeEditEmpPopUp()"
             >
               Cancel
             </button>
@@ -673,39 +556,57 @@
       let deleteEmpBg = document.getElementById("deleteEmpBg");
       let ResetPassBg = document.getElementById("ResetPassBg");
       let updateEmpBg = document.getElementById("updateEmpBg");
+      let AddEmpBg = document.getElementById("AddEmp");
+      let homeIcon = document.getElementsByClassName("home")[0];
       let body = document.getElementsByClassName("mainWrapper")[0];
+
+      // When the user clicks anywhere outside of the pop up, close it
       window.onclick = function (event) {
         if (event.target == deleteEmpBg || event.target == ResetPassBg) {
           body.classList.remove("blurbody");
-          deleteEmpBg.style.display = "none";
-          ResetPassBg.style.display = "none";
+          deleteEmpBg.classList.remove("centerItems");
+          ResetPassBg.classList.remove("centerItems");
         }
       };
-      function openDeleteEmpPopUp() {
+      addEmployee.onclick = function () {
         body.classList.add("blurbody");
-        deleteEmpBg.style.display = "block";
-      }
-      function openResetPassPopUp() {
-        body.classList.add("blurbody");
-        ResetPassBg.style.display = "block";
-      }
-      function openUpdateEmpPopUp() {
-        body.classList.add("blurbody");
-        updateEmpBg.style.display = "block";
-      }
-      function closePopUp() {
+        homeIcon.classList.add("inactiveNav");
+        addEmployee.children[0].classList.add("activeNav");
+        AddEmpBg.classList.add("centerItems");
+      };
+      // function openDeleteEmpPopUp(event) {
+      //   body.classList.add("blurbody");
+      //   deleteEmpBg.classList.add("centerItems");
+      // }
+      // function openResetPassPopUp() {
+      //   body.classList.add("blurbody");
+      //   ResetPassBg.classList.add("centerItems");
+      // }
+      // function openUpdateEmpPopUp() {
+      //   body.classList.add("blurbody");
+      //   updateEmpBg.classList.add("centerItems");
+      // }
+      function closeDeleteEmpPopUp() {
         body.classList.remove("blurbody");
-        deleteEmpBg.style.display = "none";
+        deleteEmpBg.classList.remove("centerItems");
       }
-      function closePopUp2() {
+      function closeEditEmpPopUp() {
         body.classList.remove("blurbody");
-        updateEmpBg.style.display = "none";
+        updateEmpBg.classList.remove("centerItems");
       }
-
-      function closePopUp3() {
+      function closeResetPassPopUp() {
         body.classList.remove("blurbody");
-        ResetPassBg.style.display = "none";
+        ResetPassBg.classList.remove("centerItems");
       }
+      function closeAddEmpPopUp() {
+        body.classList.remove("blurbody");
+        homeIcon.classList.remove("inactiveNav");
+        addEmployee.children[0].classList.remove("activeNav");
+        AddEmpBg.classList.remove("centerItems");
+      }
+      logOut.onclick = function () {
+        window.location.replace("../index.html");
+      };
     </script>
     <!-- password icon toggle script -->
     <script>

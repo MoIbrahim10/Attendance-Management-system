@@ -48,10 +48,6 @@ background-color: $background-color-light;
 }
 
 main{
-  // position: absolute;
-  // top: 122px;
-  // left: 155px;
-  // padding: 0;
   background-color: $background-color;
 }
 
@@ -77,7 +73,10 @@ font-weight: 700;
 font-size: $large-size;
 line-height: 150%;
 text-transform: uppercase;
+}
 
+#pendingTableDiv{
+  display: none;
 }
 
 .tableContainer {
@@ -114,7 +113,7 @@ color: #2000A1;
   width: 32px;
   height: 32px;
 }
-.deleteBtn {
+.deleteEmpBtn {
   background-color: $danger-color;
 }
 .actionBtn img {
@@ -125,13 +124,13 @@ color: #2000A1;
   height: 22px !important;
   border-radius: 11px !important;
 }
-.bg-danger,.declineBtn {
+.bg-absent,.declineBtn {
   background-color: $danger-color !important;
 }
-.bg-success,.approveBtn {
+.bg-present,.approveBtn {
   background-color: $success-color !important;
 }
-.bg-warning {
+.bg-late {
   background-color: $warning-color !important;
 }
 

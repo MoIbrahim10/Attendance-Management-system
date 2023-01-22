@@ -50,5 +50,5 @@ form.addEventListener("submit", async (event) => {
   // Redirect user to employee page
   if (userRole === 'employee') window.location.href = "../../HTML/employee.html";
   else if (userRole === 'security') window.location.href = "../../HTML/security.html";
-  else if (userRole === 'admin') window.location.href = "../../HTML/adminDashboard copy.html";
+  else if (userRole === 'admin') window.location.href = "../../HTML/adminDashboard.html";
 });
