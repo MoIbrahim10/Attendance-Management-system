@@ -1,0 +1,9 @@
+.nav-item .active{
+  color: $primary-color !important;
+  font-weight: bold;
+}
+.nav-item .nav-link:not(.active){
+  color: $text-color-dark !important;
+  // font-size: large  !important;
+  // font-weight: bold;
+}

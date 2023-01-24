@@ -2,16 +2,16 @@
   "employees": [
     {
       "id": 1,
-      "fname": "Sara",
-      "lname": "Ahmed",
+      "fname": "Sarah",
+      "lname": "Adams",
       "avatar": "images/Employeesimages/Lana Blanca Perkins.jpeg",
-      "email": "sara@gmail.com",
+      "email": "sarahAdams@gmail.com",
       "age": "24",
       "address": "Cairo",
-      "jobTittle": "Software Engineer",
-      "role": "admin",
-      "userName": "SaraAhmed10",
-      "password": "12345678",
+      "jobTittle": "CEO",
+      "role": "Admin",
+      "userName": "SarahAdams10",
+      "password": "SarahAdams",
       "attendances": [
         {
           "date": "1/15/2023",
@@ -62,7 +62,7 @@
       "jobTittle": "Software Engineer",
       "role": "security",
       "userName": "AliAhmed92",
-      "password": "ali@123_=5",
+      "password": "12345678",
       "attendances": [
         {
           "date": "1/15/2023",
@@ -123,15 +123,15 @@
         },
         {
           "date": "1/16/2023",
-          "arrivalTime": "09:15",
+          "arrivalTime": "09:00",
           "departureTime": "17:00",
-          "status": "late"
+          "status": "present"
         },
         {
           "date": "1/17/2023",
-          "arrivalTime": "",
-          "departureTime": "",
-          "status": "absent"
+          "arrivalTime": "08:38",
+          "departureTime": "17:03",
+          "status": "present"
         },
         {
           "date": "1/18/2023",
@@ -141,15 +141,15 @@
         },
         {
           "date": "1/20/2023",
-          "arrivalTime": "10:56",
+          "arrivalTime": "8:56",
           "departureTime": "11:13",
           "status": "present"
         },
         {
           "date": "1/21/2023",
           "arrivalTime": "09:24",
-          "departureTime": "",
-          "status": "late"
+          "departureTime": "16:50",
+          "status": "present"
         }
       ]
     },
@@ -263,19 +263,110 @@
       "address": "10 xd css CS",
       "age": "23",
       "avatar": "images/Employeesimages/Lana Blanca Perkins.jpeg",
-      "username": "J_Adams6186",
+      "userName": "J_Adams6186",
       "password": "93phs4qwwg",
       "jobTittle": "Engineer",
       "role": "employee",
       "attendances": [
         {
-          "date": "1/22/2023",
+          "date": "1/15/2023",
+          "arrivalTime": "09:00",
+          "departureTime": "17:00",
+          "status": "present"
+        },
+        {
+          "date": "1/16/2023",
+          "arrivalTime": "09:15",
+          "departureTime": "17:00",
+          "status": "late"
+        },
+        {
+          "date": "1/17/2023",
           "arrivalTime": "",
           "departureTime": "",
+          "status": "absent"
+        },
+        {
+          "date": "1/18/2023",
+          "arrivalTime": "08:30",
+          "departureTime": "17:00",
           "status": "present"
+        },
+        {
+          "date": "1/20/2023",
+          "arrivalTime": "11:44",
+          "departureTime": "11:31",
+          "status": "present"
+        },
+        {
+          "date": "1/21/2023",
+          "arrivalTime": "",
+          "departureTime": "",
+          "status": "absent"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "fname": "Mohamed",
+      "lname": "Ibrahim",
+      "email": "mielbedwihyy@gmail.com",
+      "address": "10 Xstreet Cairo EG",
+      "age": "27",
+      "avatar": "../Images/avatar.svg",
+      "userName": "m_ibrahimm99",
+      "password": "12345678",
+      "jobTittle": "Engineer",
+      "role": "employee",
+      "attendances": [
+        {
+          "date": "1/15/2023",
+          "arrivalTime": "09:00",
+          "departureTime": "17:00",
+          "status": "present"
+        },
+        {
+          "date": "1/16/2023",
+          "arrivalTime": "09:15",
+          "departureTime": "17:00",
+          "status": "late"
+        },
+        {
+          "date": "1/17/2023",
+          "arrivalTime": "",
+          "departureTime": "",
+          "status": "absent"
+        },
+        {
+          "date": "1/18/2023",
+          "arrivalTime": "08:30",
+          "departureTime": "17:00",
+          "status": "present"
+        },
+        {
+          "date": "1/20/2023",
+          "arrivalTime": "11:44",
+          "departureTime": "11:31",
+          "status": "present"
+        },
+        {
+          "date": "1/21/2023",
+          "arrivalTime": "",
+          "departureTime": "",
+          "status": "absent"
         }
       ]
     }
   ],
-  "pending": []
+  "pending": [
+    {
+      "id": 1,
+      "fname": "John",
+      "lname": "Adams",
+      "email": "ivm5s3s4l@moakt.co",
+      "address": "10 XXX Borat US",
+      "age": "25",
+      "avatar": "../Images/avatar.svg"
+    }
+  ]
 }

@@ -37,6 +37,9 @@
       document.getElementById(
         "userMail"
       ).innerHTML = `<a href="mailto:${userMail}">${userMail}</a>`;
+      setTimeout(() => {
+        window.location.href = "SignIn.html";
+      }, 10000);
     </script>
   </body>
 </html>

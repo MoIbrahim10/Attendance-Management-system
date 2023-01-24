@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <!-- Bootstrap CSS-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap JS-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"
+      integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Jquery-->
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Jquery DataTable-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css"
+    />
+
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/datatables.net-rowreorder/1.3.1/dataTables.rowReorder.min.js"
+      integrity="sha512-2w40F688YM0gCipZwflaCvXrIMxfaXq0ltetAL2wb6PjI3j/RQtLCN0Flu+dETIXV+JSDXEpyOTlRYOlEhfjOw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/datatables-responsive/2.4.0/dataTables.responsive.min.js"
+      integrity="sha512-UEtHfW1dblwNO8FPaTWSG2V3Jv9omJDhGWFdVFaSF8wd9TlVk0Nyk47RgoTJ03cA2Hfz8rjOJ8xhJpiNIJcErw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/css/dataTables.bootstrap.min.css"
+      integrity="sha512-BMbq2It2D3J17/C7aRklzOODG1IQ3+MHw3ifzBHMBwGO/0yUqYmsStgBjI0z5EYlaDEFnvYV7gNYdD3vFLRKsA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/datatables.net-responsive-dt/2.4.0/responsive.dataTables.min.css"
+      integrity="sha512-1rs6CKPyMyWNKKt18TIfaktqZaIkCUK4mGE78D3tI+yu0CVk/ou/XTwikeo2utvOOOdkYpcyA268IyZ17aXOWg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/t/dt/dt-1.10.11,r-2.0.2/datatables.min.js"
+    ></script>
+    <script src="../JS/admin/empsReports.js" type="module"></script>
+    <!-- addEmpPopup -->
+    <script src="../JS/admin/addEmpPopup.js" type="module"></script>
+
+    <link rel="stylesheet" href="../CSS/sass/main.css" />
+    <title>Employees Reports</title>
+  </head>
+  <body>
+    <div class="container-fluid mainWrapper position-relative">
+      <div class="row gx-0">
+        <!-- Vertical Nav -->
+        <nav
+          class="col-12 col-md-1 verticalNav1 d-flex justify-content-around flex-md-column justify-content-md-start align-items-center gap-4 px-md-4 py-md-5 p-2"
+        >
+          <!-- Home Icon -->
+          <div class="mt-md-5">
+            <a href="adminDashboard.html"
+              ><svg
+                width="31"
+                height="31"
+                viewBox="0 0 31 31"
+                fill="none"
+                class="navIcon home"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18.4165 25.2067V19.5867C18.4165 19.3383 18.3178 19.1 18.1422 18.9244C17.9665 18.7487 17.7283 18.6501 17.4798 18.6501H13.7333C13.4849 18.6501 13.2466 18.7487 13.071 18.9244C12.8953 19.1 12.7966 19.3383 12.7966 19.5867V25.2067C12.7966 25.4551 12.698 25.6933 12.5223 25.8689C12.3467 26.0446 12.1085 26.1433 11.8601 26.1433L6.24096 26.144C6.11795 26.1441 5.99614 26.1198 5.88248 26.0728C5.76883 26.0257 5.66556 25.9567 5.57858 25.8698C5.49159 25.7828 5.42259 25.6795 5.37551 25.5659C5.32843 25.4522 5.3042 25.3304 5.3042 25.2074V14.3821C5.3042 14.2516 5.33147 14.1226 5.38425 14.0032C5.43704 13.8839 5.51418 13.7769 5.61073 13.6891L14.9765 5.17332C15.1489 5.01656 15.3736 4.9297 15.6066 4.92969C15.8396 4.92968 16.0643 5.01653 16.2367 5.17328L25.6037 13.6891C25.7003 13.7769 25.7774 13.8839 25.8302 14.0033C25.883 14.1226 25.9103 14.2517 25.9103 14.3822V25.2074C25.9103 25.3304 25.8861 25.4522 25.839 25.5659C25.7919 25.6795 25.7229 25.7828 25.6359 25.8698C25.5489 25.9567 25.4457 26.0257 25.332 26.0728C25.2184 26.1199 25.0966 26.1441 24.9735 26.1441L19.353 26.1433C19.1046 26.1433 18.8664 26.0446 18.6908 25.8689C18.5152 25.6933 18.4165 25.4551 18.4165 25.2067V25.2067Z"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+          <!-- Reports Icon -->
+          <div>
+            <a
+              ><svg
+                width="31"
+                height="31"
+                viewBox="0 0 31 31"
+                fill="none"
+                class="navIcon reports"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5.30444 15.8125H25.9105"
+                  stroke="#2000A1"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M5.30444 8.31885H25.9105"
+                  stroke="#2000A1"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M5.30444 23.3047H25.9105"
+                  stroke="#2000A1"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+          <!-- Edit Info Icon -->
+          <div>
+            <a href="adminEditInfo.html"
+              ><svg
+                width="31"
+                height="31"
+                viewBox="0 0 31 31"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15.6073 22.34C19.2283 22.34 22.1638 19.4046 22.1638 15.7835C22.1638 12.1625 19.2283 9.22705 15.6073 9.22705C11.9862 9.22705 9.05078 12.1625 9.05078 15.7835C9.05078 19.4046 11.9862 22.34 15.6073 22.34Z"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M25.9102 14.8473L27.117 13.0372C27.1956 12.9206 27.2476 12.7881 27.2693 12.6491C27.291 12.5101 27.2818 12.3681 27.2424 12.2331C27.0147 11.4834 26.7147 10.7577 26.3465 10.0661C26.279 9.943 26.1852 9.8363 26.0718 9.75363C25.9583 9.67096 25.828 9.61436 25.6902 9.58786L23.5549 9.16076L22.2303 7.83617L21.8032 5.70079C21.7767 5.56294 21.7201 5.43263 21.6374 5.31918C21.5547 5.20573 21.448 5.11193 21.3249 5.04448C20.6333 4.67635 19.9076 4.37636 19.1579 4.14872C19.0229 4.10932 18.8808 4.10012 18.7419 4.12179C18.6029 4.14345 18.4704 4.19545 18.3538 4.27408L16.5438 5.48074H14.6705L12.8605 4.27408C12.7439 4.19545 12.6114 4.14345 12.4725 4.12179C12.3335 4.10012 12.1914 4.10932 12.0564 4.14872C11.3068 4.37635 10.581 4.67635 9.88942 5.04448C9.7663 5.11192 9.65959 5.20572 9.57691 5.31918C9.49423 5.43264 9.43762 5.56295 9.41112 5.70082L8.98413 7.83606L7.65943 9.16076L5.52417 9.58775C5.38631 9.61424 5.256 9.67085 5.14255 9.75352C5.0291 9.83619 4.9353 9.9429 4.86785 10.066C4.49966 10.7576 4.19962 11.4834 3.97196 12.2331C3.93256 12.3681 3.92336 12.5101 3.94503 12.6491C3.9667 12.7881 4.0187 12.9205 4.09734 13.0372L5.30399 14.8472V16.7204L4.09733 18.5304C4.0187 18.647 3.96671 18.7795 3.94504 18.9185C3.92338 19.0575 3.93257 19.1995 3.97197 19.3345C4.19957 20.0842 4.49957 20.81 4.86772 21.5016C4.93517 21.6247 5.02897 21.7314 5.14242 21.8141C5.25587 21.8967 5.38617 21.9533 5.52403 21.9798L7.65943 22.4069L8.98402 23.7315L9.41102 25.8669C9.43751 26.0048 9.49411 26.1351 9.57678 26.2485C9.65945 26.362 9.76615 26.4558 9.88926 26.5232C10.5808 26.8914 11.3066 27.1914 12.0562 27.419C12.1912 27.4584 12.3333 27.4676 12.4722 27.4459C12.6112 27.4243 12.7437 27.3723 12.8603 27.2936L14.6704 26.087H16.5437L18.3538 27.2937C18.4704 27.3724 18.6029 27.4244 18.7419 27.446C18.8808 27.4677 19.0229 27.4585 19.1579 27.4191C19.9075 27.1915 20.6333 26.8915 21.3248 26.5233C21.4479 26.4559 21.5546 26.3621 21.6373 26.2487C21.72 26.1352 21.7766 26.0049 21.8031 25.867L22.2302 23.7316L23.5548 22.4069L25.6902 21.9799C25.828 21.9534 25.9583 21.8968 26.0718 21.8142C26.1852 21.7315 26.279 21.6248 26.3465 21.5017C26.7147 20.8101 27.0147 20.0844 27.2424 19.3348C27.2818 19.1997 27.291 19.0577 27.2693 18.9187C27.2476 18.7798 27.1956 18.6473 27.117 18.5306L25.9102 16.7206V14.8473Z"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+          <!--Add Employee -->
+          <div>
+            <a id="addEmployee"
+              ><svg
+                width="31"
+                height="31"
+                viewBox="0 0 31 31"
+                fill="none"
+                class="navIcon"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.2271 7.32666H26.8469"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M24.0374 4.5166V10.1364"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M4.25 26.0588C5.40155 24.0656 7.05736 22.4105 9.05109 21.2598C11.0448 20.1091 13.3062 19.5034 15.6082 19.5034C17.9101 19.5034 20.1716 20.1092 22.1653 21.26C24.159 22.4107 25.8147 24.0658 26.9663 26.059"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M22.6382 14.6069C22.1373 15.9593 21.2566 17.1383 20.1019 18.0022C18.9473 18.8662 17.5677 19.3784 16.1289 19.4774C14.6902 19.5763 13.2535 19.2577 11.9914 18.5599C10.7293 17.8621 9.69557 16.8148 9.01431 15.5437C8.33305 14.2726 8.03326 12.8319 8.15097 11.3945C8.26867 9.95722 8.79887 8.58444 9.67785 7.44113C10.5568 6.29783 11.7472 5.43262 13.106 4.94945C14.4648 4.46627 15.9342 4.38569 17.3377 4.71738"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+          <!--Log out -->
+          <div>
+            <a id="logOut"
+              ><svg
+                width="31"
+                height="31"
+                viewBox="0 0 31 31"
+                fill="none"
+                class="navIcon"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20.9966 10.812L25.9139 15.7294L20.9966 20.6467"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12.7979 15.73H25.9108"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M14.6709 26.0324H6.24108C5.99267 26.0324 5.75443 25.9337 5.57878 25.758C5.40313 25.5824 5.30444 25.3441 5.30444 25.0957V6.36291C5.30444 6.1145 5.40313 5.87626 5.57878 5.70061C5.75443 5.52495 5.99267 5.42627 6.24108 5.42627H14.6709"
+                  stroke="#CCCCD6"
+                  stroke-width="1.87328"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </nav>
+        <div class="col-11 d-flex flex-column">
+          <nav
+            class="d-none d-md-flex horizontalNav1 px-4 py-2 d-flex justify-content-between align-items-center"
+          >
+            <div class="companyLogo py-2 px-4">
+              <img src="../Images/HeaderIcon.svg" />
+              <span class="companyName">TechWave Solutions</span>
+            </div>
+            <div class="adminInfo d-flex align-items-center gap-2">
+              <img
+                class="adminAvatar"
+                src="../Images/Employees/EdithMartin.jpeg"
+                alt=""
+              />
+              <span class="adminName">Edith Martin</span>
+            </div>
+          </nav>
+
+          <main class="ps-5 pt-5 container">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="
+                  dailyReports-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#dailyReports-tab-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="dailyReports-tab-pane"
+                  aria-selected="true"
+                >
+                  Daily Reports
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="MonthlyReports-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#MonthlyReports-tab-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="MonthlyReports-tab-pane"
+                  aria-selected="false"
+                >
+                  Monthly Reports
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="statistics-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#statistics-tab-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="statistics-tab-pane"
+                  aria-selected="false"
+                >
+                  Employee statistics
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="editEmpsAttendence-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#editEmpsAttendence-tab-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="editEmpsAttendence-tab-pane"
+                  aria-selected="false"
+                >
+                  Edit Employees attendance
+                </button>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <!--Daily Reports -->
+              <div
+                class="tab-pane fade show active"
+                id="dailyReports-tab-pane"
+                role="tabpanel"
+                aria-labelledby="dailyReports-tab"
+                tabindex="0"
+              >
+                <!--HTML for the daily report table -->
+                <div class="card mb-5">
+                  <div class="card-body">
+                    <div class="form-group mb-5">
+                      <label for="daily-report-date" class="mb-2"
+                        >Select Date:</label
+                      >
+                      <input
+                        type="date"
+                        class="form-control"
+                        id="daily-report-date"
+                        placeholder="Select date"
+                      />
+                    </div>
+                    <table
+                      class="table ctable-borderless nowrap p-lg-4"
+                      id="emp-daily-report-table"
+                      style="width: 100%"
+                    >
+                      <thead>
+                        <tr>
+                          <th>Employee</th>
+                          <th>Date</th>
+                          <th>Arrival Time</th>
+                          <th>Departure Time</th>
+                          <th>Status</th>
+                        </tr>
+                      </thead>
+                      <tbody id="dailyReportsTableBody"></tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!--Monthly Reports -->
+              <div
+                class="tab-pane fade"
+                id="MonthlyReports-tab-pane"
+                role="tabpanel"
+                aria-labelledby="MonthlyReports-tab"
+                tabindex="0"
+              >
+                <!--HTML for the monthly report table -->
+                <div class="card">
+                  <div class="card-body">
+                    <div class="mb-5">
+                      <div class="form-group mb-3">
+                        <label for="monthly-report-start-date" class="mb-2"
+                          >Select Start Date:</label
+                        >
+                        <input
+                          type="date"
+                          class="form-control"
+                          id="monthly-report-start-date"
+                          placeholder="Select start date"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="monthly-report-end-date" class="mb-2"
+                          >Select End Date:</label
+                        >
+                        <input
+                          type="date"
+                          class="form-control"
+                          id="monthly-report-end-date"
+                          placeholder="Select end date"
+                        />
+                      </div>
+                    </div>
+                    <table
+                      class="table ctable-borderless nowrap p-lg-4"
+                      id="emp-monthly-report-table"
+                      style="width: 100%"
+                    >
+                      <thead>
+                        <tr>
+                          <th>Employee</th>
+                          <th>Date</th>
+                          <th>Arrival Time</th>
+                          <th>Departure Time</th>
+                          <th>Status</th>
+                        </tr>
+                      </thead>
+                      <tbody id="monthlyReportTB"></tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!--Employees Statistics -->
+              <div
+                class="tab-pane fade"
+                id="statistics-tab-pane"
+                role="tabpanel"
+                aria-labelledby="statistics-tab"
+                tabindex="0"
+              >
+                <!--HTML for the statistics report table -->
+                <div class="card">
+                  <div class="card-body">
+                    <table
+                      class="table table-borderless nowrap p-lg-4"
+                      id="emps-statistics-table"
+                      style="width: 100%"
+                    >
+                      <thead>
+                        <tr>
+                          <th>Employee</th>
+                          <th style="color: #51c16a">Attendance Count</th>
+                          <th style="color: #eeb931">Lateness Count</th>
+                          <th style="color: #cc2929">Absence Count</th>
+                        </tr>
+                      </thead>
+                      <tbody id="empsStatisticsTB"></tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!--Edit Employees Attendance -->
+              <div
+                class="tab-pane fade"
+                id="editEmpsAttendence-tab-pane"
+                role="tabpanel"
+                aria-labelledby="editEmpsAttendence-tab"
+                tabindex="0"
+              >
+                <!--HTML for the monthly report table -->
+                <div class="card">
+                  <div class="card-body">
+                    <div class="mb-5">
+                      <div class="form-group mb-3">
+                        <label for="monthly-report-start-date" class="mb-2"
+                          >Select Start Date:</label
+                        >
+                        <input
+                          type="date"
+                          class="form-control"
+                          id="monthly-report-start-date"
+                          placeholder="Select start date"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="monthly-report-end-date" class="mb-2"
+                          >Select End Date:</label
+                        >
+                        <input
+                          type="date"
+                          class="form-control"
+                          id="monthly-report-end-date"
+                          placeholder="Select end date"
+                        />
+                      </div>
+                    </div>
+                    <table
+                      class="table ctable-borderless nowrap p-lg-4"
+                      id="emp-monthly-report-table"
+                      style="width: 100%"
+                    >
+                      <thead>
+                        <tr>
+                          <th>Employee</th>
+                          <th>Date</th>
+                          <th>Arrival Time</th>
+                          <th>Departure Time</th>
+                          <th>Status</th>
+                        </tr>
+                      </thead>
+                      <tbody id="monthlyReportTB"></tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="contact-tab-pane"
+                role="tabpanel"
+                aria-labelledby="contact-tab"
+                tabindex="0"
+              ></div>
+              <div
+                class="tab-pane fade"
+                id="disabled-tab-pane"
+                role="tabpanel"
+                aria-labelledby="disabled-tab"
+                tabindex="0"
+              ></div>
+              <div
+                class="tab-pane fade"
+                id="disabled-tab-pane"
+                role="tabpanel"
+                aria-labelledby="disabled-tab"
+                tabindex="0"
+              ></div>
+              <div
+                class="tab-pane fade"
+                id="disabled-tab-pane"
+                role="tabpanel"
+                aria-labelledby="disabled-tab"
+                tabindex="0"
+              ></div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+
+    <!--Add Employee-->
+    <div class="bluredBackground" id="AddEmp">
+      <div class="alert_box d-flex flex-column justify-content-center gap-3">
+        <div class="InviteEmployee">
+          <h1>Add a new employee</h1>
+          <p class="subText">
+            Add a new employee by sending them an invitation link through their
+            email to join the platform.
+          </p>
+        </div>
+        <div>
+          <div class="d-flex flex-column gap-3">
+            <div class="d-flex flex-column gap-2 invitationMail">
+              <label for="EmailInvite">Invitation Email</label>
+              <input
+                type="email"
+                name="email"
+                id="EmailInvite"
+                class="inputField emailInput"
+                placeholder="example@youremail.com"
+              />
+              <span
+                id="email-error"
+                style="color: #bd0000; font-size: small"
+              ></span>
+            </div>
+          </div>
+        </div>
+        <div class="btns d-flex justify-content-end gap-3">
+          <button id="closeInvitePopup" class="alertBoxBtn cancelBtn2">
+            Cancel
+          </button>
+          <button id="sendInvite" class="alertBoxBtn confirmBtn2">
+            Send Invite
+          </button>
+        </div>
+      </div>
+    </div>
+    <!--Add Employee pop up-->
+    <script>
+      let body = document.getElementsByClassName("mainWrapper")[0];
+
+      logOut.onclick = function () {
+        window.location.replace("../index.html");
+      };
+    </script>
+  </body>
+</html>

@@ -8,13 +8,14 @@ export async function displayEmployees() {
         continue;
     }
       const newRow = document.createElement('tr');
+      //newRow.setAttribute('data-id',employees[i].id)
       newRow.innerHTML = `
       <td>
                       <div class="d-flex flex-row align-items-center gap-3">
                         <img
                           src="../Images/avatar.svg"
                           width="40"
-                          class="rounded-circle"
+                          class="rounded-circle imgAvatar"
                         />
                         <div class="d-flex flex-column ml-2">
                           <span class="d-block font-weight-bold"
@@ -33,18 +34,18 @@ export async function displayEmployees() {
                     <td>
                       <div class="d-flex gap-2">
                         <button
-                          class="actionBtn resetPassBtn"
+                          class="actionBtn resetPassBtn" data-id="${employees[i].id}"
                         >
                           <img src="../images/Key.svg" class="" />
                         </button>
                         <button
-                          class="actionBtn editEmpBtn"
+                          class="actionBtn editEmpBtn" data-id="${employees[i].id}"
                         >
                           <img src="../images/PencilSimple.svg" class="" />
                         </button>
 
                         <button
-                          class="actionBtn deleteEmpBtn"
+                          class="actionBtn deleteEmpBtn" data-id="${employees[i].id}"
                         >
                           <img src="../images/X.svg" class="" />
                         </button>
@@ -54,7 +55,9 @@ export async function displayEmployees() {
 
       tableBody.appendChild(newRow);
   };
-    $('#empdataTable').DataTable();
+    $('#empdataTable').DataTable(
+      {responsive: true}
+    );
 } 
 
 

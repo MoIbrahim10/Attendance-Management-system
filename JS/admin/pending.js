@@ -24,7 +24,7 @@ export async function displayPendingUsers() {
       <td>23</td>
       <td>${pendingUser.email}</td>
       <td>
-        <div class="d-flex gap-2">
+        <div class="d-flex gap-2" id="pendingActionsSec">
           <button class="btn btn-success approveBtn">
             Approve
           </button>
@@ -38,22 +38,30 @@ export async function displayPendingUsers() {
 
   });
 
-  const declineBtns = document.getElementsByClassName("declineBtn");
   const approveBtns = document.getElementsByClassName("approveBtn");
+  const declineBtns = document.getElementsByClassName("declineBtn");
 
   for (let i = 0; i < approveBtns.length; i++) {
-    approveBtns[i].addEventListener("click", async ()=> {
-      const username = generateUsername(pending[i].fname, pending[i].lname);
+    approveBtns[i].setAttribute("data-index", i);
+  }
+  for (let i = 0; i < declineBtns.length; i++) {
+    declineBtns[i].setAttribute("data-index", i);
+  }
+
+  pendingTableBody.addEventListener("click", async (event) => {
+    if (event.target.matches(".approveBtn")) {
+      const index = event.target.getAttribute("data-index");
+      const username = generateUsername(pending[index].fname, pending[index].lname);
       const password = generatePassword();
   
-      let pendingUserData = {...pending[i], id: null};
-
-      sendApprovalEmail(pending[i].email, username, password, pending[i].fname, pending[i].lname);
-
+      let pendingUserData = {...pending[index], id: null};
+  
+      sendApprovalEmail(pending[index].email, username, password, pending[index].fname, pending[index].lname);
+  
       // Add user to the employees database
       const response = await addEmployee({
         ...pendingUserData,
-        username: username,
+        userName: username,
         password: password,
         jobTittle: "Engineer",
         role: "employee",
@@ -65,17 +73,56 @@ export async function displayPendingUsers() {
             "status": ""
           },]
       });
+  
+      await removePendingUser(pending[index].id); 
+    } else if (event.target.matches(".declineBtn")) {
+      const index = event.target.getAttribute("data-index");
+      await removePendingUser(pending[index].id);
+    }
+  });
 
-      await removePendingUser(pending[i].id); 
-    });
-  }
+  
+  
+  
   
 
-  for (let i = 0; i < declineBtns.length; i++) {
-    declineBtns[i].addEventListener("click", async () => { 
-          await removePendingUser(pending[i].id);
-      });
-  }
+    
+  // for (let i = 0; i < approveBtns.length; i++) {
+  //   approveBtns[i].addEventListener("click", async ()=> {
+  //     alert("Approve");
+  //     const username = generateUsername(pending[i].fname, pending[i].lname);
+  //     const password = generatePassword();
+  
+  //     let pendingUserData = {...pending[i], id: null};
+
+  //     sendApprovalEmail(pending[i].email, username, password, pending[i].fname, pending[i].lname);
+
+  //     // Add user to the employees database
+  //     const response = await addEmployee({
+  //       ...pendingUserData,
+  //       userName: username,
+  //       password: password,
+  //       jobTittle: "Engineer",
+  //       role: "employee",
+  //       attendances: [
+  //         {
+  //           "date": getTodayDate(),
+  //           "arrivalTime": "",
+  //           "departureTime": "",
+  //           "status": ""
+  //         },]
+  //     });
+
+  //     await removePendingUser(pending[i].id); 
+  //   });
+  // }
+  
+
+  // for (let i = 0; i < declineBtns.length; i++) {
+  //   declineBtns[i].addEventListener("click", async () => { 
+  //         await removePendingUser(pending[i].id);
+  //     });
+  // }
 }
     $("#pendingTable").DataTable({ responsive: true });
 } 
@@ -115,7 +162,7 @@ function sendApprovalEmail(email, username, password, fname, lname) {
     SecureToken: "7d499b9e-7101-425b-923c-c8fe6fcaeac9",
     To: email,
     From: "techwavesolutionjs@gmail.com",
-    Subject: "TechWave Solution Credintials",
+    Subject: "TechWave Solutions Credintials",
     Body: `Hello ${fname} ${lname},<br><br>Your account has been approved.<br><br>Your <strong>
     user name is:</strong>  ${username} and Your <strong>password</strong>  is: ${password} you now can use these data to sign in at our website at http://127.0.0.1:5501/index.html <br><br>Best Regards,<br>Mohamed Ibrahim`,
   }).then((message) => alert(message));

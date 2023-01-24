@@ -4,15 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../CSS/sass/main.css" />
 
     <!-- Font Awesome-->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
     />
     <!-- Jquery-->
     <script
@@ -32,6 +28,18 @@
       charset="utf8"
       src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"
     ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/datatables.net-rowreorder/1.3.1/dataTables.rowReorder.min.js"
+      integrity="sha512-2w40F688YM0gCipZwflaCvXrIMxfaXq0ltetAL2wb6PjI3j/RQtLCN0Flu+dETIXV+JSDXEpyOTlRYOlEhfjOw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/datatables-responsive/2.4.0/dataTables.responsive.min.js"
+      integrity="sha512-UEtHfW1dblwNO8FPaTWSG2V3Jv9omJDhGWFdVFaSF8wd9TlVk0Nyk47RgoTJ03cA2Hfz8rjOJ8xhJpiNIJcErw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <!-- Bootstrap-->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -39,12 +47,48 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/css/dataTables.bootstrap.min.css"
+      integrity="sha512-BMbq2It2D3J17/C7aRklzOODG1IQ3+MHw3ifzBHMBwGO/0yUqYmsStgBjI0z5EYlaDEFnvYV7gNYdD3vFLRKsA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/datatables.net-rowreorder-dt/1.3.1/rowReorder.dataTables.min.css"
+      integrity="sha512-f6PQZ5Ya/FRrMoEyVR2D3oTL48Tf1lsdGQv5SJiHW0DBWI9S50PTMEvVY88X/icr2nPgL+jAmM7mZvU1MIL7xg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/datatables.net-responsive-dt/2.4.0/responsive.dataTables.min.css"
+      integrity="sha512-1rs6CKPyMyWNKKt18TIfaktqZaIkCUK4mGE78D3tI+yu0CVk/ou/XTwikeo2utvOOOdkYpcyA268IyZ17aXOWg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!--SMTP sendMail-->
     <script src="https://smtpjs.com/v3/smtp.js"></script>
 
     <!-- main JS-->
     <script src="../JS/admin/adminMain.js" type="module"></script>
+    <!-- addEmp JS-->
+    <script src="../JS/admin/popUp.js" type="module"></script>
+    <!-- addEmpPopup -->
+    <script src="../JS/admin/addEmpPopup.js" type="module"></script>
+    <!-- main CSS-->
+    <link rel="stylesheet" href="../CSS/sass/main.css" />
+
+    <style>
+      input[type="search"] {
+        border-radius: 5px !important;
+        @media screen and (max-width: 768px) {
+          width: 70% !important;
+        }
+      }
+    </style>
     <title>Admin Dashboard</title>
   </head>
   <body>
@@ -77,7 +121,7 @@
           </div>
           <!-- Reports Icon -->
           <div>
-            <a
+            <a href="EmployeesReports.html"
               ><svg
                 width="31"
                 height="31"
@@ -231,17 +275,18 @@
                 src="../Images/Employees/EdithMartin.jpeg"
                 alt=""
               />
-              <span class="adminName">Edith Martin</span>
+              <span class="adminName">Sarah Adams</span>
             </div>
           </nav>
 
           <main class="p-5">
             <h1 class="dashboardHeader">Employee List</h1>
 
-            <div class="table-responsive tableContainer">
+            <div class="tableContainer">
               <table
                 id="empdataTable"
-                class="table table-borderless table-responsive p-4"
+                class="table table-borderless nowrap p-lg-4"
+                style="width: 100%"
               >
                 <thead>
                   <tr>
@@ -268,7 +313,8 @@
             <div class="table-responsive tableContainer" id="pendingTableDiv">
               <table
                 id="pendingTable"
-                class="table table-borderless table-responsive p-4"
+                class="table table-borderless nowrap p-lg-4"
+                style="width: 100%"
               >
                 <thead>
                   <tr>
@@ -298,26 +344,26 @@
         <div>
           <div class="d-flex flex-column gap-3">
             <div class="d-flex flex-column gap-2 invitationMail">
-              <label for="empEmail">Invitation Email</label>
+              <label for="EmailInvite">Invitation Email</label>
               <input
                 type="email"
                 name="email"
-                id="email2"
+                id="EmailInvite"
                 class="inputField emailInput"
                 placeholder="example@youremail.com"
               />
+              <span
+                id="email-error"
+                style="color: #bd0000; font-size: small"
+              ></span>
             </div>
           </div>
         </div>
         <div class="btns d-flex justify-content-end gap-3">
-          <button
-            id="btnClose2"
-            class="alertBoxBtn cancelBtn2"
-            onclick="closeAddEmpPopUp()"
-          >
+          <button id="closeInvitePopup" class="alertBoxBtn cancelBtn2">
             Cancel
           </button>
-          <button id="btnDelete" class="alertBoxBtn confirmBtn2">
+          <button id="sendInvite" class="alertBoxBtn confirmBtn2">
             Send Invite
           </button>
         </div>
@@ -364,14 +410,12 @@
           </p>
         </div>
         <div class="btns d-flex gap-3">
-          <button
-            id="btnClose"
-            class="alertBoxBtn cancelBtn"
-            onclick="closeDeleteEmpPopUp()"
-          >
+          <button id="closeDeleteEmpPopUp" class="alertBoxBtn cancelBtn">
             Cancel
           </button>
-          <button id="btnDelete" class="alertBoxBtn confirmBtn">Confirm</button>
+          <button id="confirmDeleteEmpPopUp" class="alertBoxBtn confirmBtn">
+            Confirm
+          </button>
         </div>
       </div>
     </div>
@@ -417,14 +461,10 @@
           </p>
         </div>
         <div class="btns d-flex gap-3">
-          <button
-            id="btnClose2"
-            class="alertBoxBtn cancelBtn2"
-            onclick="closeResetPassPopUp()"
-          >
+          <button id="closeResetPassPopUp" class="alertBoxBtn cancelBtn2">
             Cancel
           </button>
-          <button id="btnDelete" class="alertBoxBtn confirmBtn2">
+          <button id="confirmResetPassPopUp" class="alertBoxBtn confirmBtn2">
             Confirm
           </button>
         </div>
@@ -467,6 +507,10 @@
                     class="inputField"
                     placeholder="Mohamed"
                   />
+                  <span
+                    id="fName-error"
+                    style="color: #bd0000; font-size: small"
+                  ></span>
                 </div>
                 <div class="d-flex flex-column align-items-start">
                   <label for="lName" class="labels"> Last Name </label>
@@ -477,6 +521,10 @@
                     class="inputField"
                     placeholder="Ibrahim"
                   />
+                  <span
+                    id="lName-error"
+                    style="color: #bd0000; font-size: small"
+                  ></span>
                 </div>
               </div>
             </div>
@@ -491,6 +539,10 @@
                     class="inputField emailInput"
                     placeholder="example@youremail.com"
                   />
+                  <span
+                    id="email-error"
+                    style="color: #bd0000; font-size: small"
+                  ></span>
                 </div>
                 <div
                   class="password-sec d-flex flex-column align-items-start mt-3"
@@ -506,6 +558,10 @@
                     />
                     <i class="far fa-eye" id="togglePassword"></i>
                   </div>
+                  <span
+                    id="password-error"
+                    style="color: #bd0000; font-size: small"
+                  ></span>
                 </div>
               </div>
             </div>
@@ -519,7 +575,10 @@
                     id="role"
                     class="inputField"
                     placeholder="Employee"
-                  />
+                  /><span
+                    id="role-error"
+                    style="color: #bd0000; font-size: small"
+                  ></span>
                 </div>
                 <div class="d-flex flex-column align-items-start">
                   <label for="jobTitle" class="labels"> Job title </label>
@@ -529,7 +588,10 @@
                     id="jobTitle"
                     class="inputField"
                     placeholder="Accountant"
-                  />
+                  /><span
+                    id="jobTittle-error"
+                    style="color: #bd0000; font-size: small"
+                  ></span>
                 </div>
               </div>
             </div>
@@ -537,14 +599,10 @@
         </div>
         <div class="row">
           <div class="d-flex flex-row justify-content-end gap-3">
-            <button
-              id="btnClose3"
-              class="alertBoxBtn cancelBtn2"
-              onclick="closeEditEmpPopUp()"
-            >
+            <button id="closeEditEmpPopUp" class="alertBoxBtn cancelBtn2">
               Cancel
             </button>
-            <button id="btnDelete" class="alertBoxBtn confirmBtn2">
+            <button id="saveChanges" class="alertBoxBtn confirmBtn2">
               Save Changes
             </button>
           </div>
@@ -553,57 +611,6 @@
     </div>
     <!-- pop up scripts -->
     <script>
-      let deleteEmpBg = document.getElementById("deleteEmpBg");
-      let ResetPassBg = document.getElementById("ResetPassBg");
-      let updateEmpBg = document.getElementById("updateEmpBg");
-      let AddEmpBg = document.getElementById("AddEmp");
-      let homeIcon = document.getElementsByClassName("home")[0];
-      let body = document.getElementsByClassName("mainWrapper")[0];
-
-      // When the user clicks anywhere outside of the pop up, close it
-      window.onclick = function (event) {
-        if (event.target == deleteEmpBg || event.target == ResetPassBg) {
-          body.classList.remove("blurbody");
-          deleteEmpBg.classList.remove("centerItems");
-          ResetPassBg.classList.remove("centerItems");
-        }
-      };
-      addEmployee.onclick = function () {
-        body.classList.add("blurbody");
-        homeIcon.classList.add("inactiveNav");
-        addEmployee.children[0].classList.add("activeNav");
-        AddEmpBg.classList.add("centerItems");
-      };
-      // function openDeleteEmpPopUp(event) {
-      //   body.classList.add("blurbody");
-      //   deleteEmpBg.classList.add("centerItems");
-      // }
-      // function openResetPassPopUp() {
-      //   body.classList.add("blurbody");
-      //   ResetPassBg.classList.add("centerItems");
-      // }
-      // function openUpdateEmpPopUp() {
-      //   body.classList.add("blurbody");
-      //   updateEmpBg.classList.add("centerItems");
-      // }
-      function closeDeleteEmpPopUp() {
-        body.classList.remove("blurbody");
-        deleteEmpBg.classList.remove("centerItems");
-      }
-      function closeEditEmpPopUp() {
-        body.classList.remove("blurbody");
-        updateEmpBg.classList.remove("centerItems");
-      }
-      function closeResetPassPopUp() {
-        body.classList.remove("blurbody");
-        ResetPassBg.classList.remove("centerItems");
-      }
-      function closeAddEmpPopUp() {
-        body.classList.remove("blurbody");
-        homeIcon.classList.remove("inactiveNav");
-        addEmployee.children[0].classList.remove("activeNav");
-        AddEmpBg.classList.remove("centerItems");
-      }
       logOut.onclick = function () {
         window.location.replace("../index.html");
       };

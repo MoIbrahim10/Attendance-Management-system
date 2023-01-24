@@ -40,7 +40,8 @@ form.addEventListener("submit", async (event) => {
     lname: form.elements.lname.value,
     email: form.elements.email.value,
     address: form.elements.address.value,
-    age: form.elements.age.value
+    age: form.elements.age.value,
+    avatar: "../Images/avatar.svg"
   };
 
   const isSent = await postToPendingDB(data);

@@ -59,7 +59,7 @@ line-height: 150%;
 }
 
 .noPending{
-width: 1150px;
+// width: 1150px;
 height: 108px;
 margin-bottom: 50px;
 background: rgba(32, 0, 161, 0.05);
@@ -73,8 +73,12 @@ font-weight: 700;
 font-size: $large-size;
 line-height: 150%;
 text-transform: uppercase;
+@media screen and (max-width: 768px) {
+  padding: 20px;
+  font-size: 16px;
+  text-align: center;
 }
-
+}
 #pendingTableDiv{
   display: none;
 }
@@ -82,13 +86,13 @@ text-transform: uppercase;
 .tableContainer {
   border: 1px solid #ccc;
   padding: 20px 40px;
-  width: 1150px;
+  // width: 1150px;
   font-size: $medium-size;
   background: $background-color-light;
   border: 1px solid #f0f0f0;
   border-radius: 6px;
 }
-#table_id tbody tr:hover {
+#empdataTable tbody tr:hover, #pendingTable tbody tr:hover {
   background-color: rgba(32, 0, 161, 0.05);
 }
 table.dataTable thead > tr > th.sorting:before {
@@ -143,6 +147,23 @@ color: #2000A1;
 
 
 
+.imgAvatar{
+  @media screen and (max-width: 768px) {
+      display: none;
+    } 
+  }
+  // .tableContainer{
+  //   @media screen and (max-width: 768px) {
+  //     padding: 20px;
+  //   } 
+  // }
+
+  div.dataTables_wrapper div.dataTables_filter input{
+    @media screen and (max-width: 768px) {
+      width: 100px !important;
+    }
+    
+  }
 
 
 
@@ -150,9 +171,7 @@ color: #2000A1;
 
 
 
-
-
-/**************************** delete employee popup ****************************/
+/**************************** employee popup ****************************/
 .blurbody{
   filter : blur(5px);
   pointer-events: none;

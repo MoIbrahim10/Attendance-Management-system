@@ -14,6 +14,7 @@ getEmployeeData().then(employee => {
   document.getElementById('jobTittle').textContent = employee.jobTittle;
 
 })
+
 //Retrieve and display the employee's last attendance date in the daily report
 getLastAttendance().then(lastAttendance => {
 

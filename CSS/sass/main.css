@@ -453,7 +453,6 @@ main {
 }
 
 .noPending {
-  width: 1150px;
   height: 108px;
   margin-bottom: 50px;
   background: rgba(32, 0, 161, 0.05);
@@ -467,6 +466,13 @@ main {
   line-height: 150%;
   text-transform: uppercase;
 }
+@media screen and (max-width: 768px) {
+  .noPending {
+    padding: 20px;
+    font-size: 16px;
+    text-align: center;
+  }
+}
 
 #pendingTableDiv {
   display: none;
@@ -475,14 +481,13 @@ main {
 .tableContainer {
   border: 1px solid #ccc;
   padding: 20px 40px;
-  width: 1150px;
   font-size: 14px;
   background: #ffffff;
   border: 1px solid #f0f0f0;
   border-radius: 6px;
 }
 
-#table_id tbody tr:hover {
+#empdataTable tbody tr:hover, #pendingTable tbody tr:hover {
   background-color: rgba(32, 0, 161, 0.05);
 }
 
@@ -540,7 +545,19 @@ table.dataTable thead > tr > th.sorting:last-child:after, table.dataTable thead 
   border-radius: 6px;
 }
 
-/**************************** delete employee popup ****************************/
+@media screen and (max-width: 768px) {
+  .imgAvatar {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  div.dataTables_wrapper div.dataTables_filter input {
+    width: 100px !important;
+  }
+}
+
+/**************************** employee popup ****************************/
 .blurbody {
   filter: blur(5px);
   pointer-events: none;
@@ -658,7 +675,7 @@ table.dataTable thead > tr > th.sorting:last-child:after, table.dataTable thead 
   align-items: center;
 }
 
-.editAdminContainer {
+.editAdminContainer, .EmpsReportsContainer {
   background-color: #ffffff;
   border: 1px solid #F0F0F0;
   border-radius: 4px;
@@ -678,7 +695,7 @@ table.dataTable thead > tr > th.sorting:last-child:after, table.dataTable thead 
 #eyeIcon {
   position: absolute;
   top: 45%;
-  right: 30px;
+  right: 45px;
   color: #CCCCD6;
   cursor: pointer;
 }
@@ -778,6 +795,39 @@ table.dataTable thead > tr > th.sorting:last-child:after, table.dataTable thead 
 .absent-status {
   background-color: #cc2929 !important;
   color: white !important;
+}
+
+table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before, table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control:before {
+  top: 50%;
+  left: 5px;
+  height: 1em;
+  width: 1em;
+  margin-top: -9px;
+  display: block;
+  position: absolute;
+  color: white;
+  border: none;
+  box-shadow: 0 0 0.2em #444;
+  box-sizing: content-box;
+  text-align: center;
+  text-indent: 0 !important;
+  font-family: "Courier New", Courier, monospace;
+  line-height: 1em;
+  content: "+";
+  background-color: #2000a1;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  border-radius: 6px !important;
+}
+
+.nav-item .active {
+  color: #2000A1 !important;
+  font-weight: bold;
+}
+
+.nav-item .nav-link:not(.active) {
+  color: #2E2E2E !important;
 }
 
 td {

@@ -17,6 +17,11 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <!-- editAdminInfo -->
+    <script src="../JS/admin/editInfoAdmin.js" type="module"></script>
+
+    <!-- addEmpPopup -->
+    <script src="../JS/admin/addEmpPopup.js" type="module"></script>
     <title>Edit personal information</title>
   </head>
   <body>
@@ -49,7 +54,7 @@
           </div>
           <!-- Reports Icon -->
           <div>
-            <a
+            <a href="EmployeesReports.html"
               ><svg
                 width="31"
                 height="31"
@@ -207,7 +212,7 @@
           </nav>
 
           <main class="ps-5 pt-5">
-            <h1 class="dashboardHeader">Employee List</h1>
+            <h1 class="dashboardHeader">Personal Information</h1>
             <div class="editAdminContainer p-5 me-0 me-md-5">
               <div class="row">
                 <div
@@ -242,6 +247,10 @@
                           class="inputField inputFieldAdmin"
                           placeholder="Mohamed"
                         />
+                        <span
+                          id="fName-error"
+                          style="color: #bd0000; font-size: small"
+                        ></span>
                       </div>
                       <div
                         class="col-12 col-lg-6 d-flex flex-column align-items-start"
@@ -254,6 +263,10 @@
                           class="inputField inputFieldAdmin"
                           placeholder="Ibrahim"
                         />
+                        <span
+                          id="lName-error"
+                          style="color: #bd0000; font-size: small"
+                        ></span>
                       </div>
                     </div>
                   </div>
@@ -272,9 +285,13 @@
                           class="inputField emailInput inputFieldAdmin"
                           placeholder="example@youremail.com"
                         />
+                        <span
+                          id="email-error"
+                          style="color: #bd0000; font-size: small"
+                        ></span>
                       </div>
                       <div
-                        class="col-12 col-lg-6 password-sec d-flex flex-column align-items-start"
+                        class="col-12 col-lg-6 d-flex flex-column align-items-start"
                       >
                         <label for="password" class="labels"> Password </label>
                         <div class="passwordContainer">
@@ -286,42 +303,59 @@
                             placeholder="Your password"
                           />
                           <i class="far fa-eye" id="eyeIcon"></i>
+                          <span
+                            id="password-error"
+                            style="color: #bd0000; font-size: small"
+                          ></span>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <!-- <div class="row m-3">
-                    <div class="col-12 d-flex flex-row gap-5">
-                      <div class="col-6 d-flex flex-column align-items-start">
+                  <div class="row mt-3">
+                    <div class="col-12 d-flex flex-column flex-lg-row gap-3">
+                      <div
+                        class="col-12 col-lg-6 d-flex flex-column align-items-start"
+                      >
                         <label for="role" class="labels"> Role </label>
                         <input
                           type="text"
                           name="role"
                           id="role"
-                          class="inputField"
-                          placeholder="Employee"
+                          class="inputField inputFieldAdmin"
+                          placeholder="Admin"
                         />
+                        <span
+                          id="role-error"
+                          style="color: #bd0000; font-size: small"
+                        ></span>
                       </div>
-                      <div class="col-6 d-flex flex-column align-items-start">
+                      <div
+                        class="col-12 col-lg-6 d-flex flex-column align-items-start"
+                      >
                         <label for="jobTitle" class="labels"> Job title </label>
                         <input
                           type="text"
                           name="jobTitle"
                           id="jobTitle"
-                          class="inputField"
-                          placeholder="Accountant"
+                          class="inputField inputFieldAdmin"
+                          placeholder="CEO"
                         />
+                        <span
+                          id="jobTittle-error"
+                          style="color: #bd0000; font-size: small"
+                        ></span>
                       </div>
                     </div>
-                  </div> -->
+                  </div>
                 </div>
               </div>
               <div class="row mt-4">
                 <div
                   class="col-12 d-flex flex-row justify-content-center justify-content-lg-end gap-3"
                 >
-                  <!-- <button class="alertBoxBtn cancelBtn2">Cancel</button> -->
-                  <button class="alertBoxBtn confirmBtn2">Save Changes</button>
+                  <button class="alertBoxBtn confirmBtn2" id="saveChanges">
+                    Save Changes
+                  </button>
                 </div>
               </div>
             </div>
@@ -356,26 +390,26 @@
         <div>
           <div class="d-flex flex-column gap-3">
             <div class="d-flex flex-column gap-2 invitationMail">
-              <label for="empEmail">Invitation Email</label>
+              <label for="EmailInvite">Invitation Email</label>
               <input
                 type="email"
                 name="email"
-                id="email2"
+                id="EmailInvite"
                 class="inputField emailInput"
                 placeholder="example@youremail.com"
               />
+              <span
+                id="email-error"
+                style="color: #bd0000; font-size: small"
+              ></span>
             </div>
           </div>
         </div>
         <div class="btns d-flex justify-content-end gap-3">
-          <button
-            id="btnClose2"
-            class="alertBoxBtn cancelBtn2"
-            onclick="closePopUp()"
-          >
+          <button id="closeInvitePopup" class="alertBoxBtn cancelBtn2">
             Cancel
           </button>
-          <button id="btnDelete" class="alertBoxBtn confirmBtn2">
+          <button id="sendInvite" class="alertBoxBtn confirmBtn2">
             Send Invite
           </button>
         </div>
@@ -384,7 +418,8 @@
     <!--Add Employee pop up-->
     <script>
       let AddEmpBg = document.getElementById("AddEmp");
-      let EditInfoIcon = document.getElementsByClassName("editAdminInfo")[0];
+      let sendInvite = document.getElementById("sendInvite");
+      let emailInput = document.getElementById("EmailInvite");
       let body = document.getElementsByClassName("mainWrapper")[0];
 
       addEmployee.onclick = function () {
@@ -393,12 +428,6 @@
         addEmployee.children[0].classList.add("activeNav");
         AddEmpBg.classList.add("centerItems");
       };
-      function closePopUp() {
-        body.classList.remove("blurbody");
-        EditInfoIcon.classList.remove("inactiveNav");
-        addEmployee.children[0].classList.remove("activeNav");
-        AddEmpBg.classList.remove("centerItems");
-      }
       logOut.onclick = function () {
         window.location.replace("../index.html");
       };

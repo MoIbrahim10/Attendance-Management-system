@@ -1,4 +1,4 @@
-.editAdminContainer{
+.editAdminContainer , .EmpsReportsContainer{
   background-color: $background-color-light;
   border: 1px solid #F0F0F0;
 border-radius: 4px;
@@ -16,7 +16,7 @@ border-radius: 4px;
 #eyeIcon{
   position: absolute;
   top: 45%;
-  right: 30px;
+  right: 45px;
   color: #CCCCD6;
   cursor: pointer;
 }
