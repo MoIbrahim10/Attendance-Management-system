@@ -4,10 +4,57 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS-->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
       integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Bootstrap JS-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"
+      integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Jquery-->
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Jquery DataTable-->
+    <!-- Jquery DataTable CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css"
+    />
+    <!-- Jquery DataTable JS -->
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"
+    ></script>
+
+    <!-- Jquery DataTable Responsive-->
+    <!-- Jquery DataTable Responsive JS-->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/datatables-responsive/2.4.0/dataTables.responsive.min.js"
+      integrity="sha512-UEtHfW1dblwNO8FPaTWSG2V3Jv9omJDhGWFdVFaSF8wd9TlVk0Nyk47RgoTJ03cA2Hfz8rjOJ8xhJpiNIJcErw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Jquery DataTable Responsive CSS-->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/datatables.net-responsive-dt/2.4.0/responsive.dataTables.min.css"
+      integrity="sha512-1rs6CKPyMyWNKKt18TIfaktqZaIkCUK4mGE78D3tI+yu0CVk/ou/XTwikeo2utvOOOdkYpcyA268IyZ17aXOWg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
@@ -34,7 +81,7 @@
             src="../Images/avatar.svg"
             alt="user-avatar"
           />
-          <span class="adminName"><span id="employee-name"></span></span>
+          <span class="adminName" id="employee-name"></span>
           <a id="logOut"
             ><svg
               width="31"
@@ -97,11 +144,11 @@
               />
             </div>
             <table
-              class="table col-12"
+              class="table nowrap p-lg-4"
               id="emp-daily-report-table"
               width="100%"
             >
-              <thead class="border-bottom border-dark">
+              <thead>
                 <tr>
                   <th>Date</th>
                   <th>Arrival Time</th>
@@ -109,14 +156,7 @@
                   <th>Status</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td id="date"></td>
-                  <td id="arrival-time"></td>
-                  <td id="departure-time"></td>
-                  <td id="status"></td>
-                </tr>
-              </tbody>
+              <tbody id="dailyReportsTableBody"></tbody>
             </table>
           </div>
         </div>
@@ -151,8 +191,12 @@
                 />
               </div>
             </div>
-            <table class="table col-12" id="emp-monthly-report-table">
-              <thead class="border-bottom border-dark">
+            <table
+              class="table nowrap p-lg-4"
+              id="emp-monthly-report-table"
+              width="100%"
+            >
+              <thead>
                 <tr>
                   <th>Date</th>
                   <th>Arrival Time</th>

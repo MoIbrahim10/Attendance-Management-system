@@ -11,6 +11,7 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <script src="../JS/forgot Password/forgotPass.js" type="module"></script>
     <title>Forgot Your Password</title>
   </head>
   <body>
@@ -19,26 +20,36 @@
     >
       <div class="wrapper px-5 py-5">
         <div class="d-flex flex-column gap-4 px-5">
-          <div>
-            <h1 class="headerMsg">Forgot Your Password</h1>
-            <p class="paragraphtext">
-              Please enter your email address and we will <br />send your
-              password reset instructions.
-            </p>
-          </div>
+          <div id="resetPassWrapper">
+            <div>
+              <h1 class="headerMsg">Forgot Your Password</h1>
+              <p class="paragraphtext">
+                Please enter your email address and we will <br />send your
+                password reset instructions.
+              </p>
+            </div>
 
-          <div class="emailSec d-flex flex-column align-items-start">
-            <label for="email" class="labels"> Email Address </label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              class="inputField emailInput"
-              placeholder="example@youremail.com"
-            />
+            <div class="emailSec d-flex flex-column align-items-start">
+              <label for="email" class="labels"> Email Address </label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="inputField emailInput"
+                placeholder="example@youremail.com"
+              />
+            </div>
           </div>
           <div>
-            <button class="primaryBtnDisabled">Reset Password</button>
+            <button class="primaryBtnDisabled" id="resetButton">
+              Reset Password
+            </button>
+          </div>
+          <div class="goToSignUp">
+            New here? <a href="signUp.html" class="hrefLink">Sign up now!</a
+            ><br />
+            Already have an account?
+            <a href="SignIn.html" class="hrefLink">Sign In</a>
           </div>
         </div>
       </div>

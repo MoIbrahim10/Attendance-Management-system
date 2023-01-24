@@ -24,9 +24,9 @@
           <p class="paragraphtext">Enter your credentials to register.</p>
         </div>
         <div
-          class="Name d-flex flex-column flex-xl-row fl align-items-start px-5 gap-2 gap-xl-5"
+          class="Name d-flex flex-column flex-xl-row fl align-items-start px-5 gap-2 gap-xl-3"
         >
-          <div class="d-flex flex-column align-items-start">
+          <div class="d-flex flex-column align-items-start col-12 col-md-6">
             <label for="fname" class="labels"> First Name </label>
             <input
               type="text"
@@ -35,9 +35,12 @@
               class="inputField"
               placeholder="Mohamed"
             />
-            <span id="fname-error" style="color: #bd0000"></span>
+            <span
+              id="fname-error"
+              style="color: #bd0000; font-size: 14px"
+            ></span>
           </div>
-          <div class="d-flex flex-column align-items-start">
+          <div class="d-flex flex-column align-items-start col-12 col-md-6">
             <label for="lname" class="labels"> Last Name </label>
             <input
               type="text"
@@ -46,7 +49,10 @@
               class="inputField"
               placeholder="Ibrahim"
             />
-            <span id="lname-error" style="color: #bd0000"></span>
+            <span
+              id="lname-error"
+              style="color: #bd0000; font-size: 14px"
+            ></span>
           </div>
         </div>
         <div class="d-flex flex-column flex-xl-row px-5 gap-2 gap-xl-5">
@@ -55,7 +61,8 @@
               class="uploadImageSec d-flex flex-column align-items-center align-items-xl-start gap-2"
             >
               <div class="uploadImage">
-                <img src="../Images/uploadImageIcon.png" />
+                <img id="uploadedImg" src="../Images/uploadImageIcon.png" />
+                <input type="file" id="file-input" style="display: none" />
               </div>
               <span class="uploadLabel"> Upload Image </span>
               <p class="UploadDescription">
@@ -63,6 +70,7 @@
                 than 500x500 pixels and 1Mb
               </p>
             </div>
+            <span id="img-error" style="color: #bd0000; font-size: 14px"></span>
           </div>
           <div class="inputsSec">
             <div
@@ -79,7 +87,10 @@
                   class="inputField"
                   placeholder="Main Street, Your County, and Anytown"
                 />
-                <span id="address-error" style="color: #bd0000"></span>
+                <span
+                  id="address-error"
+                  style="color: #bd0000; font-size: 14px"
+                ></span>
               </div>
               <div class="ageSec d-flex flex-column">
                 <label for="age" class="labels ageLabel"> Age </label>
@@ -91,7 +102,10 @@
                   placeholder="23"
                   inputmode="numeric"
                 />
-                <span id="age-error" style="color: #bd0000"></span>
+                <span
+                  id="age-error"
+                  style="color: #bd0000; font-size: 14px"
+                ></span>
               </div>
             </div>
             <div class="emailSec d-flex flex-column align-items-start mt-3">
@@ -103,7 +117,10 @@
                 class="inputField emailInput"
                 placeholder="example@youremail.com"
               />
-              <span id="email-error" style="color: #bd0000"></span>
+              <span
+                id="email-error"
+                style="color: #bd0000; font-size: 14px"
+              ></span>
             </div>
           </div>
         </div>
@@ -118,7 +135,10 @@
               <span class="fWeight-semibold">Privacy Policy</span> .
             </span>
           </label>
-          <span id="termsConditions-error" style="color: #bd0000"></span>
+          <span
+            id="termsConditions-error"
+            style="color: #bd0000; font-size: 14px"
+          ></span>
         </div>
         <div class="px-5 w-100">
           <button class="primaryBtnDisabled" type="submit" id="submit-button">

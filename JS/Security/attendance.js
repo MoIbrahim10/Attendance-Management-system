@@ -33,7 +33,7 @@ export async function checkAttendance(username) {
           attendances.push({
             date: todayDate,
             arrivalTime: getTime(),
-            departureTime: "17:00",
+            departureTime: "",
             status: todayStatus
           });
         }

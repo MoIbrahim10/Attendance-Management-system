@@ -14,52 +14,39 @@ export function validateForm(form) {
 
     /** Validate First Name **/
   const { isValid:isValidfName, error:fNameMsgError } = validateName(fnameInput.value);
-  if (!isValidfName) {
-    fnameInput.style.border = "1px solid #BD0000";
-    errorMsgs.fnameError.textContent = fNameMsgError;
-  }
-  else{
-    fnameInput.style.border = "1px solid #51C16A";
-    errorMsgs.fnameError.textContent = "";
-  }
+  validateInput(isValidfName, fNameMsgError, fnameInput, errorMsgs.fnameError);
+
 
     /** Validate Last Name **/
   const { isValid:isValidlName, error:lNameMsgError } = validateName(lnameInput.value);
-  if (!isValidlName) {
-    lnameInput.style.border = "1px solid #BD0000";
-    errorMsgs.lnameError.textContent = lNameMsgError;
-  }else{
-    lnameInput.style.border = "1px solid #51C16A";
-    errorMsgs.lnameError.textContent = "";
-  }
+  validateInput(isValidlName, lNameMsgError, lnameInput, errorMsgs.lnameError);
 
     /** Validate Address **/
   const { isValid:isValidlAddress, error:addressMsgError } = validateAddress(addressInput.value);
-  if (!isValidlAddress) {
-    addressInput.style.border = "1px solid #BD0000";
-    errorMsgs.addressError.textContent = addressMsgError;
-  }else{
-    addressInput.style.border = "1px solid #51C16A";
-    errorMsgs.addressError.textContent = "";
-  }
+  validateInput(isValidlAddress, addressMsgError, addressInput, errorMsgs.addressError);
+  
 
     /** Validate Age **/
   const { isValid:isValidAge, error:ageMsgError } = validateAge(ageInput.value);
-  if (!isValidAge) {
-    ageInput.style.border = "1px solid #BD0000";
-    errorMsgs.ageError.textContent = ageMsgError;
-  }else{
-    ageInput.style.border = "1px solid #51C16A";
-    errorMsgs.ageError.textContent = "";
-  }
+  validateInput(isValidAge, ageMsgError, ageInput, errorMsgs.ageError);
+    
   /** Validate Email **/
   const { isValid:isValidEmail, error:emailMsgError } = validateEmail(emailInput.value);
-  if (!isValidEmail) {
-    emailInput.style.border = "1px solid #BD0000";
-    errorMsgs.emailError.textContent = emailMsgError;
-  }else{
-    emailInput.style.border = "1px solid #51C16A";
-    errorMsgs.emailError.textContent = "";
-  }
-  
+  validateInput(isValidEmail, emailMsgError, emailInput, errorMsgs.emailError);  
+    
 }
+
+
+
+
+
+function validateInput(isValid, errorMessage, inputElement, errorMessageElement) {
+  if (!isValid) {
+    inputElement.style.border = "1px solid #BD0000";
+    errorMessageElement.textContent = errorMessage;
+  } else {
+    inputElement.style.border = "1px solid #51C16A";
+    errorMessageElement.textContent = "";
+  }
+}
+

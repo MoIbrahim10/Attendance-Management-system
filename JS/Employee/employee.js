@@ -1,6 +1,5 @@
 import { getEmployeeData } from './getEmployeeData.js';
 
-
 export function getAttendanceDates() {
   return getEmployeeData().then(employee => {
     const attendanceDates = employee.attendances.map(attendance => attendance.date);

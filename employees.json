@@ -9,7 +9,7 @@
       "age": "24",
       "address": "Cairo",
       "jobTittle": "CEO",
-      "role": "Admin",
+      "role": "admin",
       "userName": "SarahAdams10",
       "password": "SarahAdams",
       "attendances": [
@@ -48,20 +48,26 @@
           "arrivalTime": "",
           "departureTime": "",
           "status": "absent"
+        },
+        {
+          "date": "1/24/2023",
+          "arrivalTime": "12:21",
+          "departureTime": "",
+          "status": "late"
         }
       ]
     },
     {
       "id": 2,
-      "fname": "Ali",
-      "lname": "Ahmed",
-      "avatar": "images/Employeesimages/Lana Blanca Perkins.jpeg",
-      "email": "AliAhmed@gmail.com",
-      "age": "36",
-      "address": "Cairo",
-      "jobTittle": "Software Engineer",
+      "fname": "Tony ",
+      "lname": "Augusta",
+      "avatar": "../Images/Employees/Tony Augusta.jpeg",
+      "email": "Tony_Augusta@gmail.com",
+      "age": "32",
+      "address": "10 Mehwar Cairo Egypt",
+      "jobTittle": "security",
       "role": "security",
-      "userName": "AliAhmed92",
+      "userName": "T_Augusta10",
       "password": "12345678",
       "attendances": [
         {
@@ -99,6 +105,12 @@
           "arrivalTime": "",
           "departureTime": "",
           "status": "absent"
+        },
+        {
+          "date": "1/24/2023",
+          "arrivalTime": "12:46",
+          "departureTime": "",
+          "status": "late"
         }
       ]
     },
@@ -150,6 +162,12 @@
           "arrivalTime": "09:24",
           "departureTime": "16:50",
           "status": "present"
+        },
+        {
+          "date": "1/24/2023",
+          "arrivalTime": "",
+          "departureTime": "",
+          "status": "absent"
         }
       ]
     },
@@ -201,6 +219,12 @@
           "arrivalTime": "09:26",
           "departureTime": "",
           "status": "late"
+        },
+        {
+          "date": "1/24/2023",
+          "arrivalTime": "",
+          "departureTime": "",
+          "status": "absent"
         }
       ]
     },
@@ -252,6 +276,12 @@
           "arrivalTime": "",
           "departureTime": "",
           "status": "absent"
+        },
+        {
+          "date": "1/24/2023",
+          "arrivalTime": "",
+          "departureTime": "",
+          "status": "absent"
         }
       ]
     },
@@ -264,7 +294,7 @@
       "age": "23",
       "avatar": "images/Employeesimages/Lana Blanca Perkins.jpeg",
       "userName": "J_Adams6186",
-      "password": "93phs4qwwg",
+      "password": "1111222233334444",
       "jobTittle": "Engineer",
       "role": "employee",
       "attendances": [
@@ -300,6 +330,12 @@
         },
         {
           "date": "1/21/2023",
+          "arrivalTime": "",
+          "departureTime": "",
+          "status": "absent"
+        },
+        {
+          "date": "1/24/2023",
           "arrivalTime": "",
           "departureTime": "",
           "status": "absent"
@@ -354,6 +390,12 @@
           "arrivalTime": "",
           "departureTime": "",
           "status": "absent"
+        },
+        {
+          "date": "1/24/2023",
+          "arrivalTime": "11:48",
+          "departureTime": "12:49",
+          "status": "late"
         }
       ]
     }
@@ -367,6 +409,69 @@
       "address": "10 XXX Borat US",
       "age": "25",
       "avatar": "../Images/avatar.svg"
+    },
+    {
+      "id": 2,
+      "fname": "Antony",
+      "lname": "Capadiva",
+      "email": "AntotnyA@Agmi.co",
+      "address": "10 Exeel Samuel Eg",
+      "age": "28",
+      "avatar": "../Images/avatar.svg"
+    },
+    {
+      "id": 3,
+      "fname": "John",
+      "lname": "Adams",
+      "email": "ivm5s3s4dssl@moakt.co",
+      "address": "10 ECCS fsfs EG",
+      "age": "28",
+      "avatar": "../Images/avatar.svg"
+    },
+    {
+      "id": 4,
+      "fname": "mo",
+      "lname": "ahmed ",
+      "email": "mielbedwihyy@gmail.comx",
+      "address": "kased",
+      "age": "28",
+      "avatar": "http://127.0.0.1:5501/Images/uploadImageIcon.png"
+    },
+    {
+      "id": 5,
+      "fname": "John",
+      "lname": "Adams",
+      "email": "mielbedwihyxxx@gmail.com",
+      "address": "10 sdds dsssd EF",
+      "age": "29",
+      "avatar": "../Images/avatar.svg"
+    },
+    {
+      "id": 6,
+      "fname": "John",
+      "lname": "Adams",
+      "email": "ivm5s3s4xxl@moakt.co",
+      "address": "10 sddsd dsds EG",
+      "age": "28",
+      "avatar": "../Images/avatar.svg"
+    },
+    {
+      "id": 7,
+      "fname": "John",
+      "lname": "Adams",
+      "email": "aa@gmail.com",
+      "address": "12 GGGG sds dd",
+      "age": "60",
+      "avatar": "../images/avatar.png"
+    },
+    {
+      "id": 8,
+      "fname": "John",
+      "lname": "Adams",
+      "email": "ivm5s3s4l@moakt.cod",
+      "address": "10 hhhh eeee RG",
+      "age": "28",
+      "avatar": "Kylan Peter.jpeg"
     }
   ]
 }

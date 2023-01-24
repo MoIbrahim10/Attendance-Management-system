@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS-->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
@@ -11,12 +12,53 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- bootstrap5 dataTables css cdn -->
+
+    <!-- Bootstrap JS-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"
+      integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Jquery-->
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Jquery DataTable-->
+    <!-- Jquery DataTable CSS -->
     <link
       rel="stylesheet"
-      href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css"
+      type="text/css"
+      href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css"
     />
-    <script src="../JS/Security/securitymain.js" type="module"></script>
+    <!-- Jquery DataTable JS -->
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"
+    ></script>
+
+    <!-- Jquery DataTable Responsive-->
+    <!-- Jquery DataTable Responsive JS-->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/datatables-responsive/2.4.0/dataTables.responsive.min.js"
+      integrity="sha512-UEtHfW1dblwNO8FPaTWSG2V3Jv9omJDhGWFdVFaSF8wd9TlVk0Nyk47RgoTJ03cA2Hfz8rjOJ8xhJpiNIJcErw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Jquery DataTable Responsive CSS-->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/datatables.net-responsive-dt/2.4.0/responsive.dataTables.min.css"
+      integrity="sha512-1rs6CKPyMyWNKKt18TIfaktqZaIkCUK4mGE78D3tI+yu0CVk/ou/XTwikeo2utvOOOdkYpcyA268IyZ17aXOWg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="../JS/Security/securityReports.js" type="module"></script>
     <link rel="stylesheet" href="../CSS/sass/main.css" />
     <title>Security</title>
   </head>
@@ -29,7 +71,7 @@
         >
           <!-- Attendance Icon -->
           <div class="mt-md-5">
-            <a
+            <a href="security.html"
               ><svg
                 width="31"
                 height="31"
@@ -39,7 +81,7 @@
               >
                 <path
                   d="M8 2V5"
-                  stroke="#2000A1"
+                  stroke="#CCCCD6"
                   stroke-width="1.5"
                   stroke-miterlimit="10"
                   stroke-linecap="round"
@@ -47,7 +89,7 @@
                 />
                 <path
                   d="M16 2V5"
-                  stroke="#2000A1"
+                  stroke="#CCCCD6"
                   stroke-width="1.5"
                   stroke-miterlimit="10"
                   stroke-linecap="round"
@@ -56,7 +98,7 @@
                 <path
                   opacity="0.4"
                   d="M3.5 9.08984H20.5"
-                  stroke="#2000A1"
+                  stroke="#CCCCD6"
                   stroke-width="1.5"
                   stroke-miterlimit="10"
                   stroke-linecap="round"
@@ -64,7 +106,7 @@
                 />
                 <path
                   d="M18 23C20.2091 23 22 21.2091 22 19C22 16.7909 20.2091 15 18 15C15.7909 15 14 16.7909 14 19C14 21.2091 15.7909 23 18 23Z"
-                  stroke="#2000A1"
+                  stroke="#CCCCD6"
                   stroke-width="1.5"
                   stroke-miterlimit="10"
                   stroke-linecap="round"
@@ -72,7 +114,7 @@
                 />
                 <path
                   d="M19.4898 19.0498H16.5098"
-                  stroke="#2000A1"
+                  stroke="#CCCCD6"
                   stroke-width="1.5"
                   stroke-miterlimit="10"
                   stroke-linecap="round"
@@ -80,7 +122,7 @@
                 />
                 <path
                   d="M18 17.5898V20.5798"
-                  stroke="#2000A1"
+                  stroke="#CCCCD6"
                   stroke-width="1.5"
                   stroke-miterlimit="10"
                   stroke-linecap="round"
@@ -88,7 +130,7 @@
                 />
                 <path
                   d="M21 8.5V16.36C20.27 15.53 19.2 15 18 15C15.79 15 14 16.79 14 19C14 19.75 14.21 20.46 14.58 21.06C14.79 21.42 15.06 21.74 15.37 22H8C4.5 22 3 20 3 17V8.5C3 5.5 4.5 3.5 8 3.5H16C19.5 3.5 21 5.5 21 8.5Z"
-                  stroke="#2000A1"
+                  stroke="#CCCCD6"
                   stroke-width="1.5"
                   stroke-miterlimit="10"
                   stroke-linecap="round"
@@ -97,7 +139,7 @@
                 <path
                   opacity="0.4"
                   d="M11.9955 13.7002H12.0045"
-                  stroke="#2000A1"
+                  stroke="#CCCCD6"
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -105,7 +147,7 @@
                 <path
                   opacity="0.4"
                   d="M8.29431 13.7002H8.30329"
-                  stroke="#2000A1"
+                  stroke="#CCCCD6"
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -113,7 +155,7 @@
                 <path
                   opacity="0.4"
                   d="M8.29492 16.7002H8.3039"
-                  stroke="#2000A1"
+                  stroke="#CCCCD6"
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -123,9 +165,9 @@
           </div>
           <!-- Reports Icon -->
           <div>
-            <a href="securitReports.html"
+            <a
               ><svg
-                fill="#CCCCD6"
+                fill="#2000A1"
                 width="31"
                 height="31"
                 viewBox="0 0 32 32"
@@ -195,55 +237,100 @@
             </div>
           </nav>
 
-          <main class="p-5">
-            <div class="card mb-5">
-              <div class="card-header">
-                <h3>Attendance</h3>
-              </div>
-              <div class="card-body">
-                <form class="row g-2 g-xl-3">
-                  <div class="col-6 col-md-9 col-xl-10">
-                    <label for="username" class="visually-hidden"
-                      >username</label
-                    >
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="username"
-                      placeholder="username"
-                    />
-                    <span id="wrongUsername"></span>
-                  </div>
-                  <div class="col-6 col-md-3 col-xl-2">
-                    <button type="submit" class="confirmAttndBtn">
-                      Confirm Attendance
-                    </button>
-                  </div>
-                </form>
-                <table class="table mt-5 col-10" id="attendance-table">
-                  <thead>
-                    <tr>
-                      <th scope="col" id="num">#</th>
-                      <th scope="col" id="name">Name</th>
-                      <th scope="col" id="arrvTime">Arrival time</th>
-                      <th scope="col" id="deptTime">Departure time</th>
-                      <th scope="col" id="status">Status</th>
-                    </tr>
-                  </thead>
-                  <tbody
-                    class="table-group-divider"
-                    id="attendance-table-body"
-                  ></tbody>
-                </table>
-                <h6 id="error-message"></h6>
+          <main class="container p-5">
+            <div class="row">
+              <div class="col-12" id="emp-info-sec">
+                <h2 class="mb-3">Employee Information</h2>
+                <p>Name: <span id="name"></span></p>
+                <p>Email: <span id="email"></span></p>
+                <p>Age: <span id="age"></span></p>
+                <p>Address: <span id="address"></span></p>
+                <p>Job Tittle: <span id="jobTittle"></span></p>
               </div>
             </div>
 
-            <!-- <h1 class="dashboardHeader"></h1>
-            <div class="container p-4">
-              
+            <!--HTML for the daily report table -->
+            <div class="card mb-5">
+              <div class="card-header">
+                <h3>Daily Report</h3>
+              </div>
+              <div class="card-body">
+                <div class="form-group mb-5">
+                  <label for="daily-report-date" class="mb-2"
+                    >Select Date:</label
+                  >
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="daily-report-date"
+                    placeholder="Select date"
+                  />
+                </div>
+                <table
+                  class="table nowrap p-lg-4"
+                  id="emp-daily-report-table"
+                  width="100%"
+                >
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Arrival Time</th>
+                      <th>Departure Time</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody id="dailyReportsTableBody"></tbody>
+                </table>
+              </div>
+            </div>
 
-            </div> -->
+            <!--HTML for the monthly report table -->
+            <div class="card">
+              <div class="card-header">
+                <h3>Monthly Report</h3>
+              </div>
+              <div class="card-body">
+                <div class="mb-5">
+                  <div class="form-group mb-3">
+                    <label for="monthly-report-start-date" class="mb-2"
+                      >Select Start Date:</label
+                    >
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="monthly-report-start-date"
+                      placeholder="Select start date"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="monthly-report-end-date" class="mb-2"
+                      >Select End Date:</label
+                    >
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="monthly-report-end-date"
+                      placeholder="Select end date"
+                    />
+                  </div>
+                </div>
+                <table
+                  class="table ctable-borderless nowrap p-lg-4"
+                  id="emp-monthly-report-table"
+                  style="width: 100%"
+                >
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Arrival Time</th>
+                      <th>Departure Time</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody id="monthlyReportTB"></tbody>
+                </table>
+              </div>
+            </div>
           </main>
         </div>
       </div>

@@ -1,24 +1,19 @@
-import {fetchData} from './fetchData.js';
-import {showDailyReports} from './EmpsdailyReports.js';
-import {showMonthlyReports} from './EmpsMonthlyReports.js';
-import {showstatisticsReports} from './statisticsReport.js';
+import { showDailyReports } from './empDailyReports.js';
+import { showMonthlyReports } from './empMonthlyReports.js';
 import {calendarDateFormat,MDYDateFormat} from '../Security/getDateformat.js';
-import {disableNonAttendanceDates} from './disableNonAttendanceDates.js';
+import {disableNonAttendanceDates} from '../admin/disableNonAttendanceDates.js';
 
 
-(async function displayEmployeesReports() {
-  const employees = await fetchData("employees");
+export function showEmpInfo(employee){
+  document.getElementById('name').textContent = `${employee.fname} ${employee.lname}`;
+  document.getElementById('email').textContent = employee.email;
+  document.getElementById('age').textContent = employee.age;
+  document.getElementById('address').textContent = employee.address;
+  document.getElementById('jobTittle').textContent = employee.jobTittle;
+}
 
-  showstatisticsReports(employees);
-  // Find the attendances of employee 1
-  const attendances = employees[0].attendances;
 
-  dailyReports(employees,attendances);
-  monthlyReports(employees,attendances);
-  
-})();
-
-export function dailyReports(employees,attendances){
+export function dailyReports(employee,attendances){
 
   const dateInput = document.getElementById("daily-report-date");
 
@@ -28,20 +23,16 @@ export function dailyReports(employees,attendances){
   const lastDate = calendarDateFormat(lastAttendance.date);
 
   dateInput.value = lastDate;
-  showDailyReports(employees, MDYDateFormat(lastDate));
+  showDailyReports(employee, MDYDateFormat(lastDate));
 
   //Retrieve and display the employee's attendance data for a specific date in the daily report
   dateInput.addEventListener('change', async (e)=> {
     const date = MDYDateFormat(e.target.value);
-    showDailyReports(employees, date);
+    showDailyReports(employee, date);
   });
 }
 
-
-
-
-
-export function monthlyReports(employees,attendances){
+export function monthlyReports(employee,attendances){
 
   const startDateInput = document.getElementById("monthly-report-start-date");
   const endDateInput = document.getElementById("monthly-report-end-date");
@@ -56,13 +47,13 @@ export function monthlyReports(employees,attendances){
 
   startDateInput.value = fisrtdate;
   endDateInput.value = lastDate;
-  showMonthlyReports(employees, MDYDateFormat(startDateInput.value),MDYDateFormat(endDateInput.value));
+  showMonthlyReports(employee, MDYDateFormat(startDateInput.value),MDYDateFormat(endDateInput.value));
 
    //Retrieve and display the employee's attendance data for a range of dates in the monthly report
   startDateInput.addEventListener('change', async (e)=> {
     const startDate = MDYDateFormat(e.target.value);
     const endDate = MDYDateFormat(endDateInput.value);
-    showMonthlyReports(employees, startDate,endDate);
+    showMonthlyReports(employee, startDate,endDate);
 
        //start date should be less than end date
     let date = new Date(startDateInput.value);
@@ -74,10 +65,6 @@ export function monthlyReports(employees,attendances){
   endDateInput.addEventListener('change', async (e)=> {
     const startDate = MDYDateFormat(startDateInput.value);
     const endDate = MDYDateFormat(e.target.value);
-    showMonthlyReports(employees, startDate,endDate);
+    showMonthlyReports(employee, startDate,endDate);
   });  
 }
-
-
-
-

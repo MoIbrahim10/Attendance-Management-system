@@ -37,12 +37,12 @@ background-color: $background-color-light;
 
 
 
-.adminAvatar{
+.adminAvatar, #securityAvatar{
   height: 40px;
   border-radius: 50%;
 }
 
-.adminName{
+.adminName, #securityName{
   @extend %labelInput;
   color:$text-color-dark2;
 }
