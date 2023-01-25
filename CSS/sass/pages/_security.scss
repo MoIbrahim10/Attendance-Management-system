@@ -30,8 +30,116 @@
   color: white !important;
 }
 
-// .Emp_status{
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
+
+
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-wrap: nowrap;
+}
+
+.input {
+  min-height: 50px;
+  min-width: 80%;
+  padding: 0 1rem;
+  color: $text-color-dark;
+  font-size: 15px;
+  border: 1px solid $primary-color;
+  border-radius: 6px 0 0 6px;
+  background-color: transparent;
+  @media screen and (max-width: 1200px) {
+    min-width: 75%;
+  }
+  @media screen and (max-width: 890px) {
+    min-width: 66%;
+  }
+  @media screen and (max-width: 696px) {
+    min-width: 50%;
+  }
+}
+
+.button--submit {
+  min-height: 50px;
+  min-width: 20%;
+  padding: .5em 1em;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  background-color: $primary-color;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color .3s ease-in-out;
+  @media screen and (max-width: 1200px) {
+    min-width: 25%;
+  }
+  @media screen and (max-width: 890px) {
+    min-width: 34%;
+  }
+  @media screen and (max-width: 696px) {
+    min-width: 50%;
+  }
+}
+
+.button--submit:hover {
+  background-color: $primary-color;
+}
+
+.input:focus, .input:focus-visible {
+  border-color: $primary-colorlight;
+  outline: none;
+}
+
+/* clock  */
+
+.clockWrapper{
+  height: 100px;
+  width: 360px;
+  position: relative;
+  border-radius: 10px;
+  cursor: default;
+  animation: animate 1.5s linear infinite;
+}
+.clockWrapper .display,
+.clockWrapper span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.clockWrapper .display{
+  z-index: 999;
+  height: 85px;
+  width: 345px;
+  // background: #1b1b1b;
+  border-radius: 6px;
+  text-align: center;
+}
+.display #time{
+  line-height: 85px;
+  color: #fff;
+  font-size: 50px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background: $primary-color;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate 1.5s linear infinite;
+}
+// @keyframes animate {
+//   100%{
+//     filter: hue-rotate(360deg);
+//   }
 // }
+.clockWrapper span{
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  background: inherit;
+}
+.clockWrapper span:first-child{
+  filter: blur(7px);
+}
+.clockWrapper span:last-child{
+  filter: blur(20px);
+}

@@ -40,3 +40,122 @@
         border: 1px solid $primary-color;
     }
 }
+
+
+
+
+.ApprvDeclinBtn {
+    width: 150px;
+    height: 42px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    // transform: scale(0.8);
+  }
+
+  .approveBtn {
+    background: #51c16a;
+  }
+  .declineBtn {
+    background: #cc2929;
+  }
+
+  .ApprvDeclinBtn,
+  .ApprvDeclinBtn span {
+    transition: 200ms;
+  }
+
+  .ApprvDeclinBtn .text {
+    transform: translateX(35px);
+    color: white;
+    font-weight: bold;
+  }
+
+  .ApprvDeclinBtn .icon {
+    position: absolute;
+    transform: translateX(110px);
+    height: 20px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .approveBtn .icon {
+    border-left: 1px solid #39874a;
+  }
+  .declineBtn .icon {
+    border-left: 1px solid #921c1c;
+  }
+
+  .ApprvDeclinBtn svg {
+    width: 15px;
+    fill: #eee;
+  }
+
+  .approveBtn:hover {
+    background: #39874a;
+  }
+  .declineBtn:hover {
+    background: #921c1c;
+  }
+
+  .ApprvDeclinBtn:hover .text {
+    color: transparent;
+  }
+
+  .ApprvDeclinBtn:hover .icon {
+    width: 150px;
+    border-left: none;
+    transform: translateX(0);
+  }
+
+  .ApprvDeclinBtn:focus {
+    outline: none;
+  }
+
+  .ApprvDeclinBtn:active .icon svg {
+    transform: scale(0.8);
+  }
+
+  .ApprvDeclinBtn{
+    @media screen and (max-width: 776px) {
+        transform: scale(0.7);
+    }   
+    }
+
+
+.edit-button,.save-button{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.16px;
+    transition: all 0.3s ease;
+}
+
+.edit-button{
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+    &:hover{
+        background-color: #000;
+        color: #fff;
+    }
+}
+
+.save-button{
+    background-color: #000;
+    color: #fff;
+    &:hover{
+        background-color: $primary-color;
+        color: white;
+    }
+}

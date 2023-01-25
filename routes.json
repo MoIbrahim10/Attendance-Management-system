@@ -1,0 +1,7 @@
+{
+  "/employees/:id/attendances/:date": {
+    "PATCH": {
+      "action": "updateAttendance"
+    }
+  }
+}

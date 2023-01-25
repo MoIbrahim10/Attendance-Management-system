@@ -4,6 +4,7 @@ import {showMonthlyReports} from './EmpsMonthlyReports.js';
 import {showstatisticsReports} from './statisticsReport.js';
 import {calendarDateFormat,MDYDateFormat} from '../Security/getDateformat.js';
 import {disableNonAttendanceDates} from './disableNonAttendanceDates.js';
+import {showEmpsAttendaces} from './editEmpAttendance.js';
 
 
 (async function displayEmployeesReports() {
@@ -15,6 +16,7 @@ import {disableNonAttendanceDates} from './disableNonAttendanceDates.js';
 
   dailyReports(employees,attendances);
   monthlyReports(employees,attendances);
+  showEmpsAttendaces();
   
 })();
 

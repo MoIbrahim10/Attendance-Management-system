@@ -54,8 +54,7 @@ export async function showDailyReports(employees, date) {
   }
 
   // initialize the DataTable
-  $('#emp-daily-report-table').DataTable({ responsive: true,
-   });
+  $('#emp-daily-report-table').DataTable({ responsive: true,stateSave: true,});
 } 
 
 

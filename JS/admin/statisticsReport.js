@@ -43,18 +43,7 @@ export async function showstatisticsReports(employees, date) {
   }
 
   // initialize the DataTable
-  $('#emps-statistics-table').DataTable({ responsive: true,       
-   buttons: [
-    {
-        extend: 'copy',
-        text: 'Copy to clipboard'
-    },
-    'excel',
-    'pdf'
-]
-
-
-});
+  $('#emps-statistics-table').DataTable({ responsive: true});
 }
 
 

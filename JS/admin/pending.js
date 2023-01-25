@@ -24,13 +24,37 @@ export async function displayPendingUsers() {
       <td>23</td>
       <td>${pendingUser.email}</td>
       <td>
-        <div class="d-flex gap-2" id="pendingActionsSec">
-          <button class="btn btn-success approveBtn">
-            Approve
-          </button>
-          <button class="btn btn-danger declineBtn">
-            Decline
-          </button>
+        <div class="d-flex gap-0 gap-md-2" id="pendingActionsSec">
+          <button class="ApprvDeclinBtn approveBtn">
+          <span class="text">Approve</span
+          ><span class="icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20.285 2l-11.285 11.567-5.286-5.011-3.814 3.216 8.7 8.428 15-15.285z"
+              />
+            </svg>
+          </span>
+        </button>
+        <button class="ApprvDeclinBtn declineBtn">
+        <span class="text">Decline</span
+        ><span class="icon"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"
+            ></path>
+          </svg>
+        </span>
+      </button>
         </div>
       </td>
 `;
@@ -50,6 +74,7 @@ export async function displayPendingUsers() {
 
   pendingTableBody.addEventListener("click", async (event) => {
     if (event.target.matches(".approveBtn")) {
+      
       const index = event.target.getAttribute("data-index");
       const username = generateUsername(pending[index].fname, pending[index].lname);
       const password = generatePassword();

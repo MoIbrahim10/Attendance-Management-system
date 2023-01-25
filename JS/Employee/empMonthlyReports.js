@@ -41,5 +41,5 @@ export async function showMonthlyReports(employee, startDate, endDate) {
       tableBody.appendChild(newRow);
       }
       // initialize the DataTable
-      $('#emp-monthly-report-table').DataTable({ responsive: true });
+      $('#emp-monthly-report-table').DataTable({ responsive: true,stateSave: true });
 } 

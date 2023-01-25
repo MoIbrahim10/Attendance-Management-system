@@ -53,7 +53,8 @@ export async function showMonthlyReports(employees, startDate, endDate) {
     }
   }
   // initialize the DataTable
-  $('#emp-monthly-report-table').DataTable({ responsive: true });
+  $('#emp-monthly-report-table').DataTable({ responsive: true, stateSave: true,dom: 'Pfrtip'
+});
 } 
 
 

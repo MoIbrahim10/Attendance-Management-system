@@ -139,8 +139,7 @@ color: #2000A1;
 }
 
 .approveBtn,.declineBtn {
-  width: 130px;
-  height: 40px;
+  // padding: 10px 25px;
   border-radius: $border-radius;
 }
 
@@ -152,11 +151,7 @@ color: #2000A1;
       display: none;
     } 
   }
-  // .tableContainer{
-  //   @media screen and (max-width: 768px) {
-  //     padding: 20px;
-  //   } 
-  // }
+
 
   div.dataTables_wrapper div.dataTables_filter input{
     @media screen and (max-width: 768px) {
@@ -168,7 +163,11 @@ color: #2000A1;
 
 
 
-
+#pendingActionsSec{
+  @media screen and (max-width: 768px) {
+    flex-flow: column;
+  } 
+}
 
 
 /**************************** employee popup ****************************/

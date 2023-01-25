@@ -97,6 +97,123 @@ table thead {
   border: 1px solid #2000A1;
 }
 
+.ApprvDeclinBtn {
+  width: 150px;
+  height: 42px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.approveBtn {
+  background: #51c16a;
+}
+
+.declineBtn {
+  background: #cc2929;
+}
+
+.ApprvDeclinBtn,
+.ApprvDeclinBtn span {
+  transition: 200ms;
+}
+
+.ApprvDeclinBtn .text {
+  transform: translateX(35px);
+  color: white;
+  font-weight: bold;
+}
+
+.ApprvDeclinBtn .icon {
+  position: absolute;
+  transform: translateX(110px);
+  height: 20px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.approveBtn .icon {
+  border-left: 1px solid #39874a;
+}
+
+.declineBtn .icon {
+  border-left: 1px solid #921c1c;
+}
+
+.ApprvDeclinBtn svg {
+  width: 15px;
+  fill: #eee;
+}
+
+.approveBtn:hover {
+  background: #39874a;
+}
+
+.declineBtn:hover {
+  background: #921c1c;
+}
+
+.ApprvDeclinBtn:hover .text {
+  color: transparent;
+}
+
+.ApprvDeclinBtn:hover .icon {
+  width: 150px;
+  border-left: none;
+  transform: translateX(0);
+}
+
+.ApprvDeclinBtn:focus {
+  outline: none;
+}
+
+.ApprvDeclinBtn:active .icon svg {
+  transform: scale(0.8);
+}
+
+@media screen and (max-width: 776px) {
+  .ApprvDeclinBtn {
+    transform: scale(0.7);
+  }
+}
+
+.edit-button, .save-button {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.16px;
+  transition: all 0.3s ease;
+}
+
+.edit-button {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+.edit-button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.save-button {
+  background-color: #000;
+  color: #fff;
+}
+.save-button:hover {
+  background-color: #2000A1;
+  color: white;
+}
+
 .inputField {
   width: 100%;
   border: 1px solid #CCCCD6;
@@ -542,8 +659,6 @@ table.dataTable thead > tr > th.sorting:last-child:after, table.dataTable thead 
 }
 
 .approveBtn, .declineBtn {
-  width: 130px;
-  height: 40px;
   border-radius: 6px;
 }
 
@@ -556,6 +671,12 @@ table.dataTable thead > tr > th.sorting:last-child:after, table.dataTable thead 
 @media screen and (max-width: 768px) {
   div.dataTables_wrapper div.dataTables_filter input {
     width: 100px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #pendingActionsSec {
+    flex-flow: column;
   }
 }
 
@@ -797,6 +918,131 @@ table.dataTable thead > tr > th.sorting:last-child:after, table.dataTable thead 
 .absent-status {
   background-color: #cc2929 !important;
   color: white !important;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-wrap: nowrap;
+}
+
+.input {
+  min-height: 50px;
+  min-width: 80%;
+  padding: 0 1rem;
+  color: #2E2E2E;
+  font-size: 15px;
+  border: 1px solid #2000A1;
+  border-radius: 6px 0 0 6px;
+  background-color: transparent;
+}
+@media screen and (max-width: 1200px) {
+  .input {
+    min-width: 75%;
+  }
+}
+@media screen and (max-width: 890px) {
+  .input {
+    min-width: 66%;
+  }
+}
+@media screen and (max-width: 696px) {
+  .input {
+    min-width: 50%;
+  }
+}
+
+.button--submit {
+  min-height: 50px;
+  min-width: 20%;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  background-color: #2000A1;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+@media screen and (max-width: 1200px) {
+  .button--submit {
+    min-width: 25%;
+  }
+}
+@media screen and (max-width: 890px) {
+  .button--submit {
+    min-width: 34%;
+  }
+}
+@media screen and (max-width: 696px) {
+  .button--submit {
+    min-width: 50%;
+  }
+}
+
+.button--submit:hover {
+  background-color: #2000A1;
+}
+
+.input:focus, .input:focus-visible {
+  border-color: #5e7dac;
+  outline: none;
+}
+
+/* clock  */
+.clockWrapper {
+  height: 100px;
+  width: 360px;
+  position: relative;
+  border-radius: 10px;
+  cursor: default;
+  -webkit-animation: animate 1.5s linear infinite;
+          animation: animate 1.5s linear infinite;
+}
+
+.clockWrapper .display,
+.clockWrapper span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.clockWrapper .display {
+  z-index: 999;
+  height: 85px;
+  width: 345px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.display #time {
+  line-height: 85px;
+  color: #fff;
+  font-size: 50px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background: #2000A1;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: animate 1.5s linear infinite;
+          animation: animate 1.5s linear infinite;
+}
+
+.clockWrapper span {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  background: inherit;
+}
+
+.clockWrapper span:first-child {
+  filter: blur(7px);
+}
+
+.clockWrapper span:last-child {
+  filter: blur(20px);
 }
 
 table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before, table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control:before {

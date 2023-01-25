@@ -1,6 +1,6 @@
 import {validateName} from "../SignUp/formValidation/validateName.js";
 import {validateEmail} from "../SignUp/formValidation/validateEmail.js";
-
+import { UploadImagefn } from "../uploadImg.js";
 export function editInfo(id){
 let firstNameInput = document.getElementById("fName");
 let lastNameInput = document.getElementById("lName");
@@ -89,8 +89,6 @@ firstNameInput.addEventListener("input", function() {
     jobTitleInput.style.border = "1px solid #51C16A";
   }
   });
-
-
 
   const { isValid:isValidName, error:NameMsgError } = validateName(firstNameInput.value);
   const { isValid:isValidLastName, error:lastNameMsgError } = validateName(lastNameInput.value);

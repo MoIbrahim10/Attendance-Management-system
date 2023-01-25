@@ -4,17 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS-->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
       integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    />
-    <!-- bootstrap5 dataTables css cdn -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css"
     />
     <script src="../JS/Security/securitymain.js" type="module"></script>
     <link rel="stylesheet" href="../CSS/sass/main.css" />
@@ -142,7 +138,7 @@
 
           <!--Log out -->
           <div>
-            <a id="logOut" href="../index.html"
+            <a id="logOut"
               ><svg
                 width="31"
                 height="31"
@@ -201,26 +197,62 @@
                 <h3>Attendance</h3>
               </div>
               <div class="card-body">
-                <form class="row g-2 g-xl-3">
-                  <div class="col-6 col-md-9 col-xl-10">
-                    <label for="username" class="visually-hidden"
-                      >username</label
-                    >
+                <div
+                  class="d-flex justify-content-center align-items-center mb-3"
+                  id="clockDiv"
+                >
+                  <div class="clockWrapper">
+                    <div class="display">
+                      <div id="time"></div>
+                    </div>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <script>
+                    setInterval(() => {
+                      const time = document.querySelector(".display #time");
+                      let date = new Date();
+                      let hours = date.getHours();
+                      let minutes = date.getMinutes();
+                      let seconds = date.getSeconds();
+                      let day_night = "AM";
+                      if (hours > 12) {
+                        day_night = "PM";
+                        hours = hours - 12;
+                      }
+                      if (seconds < 10) {
+                        seconds = "0" + seconds;
+                      }
+                      if (minutes < 10) {
+                        minutes = "0" + minutes;
+                      }
+                      if (hours < 10) {
+                        hours = "0" + hours;
+                      }
+                      time.textContent =
+                        hours + ":" + minutes + ":" + seconds + " " + day_night;
+                    });
+                  </script>
+                </div>
+                <form class="row">
+                  <div class="input-group col-12">
                     <input
                       type="text"
-                      class="form-control"
+                      class="input"
                       id="username"
-                      placeholder="username"
+                      name="username"
+                      placeholder="M_ahmed10"
+                      autocomplete="off"
                     />
-                    <span id="wrongUsername"></span>
+                    <input
+                      class="button--submit confirmAttndBtn"
+                      value="Confirm Attendance"
+                      type="submit"
+                    />
                   </div>
-                  <div class="col-6 col-md-3 col-xl-2">
-                    <button type="submit" class="confirmAttndBtn">
-                      Confirm Attendance
-                    </button>
-                  </div>
+                  <span id="wrongUsername"></span>
                 </form>
-                <table class="table mt-5 col-10" id="attendance-table">
+                <table class="table mt-2 col-10" id="attendance-table">
                   <thead>
                     <tr>
                       <th scope="col" id="num">#</th>
@@ -238,12 +270,6 @@
                 <h6 id="error-message"></h6>
               </div>
             </div>
-
-            <!-- <h1 class="dashboardHeader"></h1>
-            <div class="container p-4">
-              
-
-            </div> -->
           </main>
         </div>
       </div>

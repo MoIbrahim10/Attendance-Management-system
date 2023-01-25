@@ -28,8 +28,12 @@ function checkemail(emails) {
 
   resetButton.addEventListener('click', () => {
     let resetPassWrapper = document.getElementById("resetPassWrapper");
-    resetPassWrapper.innerHTML = "An email has been sent to you!<br/>>Kindly Check your email for reset password instructions";
+    resetPassWrapper.innerHTML = "An email has been sent to you!<br/>Kindly Check your email for reset password instructions";
     sendResetPasswordEmail(emailInput.value);
+    resetButton.disabled = true;
+    setTimeout(() => {
+      window.location.href = "../index.html";
+  }, 3000);
   });
 
 }
@@ -40,10 +44,10 @@ function sendResetPasswordEmail(email) {
     To: email,
     From: "techwavesolutionjs@gmail.com",
     Subject: "Password Reset Instructions",
-    Body: `We have received a request to reset the password for your account. To reset your password, please click on the following link: http://127.0.0.1:5501/HTML/resetPass.html <br>
+    Body: `We have received a request to reset the password for your account. <br>To reset your password, please click on the following link: http://127.0.0.1:5501/HTML/resetPassword.html <br>
     If you did not make this request, please ignore this email or contact our support team for assistance.<br>
-    Please note that this link will only be valid for 24 hours.
-    Best regards,
+    Please note that this link will only be valid for 24 hours.<br>
+    Best regards,<br>
     TechWave Solutions Team
     `,
   })
