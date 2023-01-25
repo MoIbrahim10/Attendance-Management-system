@@ -4,7 +4,7 @@
       "id": 1,
       "fname": "Sarah",
       "lname": "Adams",
-      "avatar": "images/Employeesimages/Lana Blanca Perkins.jpeg",
+      "avatar": "images/Employeesimages/sarahAdams.jpg",
       "email": "sarahAdams@gmail.com",
       "age": "24",
       "address": "Cairo",
@@ -52,7 +52,7 @@
         {
           "date": "1/24/2023",
           "arrivalTime": "12:21",
-          "departureTime": "",
+          "departureTime": "16:50",
           "status": "late"
         },
         {
@@ -84,27 +84,27 @@
         },
         {
           "date": "1/16/2023",
-          "arrivalTime": "09:15",
+          "arrivalTime": "08:02",
           "departureTime": "17:00",
-          "status": "late"
+          "status": "present"
         },
         {
           "date": "1/17/2023",
-          "arrivalTime": "",
-          "departureTime": "",
-          "status": "absent"
+          "arrivalTime": "08:01",
+          "departureTime": "17:55",
+          "status": "present"
         },
         {
           "date": "1/18/2023",
-          "arrivalTime": "08:30",
+          "arrivalTime": "08:00",
           "departureTime": "17:00",
           "status": "present"
         },
         {
           "date": "1/20/2023",
-          "arrivalTime": "12:15",
-          "departureTime": "11:13",
-          "status": "late"
+          "arrivalTime": "08:00",
+          "departureTime": "18:13",
+          "status": "present"
         },
         {
           "date": "1/21/2023",
@@ -114,15 +114,15 @@
         },
         {
           "date": "1/24/2023",
-          "arrivalTime": "12:46",
-          "departureTime": "",
-          "status": "late"
+          "arrivalTime": "07:50",
+          "departureTime": "17:55",
+          "status": "present"
         },
         {
           "date": "1/25/2023",
-          "arrivalTime": "",
-          "departureTime": "",
-          "status": "absent"
+          "arrivalTime": "7:50",
+          "departureTime": "18:22",
+          "status": "present"
         }
       ]
     },
@@ -438,6 +438,69 @@
           "arrivalTime": "11:48",
           "departureTime": "17:00",
           "status": "late"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "fname": "Rolando",
+      "lname": "Graham",
+      "avatar": "../Images/Employees/Rolando Graham.jpeg",
+      "email": "GrahamRol@gmail.com",
+      "age": "48",
+      "address": "10 Mehwar Cairo Egypt",
+      "jobTittle": "security",
+      "role": "security",
+      "userName": "RolandoG_",
+      "password": "12345678",
+      "attendances": [
+        {
+          "date": "1/15/2023",
+          "arrivalTime": "08:30",
+          "departureTime": "17:00",
+          "status": "present"
+        },
+        {
+          "date": "1/16/2023",
+          "arrivalTime": "08:02",
+          "departureTime": "17:00",
+          "status": "present"
+        },
+        {
+          "date": "1/17/2023",
+          "arrivalTime": "08:01",
+          "departureTime": "17:55",
+          "status": "present"
+        },
+        {
+          "date": "1/18/2023",
+          "arrivalTime": "08:00",
+          "departureTime": "17:00",
+          "status": "present"
+        },
+        {
+          "date": "1/20/2023",
+          "arrivalTime": "08:00",
+          "departureTime": "18:13",
+          "status": "present"
+        },
+        {
+          "date": "1/21/2023",
+          "arrivalTime": "7:40",
+          "departureTime": "18:02",
+          "status": "present"
+        },
+        {
+          "date": "1/24/2023",
+          "arrivalTime": "07:50",
+          "departureTime": "17:55",
+          "status": "present"
+        },
+        {
+          "date": "1/25/2023",
+          "arrivalTime": "7:50",
+          "departureTime": "18:22",
+          "status": "present"
         }
       ]
     }

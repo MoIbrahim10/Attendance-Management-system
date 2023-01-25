@@ -1,6 +1,23 @@
 export async function showEmpsAttendaces() {
   
-  let table = $('#emp-attendance-edit-table').DataTable({
+  let table = $('#emp-attendance-edit-table').DataTable({  
+    buttons: [
+      {
+          extend: 'pdf',
+          text: 'Save current page',
+          exportOptions: {
+              modifier: {
+                  page: 'current'
+              }
+          }
+      }
+  ]
+,    
+  searchPanes: {
+    layout: 'columns-3',
+    columns: [0,1,4]
+    },
+dom: 'Pfrtip',
     ajax: {
       url: 'http://localhost:3000/employees',
       dataSrc: function(json) {
@@ -31,14 +48,12 @@ export async function showEmpsAttendaces() {
         "defaultContent": "<button class='edit-button'>Edit</button>"
       }
     ],
-    searchPanes: {
-      columns: [
-        {
-          name: 'fullName',
-          label: 'Full Name'
-        },
-      ],
-    },
+    columnDefs:[{
+      searchPanes:{
+          show: true,
+      },
+      targets: [0, 1],
+  }],
     
     responsive: true,
     columnDefs: [
