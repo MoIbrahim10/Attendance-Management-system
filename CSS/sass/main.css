@@ -10,11 +10,6 @@
   line-height: 150%;
   letter-spacing: 0.16px;
 }
-:-ms-input-placeholder {
-  font-style: normal;
-  line-height: 150%;
-  letter-spacing: 0.16px;
-}
 .InviteEmployee h1, .alert_box, table thead, .adminName, #securityName, .companyName, .uploadLabel, .hrefLink, .goToSignUp, .goToSignIn, .rememberMeSec, .termsConditionsSec, .rememberMe, .termsConditions, .helperText, .labels, ::placeholder, .inputField {
   font-style: normal;
   line-height: 150%;
@@ -22,11 +17,6 @@
 }
 
 ::-moz-placeholder {
-  font-weight: 400;
-  font-size: 1em;
-}
-
-:-ms-input-placeholder {
   font-weight: 400;
   font-size: 1em;
 }
@@ -242,10 +232,6 @@ table thead {
   color: #CCCCD6;
 }
 
-:-ms-input-placeholder {
-  color: #CCCCD6;
-}
-
 ::placeholder {
   color: #CCCCD6;
 }
@@ -321,7 +307,6 @@ input::-webkit-inner-spin-button {
   font-size: 20px;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 
@@ -340,10 +325,8 @@ input::-webkit-inner-spin-button {
 
 .containerCheckBox input:checked ~ .checkmark {
   background-color: #2000A1;
-  -webkit-animation: pop 0.5s;
-          animation: pop 0.5s;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
+  animation: pop 0.5s;
+  animation-direction: alternate;
 }
 
 .checkmark:after {
@@ -364,18 +347,6 @@ input::-webkit-inner-spin-button {
   border: solid white;
   border-width: 0 0.15em 0.15em 0;
   transform: rotate(45deg);
-}
-
-@-webkit-keyframes pop {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(0.9);
-  }
-  100% {
-    transform: scale(1);
-  }
 }
 
 @keyframes pop {
@@ -518,24 +489,21 @@ body {
   padding: 0 !important;
 }
 
-.horizontalNav, .verticalNav, .verticalNav1, .horizontalNav1 {
+.horizontalNav, .verticalNav {
   background-color: #ffffff;
 }
 
 .verticalNav {
-  height: 70vh;
-  width: 90px;
-  position: fixed;
-  top: 0;
-  left: 0;
+  height: 600px !important;
+}
+@media screen and (max-width: 768px) {
+  .verticalNav {
+    height: 100px !important;
+  }
 }
 
 .horizontalNav {
-  position: absolute;
-  height: 72px;
-  width: 93%;
-  top: 0;
-  left: 97px;
+  height: 100px !important;
 }
 
 .navIcon:hover > *, .navIcon:focus > * {
@@ -686,7 +654,6 @@ table.dataTable thead > tr > th.sorting:last-child:after, table.dataTable thead 
   pointer-events: none;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 
@@ -708,8 +675,7 @@ table.dataTable thead > tr > th.sorting:last-child:after, table.dataTable thead 
   background-color: #fff;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.04);
   border-radius: 3px;
-  -webkit-animation: animationDropCenter 1s;
-          animation: animationDropCenter 1s;
+  animation: animationDropCenter 1s;
 }
 .alert_box span {
   font-weight: 500;
@@ -727,8 +693,7 @@ table.dataTable thead > tr > th.sorting:last-child:after, table.dataTable thead 
   background-color: #fff;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.04);
   border-radius: 3px;
-  -webkit-animation: animationDropCenter 1s;
-          animation: animationDropCenter 1s;
+  animation: animationDropCenter 1s;
 }
 @media screen and (max-width: 776px) {
   .UpdateEmpPopUp {
@@ -997,8 +962,7 @@ table.dataTable thead > tr > th.sorting:last-child:after, table.dataTable thead 
   position: relative;
   border-radius: 10px;
   cursor: default;
-  -webkit-animation: animate 1.5s linear infinite;
-          animation: animate 1.5s linear infinite;
+  animation: animate 1.5s linear infinite;
 }
 
 .clockWrapper .display,
@@ -1026,8 +990,7 @@ table.dataTable thead > tr > th.sorting:last-child:after, table.dataTable thead 
   background: #2000A1;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-animation: animate 1.5s linear infinite;
-          animation: animate 1.5s linear infinite;
+  animation: animate 1.5s linear infinite;
 }
 
 .clockWrapper span {

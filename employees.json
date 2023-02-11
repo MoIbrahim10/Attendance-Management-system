@@ -60,6 +60,12 @@
           "arrivalTime": "01:56",
           "departureTime": "17:00",
           "status": "late"
+        },
+        {
+          "date": "2/11/2023",
+          "arrivalTime": "",
+          "departureTime": "",
+          "status": "absent"
         }
       ]
     },
@@ -123,6 +129,12 @@
           "arrivalTime": "7:50",
           "departureTime": "18:22",
           "status": "present"
+        },
+        {
+          "date": "2/11/2023",
+          "arrivalTime": "03:24",
+          "departureTime": "",
+          "status": "late"
         }
       ]
     },
@@ -185,6 +197,12 @@
           "date": "1/25/2023",
           "arrivalTime": "01:56",
           "departureTime": "04:55",
+          "status": "late"
+        },
+        {
+          "date": "2/11/2023",
+          "arrivalTime": "03:21",
+          "departureTime": "",
           "status": "late"
         }
       ]
@@ -249,6 +267,12 @@
           "arrivalTime": "04:55",
           "departureTime": "06:39",
           "status": "late"
+        },
+        {
+          "date": "2/11/2023",
+          "arrivalTime": "",
+          "departureTime": "",
+          "status": "absent"
         }
       ]
     },
@@ -309,6 +333,12 @@
         },
         {
           "date": "1/25/2023",
+          "arrivalTime": "",
+          "departureTime": "",
+          "status": "absent"
+        },
+        {
+          "date": "2/11/2023",
           "arrivalTime": "",
           "departureTime": "",
           "status": "absent"
@@ -375,6 +405,12 @@
           "arrivalTime": "",
           "departureTime": "",
           "status": "absent"
+        },
+        {
+          "date": "2/11/2023",
+          "arrivalTime": "",
+          "departureTime": "",
+          "status": "absent"
         }
       ]
     },
@@ -437,6 +473,12 @@
           "date": "1/25/2023",
           "arrivalTime": "11:48",
           "departureTime": "17:00",
+          "status": "late"
+        },
+        {
+          "date": "2/11/2023",
+          "arrivalTime": "03:24",
+          "departureTime": "",
           "status": "late"
         }
       ]
@@ -501,6 +543,12 @@
           "arrivalTime": "7:50",
           "departureTime": "18:22",
           "status": "present"
+        },
+        {
+          "date": "2/11/2023",
+          "arrivalTime": "",
+          "departureTime": "",
+          "status": "absent"
         }
       ]
     }
@@ -514,6 +562,15 @@
       "address": "10 gdf fdfd EF",
       "age": "28",
       "avatar": "../../Images/EmployeesMaya Palmer.jpeg"
+    },
+    {
+      "id": 7,
+      "fname": "John",
+      "lname": "Adamsc",
+      "email": "c9529faccc784ef@tmail.ws",
+      "address": "12 fsf dffd EG",
+      "age": "25",
+      "avatar": "../../Images/Employees20220713_231838.jpg"
     }
   ]
 }

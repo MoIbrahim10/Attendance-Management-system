@@ -3,7 +3,6 @@ export async function showDailyReports(employees, date) {
   const tableBody = document.getElementById("dailyReportsTableBody"); 
 
 
-  // Destroy the existing DataTable if it exists
   const table = $('#emp-daily-report-table').DataTable();
   if (table) {
     table.destroy();
@@ -53,7 +52,6 @@ export async function showDailyReports(employees, date) {
       tableBody.appendChild(newRow);
   }
 
-  // initialize the DataTable
   $('#emp-daily-report-table').DataTable({ responsive: true,stateSave: true,});
 } 
 

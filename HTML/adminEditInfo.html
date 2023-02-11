@@ -4,6 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../Images/Favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../Images/Favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../Images/Favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="../CSS/sass/main.css" />
     <!-- Font Awesome-->
     <link
@@ -17,6 +35,8 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <!--SMTP sendMail-->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <!-- editAdminInfo -->
     <script src="../JS/admin/editInfoAdmin.js" type="module"></script>
 
@@ -29,7 +49,7 @@
       <div class="row gx-0">
         <!-- Vertical Nav -->
         <nav
-          class="col-12 col-md-1 verticalNav1 d-flex justify-content-around flex-md-column justify-content-md-start align-items-center gap-4 px-md-4 py-md-5 p-2"
+          class="col-12 col-md-1 verticalNav d-flex justify-content-around flex-md-column justify-content-md-start align-items-center gap-4 px-md-4 py-md-5 p-2"
         >
           <!-- Home Icon -->
           <div class="mt-md-5">
@@ -195,7 +215,7 @@
         </nav>
         <div class="col-11 d-flex flex-column">
           <nav
-            class="d-none d-md-flex horizontalNav1 px-4 py-2 d-flex justify-content-between align-items-center"
+            class="d-none d-md-flex horizontalNav px-4 py-2 d-flex justify-content-between align-items-center"
           >
             <div class="companyLogo py-2 px-4">
               <img src="../Images/HeaderIcon.svg" />
@@ -361,16 +381,16 @@
             </div>
             <!-- password icon toggle script -->
             <script>
-              const togglePassword = document.querySelector("#eyeIcon");
-              const password = document.querySelector("#password");
+              const togglePassword = document.querySelector('#eyeIcon');
+              const password = document.querySelector('#password');
 
-              togglePassword.addEventListener("click", function (e) {
-                this.classList.toggle("fa-eye-slash");
+              togglePassword.addEventListener('click', function (e) {
+                this.classList.toggle('fa-eye-slash');
                 const type =
-                  password.getAttribute("type") === "password"
-                    ? "text"
-                    : "password";
-                password.setAttribute("type", type);
+                  password.getAttribute('type') === 'password'
+                    ? 'text'
+                    : 'password';
+                password.setAttribute('type', type);
               });
             </script>
           </main>
@@ -417,19 +437,19 @@
     </div>
     <!--Add Employee pop up-->
     <script>
-      let AddEmpBg = document.getElementById("AddEmp");
-      let sendInvite = document.getElementById("sendInvite");
-      let emailInput = document.getElementById("EmailInvite");
-      let body = document.getElementsByClassName("mainWrapper")[0];
+      let AddEmpBg = document.getElementById('AddEmp');
+      let sendInvite = document.getElementById('sendInvite');
+      let emailInput = document.getElementById('EmailInvite');
+      let body = document.getElementsByClassName('mainWrapper')[0];
 
       addEmployee.onclick = function () {
-        body.classList.add("blurbody");
-        EditInfoIcon.classList.add("inactiveNav");
-        addEmployee.children[0].classList.add("activeNav");
-        AddEmpBg.classList.add("centerItems");
+        body.classList.add('blurbody');
+        EditInfoIcon.classList.add('inactiveNav');
+        addEmployee.children[0].classList.add('activeNav');
+        AddEmpBg.classList.add('centerItems');
       };
       logOut.onclick = function () {
-        window.location.replace("../index.html");
+        window.location.replace('../index.html');
       };
     </script>
   </body>

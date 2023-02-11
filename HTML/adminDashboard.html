@@ -4,6 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../Images/Favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../Images/Favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../Images/Favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
 
     <!-- Font Awesome-->
     <link
@@ -57,7 +75,7 @@
     <link rel="stylesheet" href="../CSS/sass/main.css" />
 
     <style>
-      input[type="search"] {
+      input[type='search'] {
         border-radius: 5px !important;
         @media screen and (max-width: 768px) {
           width: 70% !important;
@@ -71,7 +89,7 @@
       <div class="row gx-0">
         <!-- Vertical Nav -->
         <nav
-          class="col-12 col-md-1 verticalNav1 d-flex justify-content-around flex-md-column justify-content-md-start align-items-center gap-4 px-md-4 py-md-5 p-2"
+          class="col-12 col-md-1 verticalNav d-flex justify-content-around flex-md-column justify-content-md-start align-items-center gap-4 px-md-4 py-md-5 p-2"
         >
           <!-- Home Icon -->
           <div class="mt-md-5">
@@ -238,7 +256,7 @@
         <div class="col-11 d-flex flex-column">
           <!--Header -->
           <nav
-            class="d-none d-md-flex horizontalNav1 px-4 py-2 d-flex justify-content-between align-items-center"
+            class="d-none d-md-flex horizontalNav px-4 py-2 d-flex justify-content-between align-items-center"
           >
             <div class="companyLogo py-2 px-4">
               <img src="../Images/HeaderIcon.svg" />
@@ -587,19 +605,19 @@
     <!-- pop up scripts -->
     <script>
       logOut.onclick = function () {
-        window.location.replace("../index.html");
+        window.location.replace('../index.html');
       };
     </script>
     <!-- password icon toggle script -->
     <script>
-      const togglePassword = document.querySelector("#togglePassword");
-      const password = document.querySelector("#password");
+      const togglePassword = document.querySelector('#togglePassword');
+      const password = document.querySelector('#password');
 
-      togglePassword.addEventListener("click", function (e) {
+      togglePassword.addEventListener('click', function (e) {
         const type =
-          password.getAttribute("type") === "password" ? "text" : "password";
-        password.setAttribute("type", type);
-        this.classList.toggle("fa-eye-slash");
+          password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+        this.classList.toggle('fa-eye-slash');
       });
     </script>
   </body>

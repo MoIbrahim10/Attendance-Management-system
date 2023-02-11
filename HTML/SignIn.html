@@ -12,7 +12,24 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../Images/Favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../Images/Favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../Images/Favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
@@ -61,15 +78,15 @@
         </div>
         <!-- JS for the eye icon to toggle between password and text -->
         <script>
-          const togglePassword = document.querySelector("#togglePassword");
-          const password = document.querySelector("#password");
-          togglePassword.addEventListener("click", function (e) {
+          const togglePassword = document.querySelector('#togglePassword');
+          const password = document.querySelector('#password');
+          togglePassword.addEventListener('click', function (e) {
             const type =
-              password.getAttribute("type") === "password"
-                ? "text"
-                : "password";
-            password.setAttribute("type", type);
-            this.classList.toggle("fa-eye-slash");
+              password.getAttribute('type') === 'password'
+                ? 'text'
+                : 'password';
+            password.setAttribute('type', type);
+            this.classList.toggle('fa-eye-slash');
           });
         </script>
         <div class="rememberMeSec d-flex justify-content-between px-5">

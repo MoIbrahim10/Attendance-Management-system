@@ -3,22 +3,19 @@ background-color:$background-color;
 margin: 0 !important;
 padding: 0 !important;
 }
-.horizontalNav,.verticalNav, .verticalNav1,.horizontalNav1{
+.horizontalNav,.verticalNav{
 background-color: $background-color-light;
 }
 .verticalNav{
-  height: 70vh;
-  width: 90px;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
+  height: 600px !important;
+  @media screen and (max-width: 768px) {
+    height: 100px !important;
+  }
+    
+  }
+
 .horizontalNav{
-  position: absolute;
-  height: 72px;
-  width: 93%;
-  top: 0;
-  left: 97px;
+  height: 100px !important;
 }
 
 .navIcon:hover,.navIcon:focus{

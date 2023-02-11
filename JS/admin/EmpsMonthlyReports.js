@@ -1,7 +1,6 @@
 export async function showMonthlyReports(employees, startDate, endDate) {
   const tableBody = document.getElementById("monthlyReportTB");
 
-  // Destroy the existing DataTable if it exists
   const table = $('#emp-monthly-report-table').DataTable();
   if (table) {
     table.destroy();
@@ -52,7 +51,6 @@ export async function showMonthlyReports(employees, startDate, endDate) {
       tableBody.appendChild(newRow);
     }
   }
-  // initialize the DataTable
   $('#emp-monthly-report-table').DataTable({responsive: true, stateSave: true,searchPanes: {
     layout: 'columns-3',
     columns: [0,1,4]

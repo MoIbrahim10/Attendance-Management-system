@@ -106,48 +106,6 @@ export async function displayPendingUsers() {
     }
   });
 
-  
-  
-  
-  
-
-    
-  // for (let i = 0; i < approveBtns.length; i++) {
-  //   approveBtns[i].addEventListener("click", async ()=> {
-  //     alert("Approve");
-  //     const username = generateUsername(pending[i].fname, pending[i].lname);
-  //     const password = generatePassword();
-  
-  //     let pendingUserData = {...pending[i], id: null};
-
-  //     sendApprovalEmail(pending[i].email, username, password, pending[i].fname, pending[i].lname);
-
-  //     // Add user to the employees database
-  //     const response = await addEmployee({
-  //       ...pendingUserData,
-  //       userName: username,
-  //       password: password,
-  //       jobTittle: "Engineer",
-  //       role: "employee",
-  //       attendances: [
-  //         {
-  //           "date": getTodayDate(),
-  //           "arrivalTime": "",
-  //           "departureTime": "",
-  //           "status": ""
-  //         },]
-  //     });
-
-  //     await removePendingUser(pending[i].id); 
-  //   });
-  // }
-  
-
-  // for (let i = 0; i < declineBtns.length; i++) {
-  //   declineBtns[i].addEventListener("click", async () => { 
-  //         await removePendingUser(pending[i].id);
-  //     });
-  // }
 }
     $("#pendingTable").DataTable({ responsive: true });
 } 

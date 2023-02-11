@@ -11,7 +11,6 @@ import {showEmpsAttendaces} from './editEmpAttendance.js';
   const employees = await fetchData("employees");
 
   showstatisticsReports(employees);
-  // Find the attendances of employee 1
   const attendances = employees[0].attendances;
 
   dailyReports(employees,attendances);
@@ -32,7 +31,6 @@ export function dailyReports(employees,attendances){
   dateInput.value = lastDate;
   showDailyReports(employees, MDYDateFormat(lastDate));
 
-  //Retrieve and display the employee's attendance data for a specific date in the daily report
   dateInput.addEventListener('change', async (e)=> {
     const date = MDYDateFormat(e.target.value);
     showDailyReports(employees, date);

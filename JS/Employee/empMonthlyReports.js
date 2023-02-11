@@ -3,7 +3,6 @@ import {getAttendancesByDateRange} from '../admin/EmpsMonthlyReports.js';
 export async function showMonthlyReports(employee, startDate, endDate) {
       const tableBody = document.getElementById("monthlyReportTB");
 
-      // Destroy the existing DataTable if it exists
       const table = $('#emp-monthly-report-table').DataTable();
       if (table) {
             table.destroy();
@@ -40,6 +39,5 @@ export async function showMonthlyReports(employee, startDate, endDate) {
             </td>`;
       tableBody.appendChild(newRow);
       }
-      // initialize the DataTable
       $('#emp-monthly-report-table').DataTable({ responsive: true,stateSave: true });
 } 

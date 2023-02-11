@@ -78,34 +78,28 @@ export function updateTable() {
   todayAttendance.forEach((employee, index) => {
     const newRow = document.createElement('tr');
 
-    // Create and append the number column
     const numCol = document.createElement('th');
     numCol.scope = 'row';
     numCol.innerText = index + 1;
     newRow.appendChild(numCol);
 
-    // Create and append the name column
     const nameCol = document.createElement('td');
     nameCol.innerText = employee.name;
     newRow.appendChild(nameCol);
 
-    // Create and append the arrival time column
     const arrvTimeCol = document.createElement('td');
     arrvTimeCol.innerText = employee.arrivalTime;
     newRow.appendChild(arrvTimeCol);
 
-    // Create and append the departure time column
     const deptTimeCol = document.createElement('td');
     deptTimeCol.innerText = employee.departureTime || '-';
     newRow.appendChild(deptTimeCol);
 
-    // Create and append the status column
     const statusCol = document.createElement('td');
     statusCol.innerHTML =`<span class="${employee.status}-status badge">${employee.status}</span>` ;
     statusCol.classList.add("Emp_status");
     newRow.appendChild(statusCol);
 
-    // Append the new row to the table
     tableBody.appendChild(newRow);
   });
 }
